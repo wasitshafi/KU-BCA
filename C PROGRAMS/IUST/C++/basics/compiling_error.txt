@@ -1,0 +1,13 @@
+/home/wasit/Desktop/my_cpp_programs/basics/compare.cpp: In function ‘int main()’:
+/home/wasit/Desktop/my_cpp_programs/basics/compare.cpp:7:9: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11
+   int n1{0}, n2{0};
+         ^
+/home/wasit/Desktop/my_cpp_programs/basics/compare.cpp:7:16: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11
+   int n1{0}, n2{0};
+                ^
+/home/wasit/Desktop/my_cpp_programs/basics/compare.cpp:10:3: error: expected ‘;’ before ‘cin’
+   cin >> n1 >> n2;
+   ^
+/home/wasit/Desktop/my_cpp_programs/basics/compare.cpp:12:52: error: invalid operands of types ‘int’ and ‘<unresolved overloaded function type>’ to binary ‘operator<<’
+   cout << n1 << " == " << n2 << " = " << n1==n2 << endl;
+                                                    ^

@@ -1,0 +1,10 @@
+/home/wasit/Desktop/my_cpp_programs/classes/Constructors/rational.cpp: In constructor ‘Rational::Rational(int, int)’:
+/home/wasit/Desktop/my_cpp_programs/classes/Constructors/rational.cpp:7:37: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11
+ Rational::Rational(int n, int d):num{n},denom{d}
+                                     ^
+/home/wasit/Desktop/my_cpp_programs/classes/Constructors/rational.cpp:7:46: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11
+ Rational::Rational(int n, int d):num{n},denom{d}
+                                              ^
+/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o: In function `_start':
+(.text+0x20): undefined reference to `main'
+collect2: error: ld returned 1 exit status
