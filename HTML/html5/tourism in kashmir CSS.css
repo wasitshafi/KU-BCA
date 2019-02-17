@@ -1,0 +1,63 @@
+
+*{margin: 0px;padding:0px;box-sizing: border-box;}
+body{background-color: wheat;}
+header,hgroup,nav,section,article,aside,footer,summary,details{display: block;}
+a{text-decoration: none;color: inherit;}
+::selection{background-color: gray;}
+.maincontainer{overflow: auto;max-width: 1400px;}
+.topheader{ color:indianred;text-align: center; margin: 10px 0px; }
+.topheader h4{text-align: right;}
+.nav{margin: 10px 0px;text-align: center;padding: 10px 0px;}
+.nav ul {text-align: center;}
+.nav li{
+      display: inline;
+      list-style: none;
+      line-height: 200%;
+      padding: 10px 5px;
+    }
+.nav a{
+       color: maroon;
+       font:normal 16px comic sans ms;
+       letter-spacing: .6px;
+       transition: background-color .30s padding 1s;
+       -webkit-transition: background-color .70s ,text-shadow 2s; 
+       padding: 4px 2px;
+       transition-delay: .20s;
+       -webkit-transition-delay:.10s;
+      }
+.nav li a:hover{
+               background-color: lightseagreen;
+               border-top:8px solid teal;
+               border-bottom:8px solid teal;
+               color: white;
+               text-shadow: 1px 0px 10px yellow;
+             } 
+.maindiv {
+          width:70%;
+          padding: 10px 20px;
+          margin: 10px 0px;
+          height: 700px;
+          overflow: auto;
+          float: right;
+          clear: both;
+         }
+.maindiv article{line-height: 160%;padding:5px 10px;font: normal 20px arial;color: #444444;}
+.maindiv article > header{text-align: center;color: maroon;}
+.maindiv article > p{margin: 20px 0px;text-align-last:center;text-indent: 30px;}
+.maindiv article footer p{color:chocolate;text-align: right;}
+.maindiv article footer p:hover{color:darkred;}
+.aside{
+  width: 30%;
+  height: 600px;
+  background-color:burlywood;
+  padding: 20px 10px;
+  overflow-x: auto;
+  margin: 5px 0px;
+      }
+.aside  section h3{font-family: comic sans ms;border-top: 3px solid brown;}
+.aside  section p{font-family: arial;color: #333333;text-align-last:center;line-height: 150%; }
+.aside  section p a{color: chocolate;}
+.aside  section p a:hover{color:maroon;}
+.bottomfooter{clear: both;text-align: center;background-color: #23282D;}
+.bottomfooter p{display: inline;margin: 10px; font-family: comic sans ms;color: #555555;}
+.bottomfooter p a:hover{color: silver;}

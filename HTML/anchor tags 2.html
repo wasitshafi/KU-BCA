@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>
+homepage
+</title>
+<body link=teal vlink=teal alink=maroon>
+<h3>
+<a href="#gen registers">1. general register organisation section.</a>
+<br />
+<a href="#control word">2. control word sectioin.</a>
+<br />
+<a href="#add modes">3. addressing modes section.</a>
+<br />
+<a href="#pipelining">4. pipelining section.</a>
+<br />
+<a href="#i pipelining">5. instruction pipelining section.</a>
+<br />
+<a href="#d independence">6. data independence sectioin.</a>
+<br />
+<a href="#b commun">7. business communicationon sectioin.</a>
+<br />
+<a href="#f commun">8. formal communication sectioin.</a>
+</h3>
+<br />
+
+<!-- in older mathod
+<a name="gen registers"></a>
+-->
+<h3 id="gen registers">1. General Register Organization:</h3> <!-- new method-->
+
+When a large number of registers are included in the CPU, it is most efficient to connect them through a common bus system. The registers communicate with each other not only for direct data transfers, but also while performing various micro-operations. Hence it is necessary to provide a common unit that can perform all the arithmetic, logic and shift micro-operation in the processor.
+<hr />
+<h3 id="control word"> 2. Control Word:</h3>
+There are 14 binary selection inputs in the units, and their combined value specified a control word. It consists of four fields three fields contain three bits each, and one field has five bits. The three bits of SEL A select a source register for the A input of the ALU. The three bits of SEL B select a source register for the B input of the ALU. The three bit of SEC D select a destination register using the decoder and its seven load outputs. The five bits of OPR select one of the operations in the ALU. The 14-bit control word when applied to the selection inputs specify a particular micro-operation.
+<hr />
+<h3 id="add modes">3. Addressing Modes</h3>
+
+The operation field of an instruction specifies the operation to be performed. This operation must be executed on some data stored in computer register as memory words. The way the operands are chosen during program execution is dependent on the addressing mode of the instruction. The addressing mode specifies a rule for interpreting or modifying the address field of the instruction between the operand is activity referenced. Computer use addressing mode technique for the purpose of accommodating one or both of the following provisions.
+
+<br />(1)	To give programming versatility to the uses by providing such facilities as pointer to memory, counters for top control, indexing of data, and program relocation.
+<br /> (2)	To reduce the number of bits in the addressing fields of the instruction.
+
+
+<hr />
+<h3 id="pipelining">4. Pipelining</h3>
+
+Pipelining is a technique of decomposing a sequential process into sub-operation with each sub-process being executed in a special dedicated segment that operator concurrently with all other segment. A pipeline can be visualized as a collection of processing segments through which binary information flows. Each segment performs partial processing dictated by the way the task is portioned. The result obtained from the computation in each segment is transferred to next segment in the pipeline. The final result is obtained after the data have passed through all segments.
+<hr />
+<h3 id="i pipelining">5. Instruction pipeline</h3>
+
+Pipeline processing can occurs not only in the data stream, but in the instruction stream as well. An Instruction pipeline reads consecutive instruction from memory while previous instruction one being executed in other segments. This causes the instruction fetch & execute phase to overlap and perform simultaneous operations.
+
+<br />
+<br />Most of the cases, the computer needs to process each instruction (with the following segments of steps:-
+<br />
+<br />(1)	Fetch the instruction from memory
+<br />(2)	Decode the instruction
+<br />(3)	Calculate the effective address
+<br />(4)	Fetch the operands from memory
+<br />(5)	Execute the instruction
+<br />(6)	Store the result in the proper place.
+<hr />
+<h3 id="d independence">6. Data Independence</h3>
+<br /> This brings us to our next topic: data independence. It is the property of the database which tries to ensure that if we make any change in any level of schema of the database, the schema immediately above it would require minimal or no need of change.  
+
+<br />What does this mean? We know that in a building, each floor stands on the floor below it. If we change the design of any one floor, e.g. extending the width of a room by demolishing the western wall of that room, it is likely that the design in the above floors will have to be changed also. As a result, one change needed in one particular floor would mean continuing to change the design of each floor until we reach the top floor, with an increase in the time, cost and labour. Would not life be easy if the change could be contained in one floor only? Data independence is the answer for this. It removes the need for additional amount of work needed in adopting the single change into all the levels above.  
+
+<br />Data independence can be classified into the following two types: 
+<br /><h5>1. Physical Data Independence:</h5> This means that for any change made in the physical schema, the need to change the logical schema is minimal. This is practically easier to achieve. Let us explain with an example 
+<br />    Say, you have bought an Audio CD of a recently released film and one of your friends has bought an Audio Cassette of the same film. If we consider the physical schema, they are entirely different. The first is digital recording on an optical media, where random access is possible. The second one is magnetic recording on a magnetic media, strictly sequential access. However, how this change is reflected in the logical schema is very interesting. For music tracks, the logical schema for both the CD and the Cassette is the title card imprinted on their back. We have information like Track no, Name of the Song, Name of the Artist and Duration of the Track, things which are identical for both the CD and the Cassette. We can clearly say that we have achieved the physical data independence here. 
+<br /><h5>2. Logical Data Independence:</h5> This means that for any change made in the logical schema, the need to change the external schema is minimal. As we shall see, this is a little difficult to achieve. Let us explain with an example. Suppose the CD you have bought contains 6 songs, and some of your friends are interested in copying some of those songs (which they like in the film) into their favorite collection. One friend wants the songs 1, 2, 4, 5, 6, another wants 1, 3, 4, 5 and another wants 1, 2, 3, 6. Each of these collections can be compared to a view schema for that friend. Now by some mistake, a scratch has appeared in the CD and you cannot extract the song 3. Obviously, you will have to ask the friends who have song 3 in their proposed collection to alter their view by deleting song 3 from their proposed collection as well.
+<br />
+<hr />
+<h3 id="b commun">7. What is Business Communication?</h3> 
+As Business Communication plays an important role in any business organization, it is necessary to focus on its meaning. Business Communication is the sharing of information related to business activities  and their results. 
+<br />    The following definition is more concerned with organisational communication. Therefore, it can be considered as a more satisfying and comprehensive definition of<strong> Business Communication.</strong>
+<br/>Administrative communication is a process which involves the transmission and accurate replication of ideas ensured by feedback for the purpose of eliciting actions which will accomplish organisational goals.
+<br />
+<hr />
+
+<h3 id="f commun">8. Formal Communication</h3>
+ Messages that move along predefined and regulated pathways comprise formal communication. Formal communication may be verbal or written, and may be in the form of letters, telephone calls, computer messages or memos. At times, a gesture may communicate as effectively as writing or speaking. Messages convey decisions and can be transmitted personally, or in writing, or by machines. From the sender, the messages move along designated routes to designated receiver/s, who must act on these messages
+</body>
+</head>
+</html> 
+ 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML 5 audio tag</title>
+</head>                  <!-- we must include different types format of same file because different
+								browsers  uses different encoding techniques -->
+
+<body>					 <!-- if the browser does not support first audio format then it moves on to second 								source and so on. if all of the audio formats is rejected by the browser 										the it displays the message in <p> tag   --> 
+<h1>HTMl5 audio tag:</h1>
+<audio controls style="border: 2px solid lightgreen;"/>
+	<source src="G:\BCA\lecturers\HTML\Exercise File\Chap10\media\song.m4a" type="audio/x-aac">
+	<source src="G:\BCA\lecturers\HTML\Exercise File\Chap10\media\song.mpeg" type="audio/mpeg">
+	<source src="G:\BCA\lecturers\HTML\Exercise File\Chap10\media\song.ogg" type="audio/ogg">
+	<p>ur browser does not support HTML5 audio feature.</p>
+</audio>
+<br/>
+<!--
+<p>The below audio is without controls but we can add our own buttons to control the audio using javascript</p>
+<audio style="border: 2px solid lightgreen; " autoplay />
+	<source src="G:\BCA\lecturers\HTML\Exercise File\Chap10\media\song.m4a" type="audio/x-aac">
+	<source src="G:\BCA\lecturers\HTML\Exercise File\Chap10\media\song.mpeg" type="audio/mpeg">
+	<source src="G:\BCA\lecturers\HTML\Exercise File\Chap10\media\song.ogg" type="audio/ogg">
+	<p>ur browser does not support HTML5 audio feature.</p>
+</audio>
+-->
+</body>
+</html>

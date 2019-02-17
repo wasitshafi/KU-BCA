@@ -1,0 +1,219 @@
+<html>
+<head>
+<title>Admission Form</title>
+<link rel="icon" href="G:\BCA\icons & logo\edit.png">
+</head>
+<body bgcolor="darkkhaki" topmargin="10px" leftmargin="300px" rightmargin="300px" bottommargin="2000px"> 
+<h2>this will not pass detail on url bar(method=post)</h2>
+<div style="background-color: lightcoral;">
+<center><font color="wheat" face="arieal" size="8">ADMISSION FROM</font></center>
+<form method="post">
+<fieldset>
+<fieldset>
+<legend><font color=khaki face="Comic sans MS" size=5 face="italic">1.Personal Information</font></legend>
+<table>
+<tr>
+ <td>Name :</td>
+ <td><input type ="text" size="15" maxlength="30" title="Enter your name"></td>
+ <td>Photo :<input type="file" name="attachement" size="30" accept="image/*"> 
+ </tr>
+ <tr>
+ <td>Father's name :</td>
+ <td><input type="text" size="15" maxlength="30" name="txtbfname" title="Enter your father's/spouse's name"></td>
+ </tr>
+ <tr>
+ <td>D.O.B :</td>
+ <td><input type="text" size="15" maxlength="10" name="txtbdob"><font color=red size="1" face="bold"><sub>(DD-MM-YYYY)</sub></font></td>
+ </tr>
+ <tr>
+ <td>Gender :</td>
+ <td><input type="radio" name="gender" value="male"><sub><b>Male</b></sub></input><input type="radio" name="gender" value="female"><sub><b>Female</b></sub></input></td>
+ </tr>
+ </table>
+ </fieldset>
+ <fieldset>
+ <legend><font color=khaki face="Comic sans MS" size=5 face="italic">2.Contact Details</font></legend>
+ <table>
+ <tr>
+ <td>Address : </td>
+ <td><textarea cols=25 rows=3 style="max-width: 350px; max-height: 100px;"></textarea></td>
+ </tr>
+ <tr>
+ <td>District : </td>
+ <td>
+     <select>
+      <OPTION value="null">--SELECT--</option>
+      <OPTION value="srinagar">Srinagar</option>
+	  <option value="budgam">Budgam</option>
+	  <option value="bandipora">Bandipora</option>
+  	  <option value="ganderbal">Ganderbal</option>			
+ 	  <option value="sopian">Sopian</option>
+	  <option value="kupwara">Kupwara</option>
+	  <option value="jammu">Jammu</option>
+	  <option value="udhampur">Udhampur</option>
+	  <option value="doda">Doda</option>
+	  <option value="banihal">Banihal</option>
+     </select>
+ </td>
+ <td>ZIP/Postal code :</td>
+ <td><input type=text name="txtbzipcode" maxlength="6"size="7">
+</tr>
+ <tr>
+ <td>P.no :</td>
+ <td><input type="hidden" name="lblcountrycode"><sub><font color="lightslategrey">+91</font></sub></input><input type="dsdtdddesdlsdd" name="txtbpno" maxlength=10 size="12"></td>
+ <td>Email&nbsp id :</td>
+ <td><input type="email" name="txtbeid"></td>
+ </tr>
+</table>
+</fieldset>
+ <fieldset>
+ <legend><font color=khaki face="Comic sans MS" size=5 face="italic">3.Education Qualification</font></legend>
+ <table>
+ <tr>
+ <td colspan="5">Higher Secondary level</td>
+ </tr> 
+ <tr>
+ <td colspan=5><hr /></td>
+ </tr> 
+ <td><input type="checkbox" name="chkb10th" value="10th">10<sup>th</sup></input></td>
+ <td><input type="checkbox" name="chkb12th" value="12th">12<sup>th</sup></input></td>
+ </tr>
+ <tr>
+ <td colspan=5>University level</td>
+ </tr> 
+ <tr>
+ <td colspan=5><hr /></td>
+ </tr>
+ <tr>
+ <td><input type="checkbox" name="chkbug" value="ug">UG</input></td>
+ <td><input type="checkbox" name="chkbpg" value="pg">PG</input></td>
+ <td><input type="checkbox" name="chkphd" value="phd">Phd</input></td>
+ <td><input type="checkbox" name="chkmphill" value="mphill">M phill.</input></td>
+ </tr>
+ </table>
+ </fieldset>
+ <br/>
+ <br/>
+ <center><input type="submit" value="SUBMIT">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="RESET"></center> 
+ </fieldset>
+ </form>
+</td></OPTION></OPTION></select></td></tr></table></fieldset></td></tr></table></fieldset></fieldset>
+</div>
+
+
+
+<!-- form 2 -->
+
+
+
+
+
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<h2>this will  pass detail on url bar(method = get)</h2>
+<div style="background-color: forestgreen;">
+<center><font color="wheat" face="arieal" size="8">ADMISSION FROM</font></center>
+<form method="get">
+<fieldset>
+<fieldset>
+<legend><font color=khaki face="Comic sans MS" size=5 face="italic">1.Personal Information</font></legend>
+<table>
+<tr>
+ <td>Name :</td>
+ <td><input type ="text" size="15" maxlength="30" title="Enter your name"></td>
+ <td>Photo :<input type="file" name="attachement" size="30" accept="image/*"> 
+ </tr>
+ <tr>
+ <td>Father's name :</td>
+ <td><input type="text" size="15" maxlength="30" name="txtbfname" title="Enter your father's/spouse's name"></td>
+ </tr>
+ <tr>
+ <td>D.O.B :</td>
+ <td><input type="text" size="15" maxlength="10" name="txtbdob"><font color=red size="1" face="bold"><sub>(DD-MM-YYYY)</sub></font></td>
+ </tr>
+ <tr>
+ <td>Gender :</td>
+ <td><input type="radio" name="gender" value="male"><sub><b>Male</b></sub></input><input type="radio" name="gender" value="female"><sub><b>Female</b></sub></input></td>
+ </tr>
+ </table>
+ </fieldset>
+ <fieldset>
+ <legend><font color=khaki face="Comic sans MS" size=5 face="italic">2.Contact Details</font></legend>
+ <table>
+ <tr>
+ <td>Address : </td>
+ <td><textarea cols=25 rows=3 style="max-width: 350px; max-height: 100px;"></textarea></td>
+ </tr>
+ <tr>
+ <td>District : </td>
+ <td>
+     <select>
+      <OPTION value="null">--SELECT--</option>
+      <OPTION value="srinagar">Srinagar</option>
+	  <option value="budgam">Budgam</option>
+	  <option value="bandipora">Bandipora</option>
+  	  <option value="ganderbal">Ganderbal</option>			
+ 	  <option value="sopian">Sopian</option>
+	  <option value="kupwara">Kupwara</option>
+	  <option value="jammu">Jammu</option>
+	  <option value="udhampur">Udhampur</option>
+	  <option value="doda">Doda</option>
+	  <option value="banihal">Banihal</option>
+     </select>
+ </td>
+ <td>ZIP/Postal code :</td>
+ <td><input type=text name="txtbzipcode" maxlength="6"size="7">
+</tr>
+ <tr>
+ <td>P.no :</td>
+ <td><input type="hidden" name="lblcountrycode"><sub><font color="lightslategrey">+91</font></sub></input><input type="dsdtdddesdlsdd" name="txtbpno" maxlength=10 size="12"></td>
+ <td>Email&nbsp id :</td>
+ <td><input type="email" name="txtbeid"></td>
+ </tr>
+</table>
+</fieldset>
+ <fieldset>
+ <legend><font color=khaki face="Comic sans MS" size=5 face="italic">3.Education Qualification</font></legend>
+ <table>
+ <tr>
+ <td colspan="5">Higher Secondary level</td>
+ </tr> 
+ <tr>
+ <td colspan=5><hr /></td>
+ </tr> 
+ <td><input type="checkbox" name="chkb10th" value="10th">10<sup>th</sup></input></td>
+ <td><input type="checkbox" name="chkb12th" value="12th">12<sup>th</sup></input></td>
+ </tr>
+ <tr>
+ <td colspan=5>University level</td>
+ </tr> 
+ <tr>
+ <td colspan=5><hr /></td>
+ </tr>
+ <tr>
+ <td><input type="checkbox" name="chkbug" value="ug">UG</input></td>
+ <td><input type="checkbox" name="chkbpg" value="pg">PG</input></td>
+ <td><input type="checkbox" name="chkphd" value="phd">Phd</input></td>
+ <td><input type="checkbox" name="chkmphill" value="mphill">M phill.</input></td>
+ </tr>
+ </table>
+ </fieldset>
+ <br/>
+ <br/>
+ <center><input type="submit" value="SUBMIT" >&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type="reset" value="RESET"></center> 
+ </fieldset>
+ </form>
+
+
+
+</td></OPTION></OPTION></select></td></tr></table></fieldset></td></tr></table></fieldset></fieldset></form>
+</div>
+
+
+
+</body>
+<html>

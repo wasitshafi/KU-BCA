@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML 5 video tag</title>
+</head>				    <!-- we must include different types format of same file because different
+								browsers  uses different encoding techniques -->
+
+<body>					 <!-- if the browser does not support first video format then it moves on to second 								source and so on. if all of the video formats is rejected by the browser 										the it displays the message in <p> tag   --> 
+<h1>HTMl5 video tag:</h1>
+<video class="vd1" width="500" height="350" controls/>
+	<source src="G:\BCA\lecturers\HTML\Exercise File\Chap10\media\video.m4v" type="video/mp4">
+	<source src="G:\BCA\lecturers\HTML\Exercise File\Chap10\media\video.ogg" type="video/ogg">
+	<source src="G:\BCA\lecturers\HTML\Exercise File\Chap10\media\video.webm" type="video.webm">
+	<p>ur browser does not support HTML5 video feature.</p>
+</video>
+<br/>
+<p>The below video is without controls but we can add our own buttons to control the video using javascript</p>
+<video class="vd1" width="500" height="350" />
+	<source src="G:\BCA\lecturers\HTML\Exercise File\Chap10\media\video.m4v" type="video/mp4">
+	<source src="G:\BCA\lecturers\HTML\Exercise File\Chap10\media\video.ogg" type="video/ogg">
+	<source src="G:\BCA\lecturers\HTML\Exercise File\Chap10\media\video.webm" type="video.webm">
+	<p>ur browser does not support HTML5 video feature.</p>
+</video>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form containing HTML5 tags</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+<div style=" background-color: yellowgreen">
+<form ><!-- we can also use autocomplete attr for the whole form by placing it in for tag -->
+
+<p>this is example of placeholder , autofocus and autocomplete(autocomplete means what ever us enter in txtb is stored and will be displayed when we press down key. working in IE)</p>
+<input type="text" placeholder="enter your text here...." autocomplete="on" autofocus></input>
+<input type="submit" value="go"></input>
+</form>
+</div>
+
+<div>
+<form>
+<p>you can't submit form without entering below text box</p>
+<input type="text" placeholder="you must enter something" required ></input>
+<input type="submit" value="go"></input>
+</form>
+</div>
+<div>
+
+
+<form>
+<p>this is example of data list (enter BCA subjects to see the result..)</p>
+<label for=""> Enter BCA subjects</label>
+<input type="text" placeholder="Enter subjects name" list="subjects" ></input>
+<input type="submit" value="go"></input>
+
+<datalist id=subjects>
+<option>digital electronics</option>
+<option>math A</option>
+<option>math B</option>
+<option>c programming</option>
+<option>c++ programming</option>
+<option>database</option>
+<option>computer organisation and architecture</option>
+<option>system analysis design and implementation</option>
+<option>data structures</option>
+<option>pc software</option>
+<option>data communication and networks</option>
+<option>operating system</option>
+<option>multimedia</option>
+<option>visual basic</option>
+<option>web designing</option>
+</datalist>
+</form>
+</div>
+<br/>
+
+
+<div style="background-color: teal;">
+<form>
+<p>this is the example of input type SEARCH</p>
+<div>
+	<input type="search" placeholder="Enter your search string here" required></input>
+	<input type="submit" value="go"></input>
+</div>
+</form>
+</div>
+<br/>
+<div style="background-color: olive;">
+
+<p>this is the example of input type E-MAIL</p>
+<div>
+<form>
+	<input type="email" placeholder="Enter your e-mail id" ></input>
+	<input type="submit" value="go"></input>
+</form>
+</div>
+<div>
+<form>
+<p>this emial box can contain multiple email address seperated by coma</p>
+	<input type="email" placeholder="Enter your e-mail id" multiple></input>
+	<input type="submit" value="go"></input>
+</form>
+</div>
+
+</div>
+<br/>
+<div style="background-color: lime;">
+<form>
+<p>this is the example of input type URL</p>
+<div>
+	<input type="url" placeholder="Enter url"></input>
+	<input type="submit" value="go"></input>
+</div>
+</form>
+</div>
+<br/>
+
+
+<div style="background-color: lime;">
+	<div>
+	 <p>this is the example of input type date</p>
+	<form>
+		<input type="date" ></input>
+		<input type="submit" value="go"></input>
+	</form>
+	</div>	
+
+	<div>
+	 <p>this is the example of input type date with patter arrt. which can help in validate date in the those browser which does not support date input type like in fire fox</p>
+	<form>
+		<input type="date" pattern="\d{2}-\d{2}-\d{4}" ></input>
+		<input type="submit" value="go"></input>
+	</form>
+	</div>
+
+	<div>
+	<p>this is the example of input type datetime</p>
+	<input type="datetime"></input>
+	<input type="submit" value="go"></input>
+	</form>
+	</div>
+
+	<div>
+	<form>
+	<p>this is the example of input type week</p>
+		<input type="week"></input>
+		<input type="submit" value="go"></input>
+	</form>
+	</div>
+
+	<div>
+	<form>
+	<p>this is the example of input type month</p>
+		<input type="month"></input>
+	<input type="submit" value="go"></input>
+	</form>
+	</div>
+
+	<div>
+	<form>
+	<p>this is the example of input type color</p>
+		<input type="color"></input>
+	<input type="submit" value="go"></input>
+	</form>
+	</div>
+
+	<div>
+	<form>
+	<p>this is the example of input type time</p>
+		<input type="time"></input>
+	<input type="submit" value="go"></input>
+	</form>
+</div>
+</body>
+</html>

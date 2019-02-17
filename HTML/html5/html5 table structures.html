@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>html5 table structure</title>
+<style type="text/css">
+tr:nth-child(even) {background-color:lightblue}
+tr:nth-child(odd) {background-color:whitesmoke}
+*{padding:0px;margin: 0px;}
+table{
+	   margin: 30px;
+	   border-spacing: 0px;
+	   border: 2px solid silver;
+	 }
+div{overflow: auto;}
+thead th,tfoot td{background-color: gainsboro!important;}
+caption{caption-side: bottom;font: bolder 25px arial;color: maroon;text-decoration: underline;}
+thead th,table td,table th{padding:10px 15px;}
+thead th{font: bold 20px tahoma;color: teal;}
+tbody td{font: normal 15px comic sans ms;color: #333333;text-align: center;}  
+tfoot td{font:bold 15px courier;color:#333333;background-color: silver;text-decoration: underline;}
+
+</style>
+</head>
+<body>
+<h1>HTML5 table structures</h1>
+<div>
+<table> 
+   <caption>Result of BCA 3rd year session 2015-2016</caption>   
+   <thead>
+      <tr>
+		   <th>Roll no</th>
+		   <th>Name</th>
+		   <th>Marks</th>
+		   <th>M marks</th>
+		   <th>Address</th>
+		   <th>Contact no.</th>
+      </tr>
+   </thead>
+                <!-- tfoot can be before/after tbody tags but it should be inside table tag -->
+   <tfoot>
+   	<tr>
+   		<td>--End--</td>
+   		<td>--End--</td>
+   		<td>--End--</td>
+   		<td>--End--</td>
+   		<td>--End--</td>
+   		<td>--End--</td>
+   	</tr>	
+   </tfoot>
+
+	   <tbody>
+		   <tr>
+			   <td >100</td>
+			   <td>adil</td>
+			   <td>50</td>
+			   <td>100</td>
+			   <td>solina</td>
+			   <td>9960548452</td>
+		   </tr>
+		   
+		   <tr>
+			   <td>101</td>
+			   <td >zahid</td>
+			   <td>64</td>
+			   <td>100</td>
+			   <td>raambagh</td>
+			   <td>9622511677</td>
+		   </tr>
+		   
+		   <tr>
+			   <td>102</td>
+			   <td>amir</td>
+			   <td >86</td>
+			   <td>100</td>
+			   <td>batamaloo</td>
+			   <td>9797182778</td>
+		   </tr>
+		   
+		   <tr>
+			   <td>103</td>
+			    <td>waseem</td>
+			   <td>45</td>
+			   <td >100</td> 
+			   <td>lal chowk</td>
+			   <td>9797856247</td>
+		   </tr>
+		   
+		   <tr>
+			   <td>105</td>
+			    <td>aqib</td>
+			   <td>91</td>
+			   <td>100</td> 
+			   <td >hazuri bagh</td>
+			   <td>9797856247</td>
+		   </tr>
+
+		   <tr>
+			   <td>106</td>
+			    <td>yasir</td>
+			   <td>67</td>
+			   <td>100</td> 
+			   <td>natipora</td>
+			   <td>8036554785</td>
+		   </tr>
+	   </tbody>
+   </table>
+</div>
+</body>
+</html>
