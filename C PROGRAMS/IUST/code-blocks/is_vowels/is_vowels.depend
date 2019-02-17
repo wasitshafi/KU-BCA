@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1507883477 source:c:\users\jhon pc\desktop\code-blocks\is_vowels\main.c
+	<stdio.h>
+	<stdlib.h>
+
