@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html> 
+<script language="vbscript" type="text/vbscript"> 
+<!-- 
+ Function sumandprod()   
+  dim num
+  dim r
+  dim sum 
+  dim prod
+  sum = 0
+  prd = 1
+
+
+
+  num = inputbox("Enter any Positive number")
+
+  While num <> 0
+ 
+  r = num mod 10
+  prd = prd * r 
+  sum = sum + r
+ 
+  num = num / 10
+
+  Wend 
+
+  msgbox("Sum of digits is : " & sum)
+  msgbox("Product of digits is : " & prd)  
+
+  End Function
+//-->
+</script> 
+<body>  
+<input type="button" value="compute factorial" onclick="sumandprod()"><br/><br/>
+
+
+</body> 
+</html> 

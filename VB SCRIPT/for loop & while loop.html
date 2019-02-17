@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html> 
+<script language="vbscript" type="text/vbscript"> 
+<!-- 
+ Function fact()   
+  dim num
+  dim fct
+  dim i
+    num = Cint(inputBox("Enter any positive integer number upto  10"))
+   fct = 1
+   for i = 1 to num  Step 1
+     fct = fct * i
+   next
+   msgbox ("Factorial of  " & num  & " is : " & fct)
+  End Function
+
+ Function sumton()   
+  dim num
+  dim sum 
+  dim i
+    num = Cint(inputBox("Enter upper Bound"))
+  i=1
+  sum=0
+
+   While i <= num 
+    sum = sum  + i
+    i=i+1
+   Wend   
+   msgbox ("Sum of digits from 1 to " & num & " is : " & sum)
+  End Function
+//-->
+</script> 
+<body>  
+<input type="button" value="compute factorial" onclick="fact()"><br/><br/>
+
+<input type="button" value="compute sum to n" onclick="sumton()"><br/><br/>
+
+</body> 
+</html> 

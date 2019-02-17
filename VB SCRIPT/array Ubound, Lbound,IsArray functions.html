@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html> 
+<script language="vbscript" type="text/vbscript">  
+  <!--
+
+
+Function fun1()
+  dim arr1(10)
+  arr1(0) = 0
+  arr1(1) = 1
+  arr1(2) = 2
+  arr1(3) = 3
+  arr1(4) = 4
+  arr1(5) = 5
+  arr1(6) = 6
+  arr1(7) = 7
+msgbox("Array Lbound is : " & LBound(arr1))
+msgbox("Array Ubound is : " & UBound(arr1))
+msgbox("Value of IsArray(arr1) is : " & IsArray(arr1))
+
+End Function
+
+
+Function fun2()
+dim arr(2,3)
+
+
+
+msgbox("The lower subscript of the first dimension of arr(2,3) is : " & LBound(arr,1))
+
+msgbox("The lower subscript of the second dimension of arr(2,3) is : " & LBound(arr,2))
+
+msgbox("The upper subscript of the first dimension of arr(2,3) is : " & UBound(arr,1))
+
+msgbox("The upper subscript of the second dimension of arr(2,3) is : " & UBound(arr,2))
+
+
+msgbox("Value of IsArray(arr) is : " & IsArray(arr))
+
+End Function
+
+  //--> 
+</script> 
+<body> 
+<input type="button" onclick="fun1()" value="1d Array"><br/><br/>
+<input type="button" onclick="fun2()" value="2d Array">
+
+</body> 
+</html> 

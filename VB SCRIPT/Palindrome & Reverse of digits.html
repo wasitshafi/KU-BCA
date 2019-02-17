@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html> 
+<script language="vbscript" type="text/vbscript"> 
+<!-- 
+ Function palindromeandreverse()   
+  dim num
+  dim copy
+  dim sum 
+  dim r
+  sum = 0
+ 
+
+
+
+  num = inputbox("Enter any Positive number")
+  copy = num
+
+  While copy <> 0
+ 
+  r = copy mod 10
+ 
+  sum = (sum * 10) + r
+  copy = fix(copy / 10) ' if not used fix then it will take 6 digits after . point
+
+  Wend 
+
+  'msgbox("val if sum " & sum )
+ 
+ if(sum = num) then
+  msgbox("Reverse of digits is : " & sum & " its also a palindrome number.")
+Else
+  msgbox("Reverse of digits is : " & sum & " its not  a palindrome number.")
+End if
+  End Function
+//-->
+</script> 
+<body>  
+<input type="button" value="compute factorial" onclick="palindromeandreverse()"><br/><br/>
+
+
+</body> 
+</html> 

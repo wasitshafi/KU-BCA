@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>this is title</title>
+<script type="text/vbscript">
+Function fun1()
+dim str
+str = Inputbox("Enter string : " )
+msgbox ("Original string is : " & str)
+msgbox ("String  after UCase is : " & UCase(str))
+End Function
+
+Function fun2()
+dim str
+str = Inputbox("Enter string : " )
+msgbox ("Original string is : " & str)
+msgbox ("String  after LCase is : " & LCase(str))
+End Function
+
+
+Function lft()
+dim str
+str = "Microsoft"
+msgbox ("str='Microsoft'  and value of Left(str,3) is : " & Left(str,3)) 
+msgbox ("str='Microsoft vbscript'  and value of Left(str,20) is : " & Left(str,20)) 
+End Function
+
+
+Function ryt()
+dim str
+str = "Microsoft"
+msgbox ("str='Microsoft' and value of Left(str,3) is : " & Right(str,3)) 
+msgbox ("str='Microsoft' and value of Left(str,20) is : " & Right(str,20)) 
+End Function
+
+
+Function md()
+dim str
+str = "Microsoft"
+msgbox ("str='Microsoft'  and value of Mid(str,3) is : " & Mid(str,3)) 
+msgbox ("str='Microsoft' and value of Mid(str,3,5) is : " & Mid(str,3,5))
+msgbox ("str='Microsoft' and value of Mid(str,3,20) is : " & Mid(str,3,20)) 
+End Function
+
+
+Function ltrtt()
+dim str
+str = "       Microsoft       "
+msgbox ("str='       Microsoft       '  and value of LTrim(str) is :<" & LTrim(str) & ">") 
+msgbox ("str='       Microsoft       '  and value of RTrim(str) is :<" & RTrim(str) & ">") 
+msgbox ("str='       Microsoft       '  and value of Trim(str) is :<" & Trim(str) & ">") 
+End Function
+
+
+Function ln()
+dim str
+str = " Microsoft"
+msgbox ("str=' Microsoft'  and value of Len(str) is : " & Len(str)) 
+str = " Micro     soft"
+msgbox ("str='Micro     soft'  and value of Len(str) is : " & Len(str)) 
+End Function
+
+
+Function sp()
+dim str1
+dim str2
+dim s
+str1 = " Microsoft"
+str2 = " VbScript"
+s = InputBox ("Enter no of spaces betwen two words: ")
+msgbox ("str1='Microsoft' and str2='Vbscript' , There are n spaces between 2 words  : " & str1 & Space(s) & str2)  
+End Function
+
+
+Function scmp()
+dim str1
+dim str2
+dim res
+str1 = InputBox ("Enter string 1")
+str2 = InputBox ("Enter string 2")
+res = StrComp(str1,str2,1) ' 0(default) for binary comparison, 1 for text comparison)
+
+If res = -1 then
+	Msgbox("Str1 is less than Str2.")
+
+	ElseIf res = 0 then
+	Msgbox("Str1 is equalto Str2.")
+
+	ElseIf res = 1 then
+	Msgbox("Str1 is greater than Str2.")
+End If
+End Function
+
+
+Function srev()
+dim str
+str = InputBox ("Enter string 1")
+	Msgbox("Entered string is : " & str & ",and its reverse is : " & StrReverse(str))
+
+End Function
+
+Function repp()
+dim str
+str = "This is vb programming"	
+Msgbox ("Srt = 'This is vb programming' and the value of Replace(str,'vb',MS VBSCRIPT) is : " & Replace(str,"vb","MS VBSCRIPT"))
+
+End Function
+
+</script>
+</head>
+
+<body>
+<input type="button" value="uppercase" onclick="fun1()"><br/><br/>
+<input type="button" value="lowercase" onclick="fun2()"><br/><br/>
+<input type="button" value="Left" onclick="lft()"><br/><br/>
+<input type="button" value="Right" onclick="ryt()"><br/><br/>
+<input type="button" value="Mid" onclick="md()"><br/><br/>
+<input type="button" value="LTrim,RTrim & Trim" onclick="ltrtt()"><br/>
+<br/>
+<input type="button" value="Len" onclick="ln()"><br/><br/>
+<input type="button" value="Space" onclick="sp()"><br/><br/>
+<input type="button" value="StrComp" onclick="scmp()"><br/><br/>
+<input type="button" value="StrReverse" onclick="srev()"><br/><br/>
+<input type="button" value="Replace" onclick="repp()"><br/><br/>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+<html> 
+<script language="vbscript" type="text/vbscript">  
+
+Function funascii()
+
+dim char
+char =  inputbox("Enter any character: ")
+msgbox ("Ascii code of character is : " & Asc(char))
+End function
+
+
+
+Function funcharcode()
+dim charcode
+charcode =  inputbox("Enter any character code: ")
+msgbox ("Character having give code is  : " & chr(charcode))
+
+End function
+
+</script> 
+<body> 
+
+<input type="button" value="display ascii code" onclick="funascii()">
+<input type="button" value="display character" onclick="funcharcode()">
+
+</body> 
+</html> 

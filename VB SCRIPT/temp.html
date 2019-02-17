@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>ThaiCreate.Com Tutorial</title>
+<script language="vbscript" type="text/vbscript"> 
+
+Function chkShowInput_OnClick()
+
+If form1.chkShowInput.Checked = True Then
+Document.form1.Elements("txtName1").Value = "ThaiCreate.Com 1"
+Document.form1.Elements("txtName2").Value = "ThaiCreate.Com 2"
+ELse
+Document.form1.Elements("txtName1").Value = ""
+Document.form1.Elements("txtName2").Value = ""
+End IF
+End Function
+ 
+Function btnCheck_OnClick()
+ 
+Dim i
+For i = 1 To 4
+MsgBox (Document.getElementByID("txtName"&i).Value)
+Next
+' or Document.getElementByID("txtName1").Value
+' or Document.getElementByID("txtName2").Value
+' or Document.getElementByID("txtName3").Value
+' or Document.getElementByID("txtName4").Value
+' or Var = Document.getElementsByName("txtName1")
+' or Var.Value
+End Function
+ 
+</script>
+
+<body>
+<form name="form1" method="post" action="">
+<input type="checkbox" name="chkShowInput" value="Y"><br>
+<input type="text" name="txtName" id="txtName1" value="">
+<input type="text" name="txtName" id="txtName2" value="">
+<br><br>
+<input type="text" name="txtName" id="txtName3" value="Test1">
+<input type="text" name="txtName" id="txtName4" value="Test2">
+<input type="button" name="btnCheck" value="GetValue">
+</form>
+
+
+</body>
+</html>
