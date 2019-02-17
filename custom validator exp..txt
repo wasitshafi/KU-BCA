@@ -1,0 +1,14 @@
+the control for custom validation should be regular expression validator:-
+
+for capital and small alphabits
+(^[A-Za-z\s]+$)
+
+for valid email id 
+\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*
+
+For valid phone number of length 10
+([0-9]{10}|[0-9]{10})
+for numaric numbers
+^[-+]?[0-9]*\.?[0-9]*([?[0-9]+)?$
+only numbers 
+([0-9]+)
