@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM item() Method</title>
+	<style type="text/css">
+	
+		.cone{font-family: comic sans ms;}
+	</style>
+</head>
+<body>
+<div style="border:3px solid lightblue;background-color:whitesmoke;color:#555555;">
+<h1/><code>Item() method</code></h1>
+
+The item() method returns the node at the specified index in a NamedNodeMap, as a Node object.<br/>
+The nodes are sorted as they appear in the source code, and the index starts at 0.<br/>
+<code>Note:</code>There are two ways to access an attribute node at the specified index in a NamedNodeMap:	
+
+<br/><hr/><br/>
+
+<h1/><code>Length property</code></h1>
+The length property returns the number of nodes in a NamedNodeMap object.<br/>
+A Node object's attributes is an example of a NamedNodeMap object.<br/>
+
+
+<br/><hr/><br/>
+<h1/><code>Value property</code></h1>
+The value property sets or returns the value of the attribute.	
+</div>
+<br/>
+	
+<input type="button" onclick="alert('Button Clicked');" value="Click here" id="bt1"></input>
+<p id="p1"></p>
+<h2>Second method</h2>
+<br/><hr/><br/>
+<div id='div1' style="border:2px solid lightgreen;">
+This is div.		
+</div>
+
+<p id="p2"></p>
+<br/><hr/><br/>
+
+<input type="button" value="HOME" onclick="alert('button clicked')" title="this is button" id="bt2" class="cone"></input>
+<p id="p3"></p>
+<br/><hr/><br/>
+
+
+<script type="text/javascript">
+<!--
+
+	
+	var x = document.getElementById('bt1').attributes.item(0).nodeName;
+	document.getElementById('p1').innerHTML = "Value of { <b>document.getElementById(\'bt1\').attributes.item(0).nodeName</b>} is : " + x;
+	//*********************************************************
+	
+	x = document.getElementById('div1').attributes[0].nodeName;
+	document.getElementById('p2').innerHTML = "Value of { <b>document.getElementById('div1').attributes[0].nodeName;</b>} is : " + x;
+		//*********************************************************
+
+	var i;
+	document.getElementById('p3').innerHTML = "<b>The above button has following attributes.</b></br>"
+ 	for(i = 0; i< document.getElementById('bt2').attributes.length;i++)
+		{
+		  document.getElementById('p3').innerHTML += document.getElementById('bt2').attributes.item(i).nodeName + '\t\t\t\t\t=\t\t\t\t\t' + document.getElementById('bt2').attributes[i].value + '<br/>';
+
+		}
+		//*********************************************************
+
+	
+	
+	
+//-->
+</script>
+
+</body>
+</html>

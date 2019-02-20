@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>date object and setinterval function</title>
+	<script type="text/javascript">
+	<!--
+     function print_datentime()
+     {
+     	var today=new Date();
+          document.getElementById('lbltime').innerHTML = today;
+          setInterval("print_datentime()",1000);          
+     }
+	function getdate()
+	{
+		dt = new Date();
+		alert('dt.getdate = ' + dt.getDate());
+	}
+	function getday()
+	{
+		dt = new Date();
+		alert('dt.getday = ' + dt.getDay());
+	}
+	function getfullyear()
+	{
+		dt = new Date();
+		alert('dt.getfullyear = ' + dt.getFullYear());
+	}
+	function getmonth()
+	{
+		dt = new Date();
+		alert('dt.getmonth = ' + dt.getMonth());
+	}
+	function gethours()
+	{
+		dt = new Date();
+		alert('dt.gethour = ' + dt.getHours());
+	}	
+	function getminutes()
+	{
+		dt = new Date();
+		alert('dt.getminutes = ' + dt.getMinutes());
+	}	
+	function getseconds()
+		{
+		dt = new Date();
+		alert('dt.getseconds = ' + dt.getSeconds());
+	}	
+	function getmiliseconds()
+	{
+		dt = new Date();
+		alert('dt.getseconds = ' + dt.getMilliseconds());
+	}
+	function datestring()
+	{
+		dt = new Date();
+		alert('dt.todatestring = ' + dt.toDateString());
+	}	
+	function gmtstring()
+	{
+		dt = new Date();
+		alert('dt.gmtstring = ' + dt.toGMTString());
+	}
+	function localedatestring()
+	{
+		dt = new Date();
+		alert('dt.tolocaledatestring = ' + dt.toLocaleDateString());
+	}	
+	function localestring()
+	{
+		dt = new Date();
+		alert('dt.tolocalestring = ' + dt.toLocaleString());
+	}
+	function localetimestring()
+	{
+		dt = new Date();
+		alert('dt.tolocaletimestring = ' + dt.toLocaleTimeString());
+	}
+//-->
+    </script>
+</head>
+<body onload="print_datentime()">
+<div>
+<p style="display: inline;">Time:</p>
+<p id=lbltime style="display: inline;background-color:lightgreen;color: gray;text-shadow: 0px 0px 1px gray;"></p>     
+<br/><br/><input type="button" value="show getdate" onclick="getdate();"></input>
+<br/><br/><input type="button" value="show getday" onclick="getday();"></input>
+<br/><br/><input type="button" value="show getfullyear" onclick="getfullyear();"></input>
+<br/><br/><input type="button" value="show getmonth" onclick="getmonth();"></input>
+<br/><br/><input type="button" value="show gethour" onclick="gethours();"></input>
+<br/><br/><input type="button" value="show getminutes" onclick="getminutes();"></input>
+<br/><br/><input type="button" value="show getsecond" onclick="getseconds();"></input>
+<br/><br/><input type="button" value="show getmilisecond" onclick="getmiliseconds();"></input>
+<br/><br/><input type="button" value="show todatesring" onclick="datestring();"></input>
+<br/><br/><input type="button" value="show togmtstring" onclick="gmtstring();"></input>
+<br/><br/><input type="button" value="show tolocaledatestring" onclick="localedatestring();"></input>
+<br/><br/><input type="button" value="show tolocalestring" onclick="localestring();"></input>
+<br/><br/><input type="button" value="show tolocaletimestring" onclick="localetimestring();"></input>
+
+</div>
+</body>
+</html>

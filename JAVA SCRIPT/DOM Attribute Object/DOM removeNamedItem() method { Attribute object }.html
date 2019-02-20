@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM removeNamedItem() method</title>
+</head>
+<body>
+
+<h1>DOM removeNamedItem()</h1>
+<h3>The removeNamedItem() method removes the node with the specified name in a NamedNodeMap object.</h3>
+
+<input type="button" onclick="alert('Button Clicked');" value="Click here" id="bt1"></input>
+<p id="p1"></p>
+
+	<input type="button" onclick="fun1();" value="remove onclick attribute of above button"></input>
+
+
+<script type="text/javascript">
+
+<!--
+	
+document.getElementById('p1').innerHTML = "Value of { <b>document.getElementById(\'bt1\').attributes.getNamedItem(\'onclick\').value</b> } is:" + document.getElementById('bt1').attributes.getNamedItem('onclick').value;
+
+function fun1()
+{
+	document.getElementById('bt1').attributes.removeNamedItem('click');
+		
+}
+
+
+//-->
+</script>
+</body>
+</html>

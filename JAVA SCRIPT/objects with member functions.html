@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>creating objects and member function</title>
+	<script type="text/javascript">
+	<!--
+
+    function person(name,age,address)
+    {
+	 this.name=name;
+	 this.age=age;
+	 this.address=address;
+     this.votestatus=cal_age;
+    }
+    function cal_age(){   //this function is a member function of class person
+        var status;
+        if (this.age>=18)
+        {
+         status="Eligible for voting";
+        }
+        else
+        {
+         status="Not Eligible for voting";
+        }
+        return status;
+    }
+    var obj1=new person("amir",20,"solina payeen srinagar");
+    var obj2=new person("fazan",14,"raambagh");
+    var obj3=new person("aqir",28,"barzulla srinagar");
+  //-->
+  </script>
+</head>
+<body>
+<input type="button" value="display obj1" onclick="alert(obj1.name+' '+obj1.age+' '+obj1.address+' '+obj1.votestatus() );"></input>
+<br/>
+<br/>
+<input type="button" value="display obj2" onclick="alert(obj2.name+' '+obj2.age+' '+obj2.address+' '+obj2.votestatus() );"></input>
+<br/>
+<br/>
+<input type="button" value="display obj3" onclick="alert(obj3.name+' '+obj3.age+' '+obj3.address+' '+obj3.votestatus() );"></input>
+
+</body>
+</html>

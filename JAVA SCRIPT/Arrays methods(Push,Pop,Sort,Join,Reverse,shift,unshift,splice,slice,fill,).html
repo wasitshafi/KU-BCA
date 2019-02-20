@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays methods...(push,pop,sort,join,reverse)</title>
+	<script type="text/javascript">
+	<!--
+   
+    var arr1=new Array("one","two","three","four");
+//-->
+    </script>
+</head>
+<body>
+<input type="button" value="display array1" onclick="alert(arr1);"></input>
+<br/>
+<br/>
+<input type="button" value="reverse array &amp display" onclick="alert(arr1.reverse());"></input>
+<br/>
+<br/>
+<input type="button" value="Sort array &amp display" onclick="alert(arr1.sort());"></input>
+<br/>
+<br/>
+<input type="button" value="push new element &amp display" onclick="arr1.push('new1');alert(arr1);"></input>
+<br/>
+<br/>
+<input type="button" value="pop element &amp display" onclick="arr1.pop();alert(arr1);"></input>
+<br/>
+<br/>
+                                                          <!-- by default it is comma betwen array elements -->
+<input type="button" value="save all element  in string &amp display" onclick="var str=arr1.join('_');alert(str);"></input>
+<br/>
+<br/>
+<input type="button" value="unshift() and display" onclick="arr1.unshift('new1','new2');alert(arr1);" ></input>
+<br/>
+<br/>
+<input type="button" value="shift() and show" onclick="var t;t = arr1.shift();alert('Item removed :' + t);alert('array elements are :' + arr1);" ></input>
+<br/>
+<br/>
+<input type="button" value="splice(2,1) and display" onclick="arr1.splice(2,1,'new1','new2');alert(arr1);" ></input>
+ITS SYNTAX : array.splice(index,howmany,item1,.....,itemX).  and IT MEANS :At position 2, add the new items, and remove 1 item:
+<br/>
+<br/>
+<input type="button" value="slice(1,3) and show" onclick="var temp;temp = arr1.slice(1,3);alert(temp);"></input>
+<br/>
+<br/>
+<input type="button" value="fill() and show" onclick="temp = arr1.fill('NULL');alert(arr1);"></input>
+<br/>
+<br/>
+<input type="button" value="fill('Null',2,arr1.length) and show" onclick="temp = arr1.fill('Null',2,arr1.length);alert(arr1);"></input>
+
+</body>
+</html>

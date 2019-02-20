@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML 5 video tag</title>
+	<script type="text/javascript">
+/*      function play()
+      {
+      	if(!document.solarenergyvideo.isplaying())
+      	{
+      		document.solarenergyvideo.Play();
+      	}
+}	*/
+var myvideo;
+function init()
+{
+	myvideo= document.getElementById('solarenergyvideo')
+}
+
+function play(){ myvideo.play(); }
+
+function pause(){ myvideo.pause(); }
+
+function rewind(){ myvideo.currentTime=0; }
+
+window.onload=init;
+	</script>
+</head>	 
+<body> 
+<h1>HTMl5 video tag:</h1>
+<video class="vd1" id="solarenergyvideo" width="500" height="350" controls/>
+	<source src="G:\BCA\lecturers\HTML\Exercise File\Chap10\media\video.m4v" type="video/mp4">
+	<source src="G:\BCA\lecturers\HTML\Exercise File\Chap10\media\video.ogg" type="video/ogg">
+	<source src="G:\BCA\lecturers\HTML\Exercise File\Chap10\media\video.webm" type="video.webm">
+	<p>ur browser does not support HTML5 video feature.</p>
+</video>
+<br/>
+<form name="controls">
+<input type="button" value="play" onclick="play();"></input>
+<input type="button" value="pause" onclick="pause();"></input>
+<input type="button" value="rewind" onclick="rewind();"></input>
+</form>
+</body>
+</html>

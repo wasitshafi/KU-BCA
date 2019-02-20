@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>window location  &amp; history properties</title>
+<script type="text/javascript">
+</script>
+<body> <!-- it can be also only location._______ -->
+	<input type="button" value="show window.location" onclick="alert(window.location);"></input><br/><br/>
+	<input type="button" value="show window.location.href" onclick="alert('Page loction is : ' + window.location.href);"></input><br/><br/>
+	<input type="button" value="show loocation.hostname" onclick="alert('Page host name is : ' + location.hostname);"></input><br/><br/>
+	<input type="button" value="show location.pathname" onclick="alert('Page host name is : ' + location.pathname);"></input><br/><br/>
+	<input type="button" value="show location.protocol" onclick="alert('Page protocol is : ' + location.protocol);"></input><br/><br/>
+	<input type="button" value="show location.assign()" onclick="alert('this page will now goto the location http://www.snapdeal.com');location.assign('http://www.snapdeal.com');"></input><br/><br/>
+<br/><hr/>
+<div style="border:1px solid lightblue;">
+	<input type="button" value="Go Back <==" onclick="window.history.back();" style="padding:5px 10px;"></input>
+	<input type="button" value="Go Forward ==>" onclick="history.forward();" style="padding:5px 10px;"></input>
+	<input type="button" value="Go 2 steps back" onclick="window.history.go(-2);" style="padding:5px 10px;"></input>
+<p id="p1"></p>
+</div>
+<script type="text/javascript">
+
+document.getElementById('p1').innerHTML ="Number of URLs in history list  is : " + history.length;
+	
+</script>
+</body>
+</html>

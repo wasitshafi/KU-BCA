@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM setNamedItem() method</title>
+<style type="text/css">
+	.cone{font-family: comic sans ms;color:gray;}	
+
+</style>
+</head>
+<body>
+
+<h1>DOM setNamedItem()</h1>
+<p>The setNamedItem() method adds the specified node to the NamedNodeMap.<br/>
+If the node already exists, it will be replaced, and the replaced node will be the return value, otherwise the return value will be null.<br/>
+Tip: Instead of working with attribute nodes, you could use the element.setAttribute() method to add an attribute with a value to an element. </p>
+<br/>
+	
+<input type="button" onclick="alert('Button Clicked');" value="Click here" id="bt1"></input>
+<p id="p1"></p>
+
+<input type="button" onclick="fun1();" value="set attribute to above attribute(class)"></input>
+
+
+<script type="text/javascript">
+
+<!--
+	
+document.getElementById('p1').innerHTML = "Value of { <b>document.getElementById(\'bt1\').attributes.getNamedItem(\'onclick\').value</b> } is:" + document.getElementById('bt1').attributes.getNamedItem('onclick').value;
+
+function fun1()
+{
+    var btn = document.getElementById('bt1'); 
+    var typ = document.createAttribute('class');
+    typ.value = "cone";
+	btn.attributes.setNamedItem(typ);
+		
+}
+
+
+//-->
+</script>
+</body>
+</html>

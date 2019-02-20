@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript validation</title>
+	<script type="text/javascript">
+	function validate()
+	{
+		if (document.admfrm.txtbname.value =="") 
+			{
+			 alert("please enter ur name");
+			 document.admfrm.txtbname.focus();
+			 return false;
+			}
+		if (document.admfrm.txtbemail.value =="") 
+		   {
+		   	alert("please enter ur email id");
+			document.admfrm.txtbemail.focus();
+			 return false;
+		   } 
+		if (document.admfrm.txtbpin.value =="" || isNaN(document.admfrm.txtbpin.value) || document.admfrm.txtbpin.value.length !=4)
+		   {
+		   	alert("please enter pin in format ####");
+			document.admfrm.txtbpin.focus();
+			 return false;
+		   } 
+		if (document.admfrm.state.value=="-1" )
+		   {
+		   	alert("please select ur city");
+			document.admfrm.state.focus();
+			 return false;
+		   } 	
+	}
+	</script>
+</head>
+<body>
+<form name="admfrm" onsubmit="return(validate());" method="post">
+Name:<input type="text" name="txtbname"></input>
+<br/>	
+email:<input type="email" name="txtbemail"></input>	
+<br/>	
+pin:<input type="text" name="txtbpin"></input>	
+<br/>	
+contact:<input type="text" name="txtbcno"></input>	
+<br/>	
+state:
+ <select name="state">
+      <OPTION value="-1" disabled selected>--SELECT--</option>
+      <OPTION value="srinagar">Srinagar</option>
+	  <option value="budgam">Budgam</option>
+	  <option value="bandipora">Bandipora</option>
+  	  <option value="ganderbal">Ganderbal</option>			
+ 	  <option value="sopian">Sopian</option>
+	  <option value="kupwara">Kupwara</option>
+	  <option value="jammu">Jammu</option>
+	  <option value="udhampur">Udhampur</option>
+	  <option value="doda">Doda</option>
+	  <option value="banihal">Banihal</option>
+	</select>	
+<br/>	
+<input type="submit" value="Sumbit"></input>
+<br/>	
+</form>
+</body>
+</html>

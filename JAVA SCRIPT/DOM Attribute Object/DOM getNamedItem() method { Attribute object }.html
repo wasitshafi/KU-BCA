@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM getNamedItem() method</title>
+</head>
+<body>
+
+<h1>DOM getNamedItem()</h1>
+<h3>
+The getNamedItem() method returns the attribute node with the specified name from a NamedNodeMap object.</h3>
+	
+<input type="button" onclick="alert('Button Clicked');" value="Click here" id="bt1"></input>
+<p id="p1"></p>
+
+<input type="button" value="Click here" id="bt2"></input>
+<p id="p2"></p>
+
+<script type="text/javascript">
+
+<!--
+	
+document.getElementById('p1').innerHTML = "Value of { <b>document.getElementById(\'bt1\').attributes.getNamedItem(\'onclick\').value</b> } is:" + document.getElementById('bt1').attributes.getNamedItem('onclick').value;
+
+document.getElementById('p2').innerHTML = "Value of { <b>document.getElementById(\'bt2\').attributes.getNamedItem(\'type\').value</b> } is:" + document.getElementById('bt2').attributes.getNamedItem('type').value;
+
+
+
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Window Location  Object</title>
+
+<style type="text/css">
+	*{word-break: break-all;margin: 5px;}
+	div{padding: 10px;}
+	</style>
+	<body>
+		<a href="#TOP"></a>
+		
+<h1 style="color:green;">Location Object</h1>
+<h3 style="color:steelblue;" >The location object contains information about the current URL.<br/>
+The location object is part of the window object and is accessed through the window.location property.<br/>
+Note: There is no public standard that applies to the location object, but all major browsers support it.
+</h3><br/><hr/><br/>
+		
+		
+<div style="border:2px solid #123456;background-color:whitesmoke;color:#567890">
+
+<h2 style="color:#444444";>Location.reload</h2>
+<p>The reload() method is used to reload the current document.<br/>
+The reload() method does the same as the reload button in your browser.<br/>
+By default, the reload() method reloads the page from the cache, but you can force it to reload the page from the server by setting the forceGet parameter to true: location.reload(true).<br/>
+</p><hr/><br/>
+	
+	
+<h2 style="color:#444444";>Location.assign()</h2>
+<p>
+The assign() method loads a new document.<br/>
+The difference between this method and replace(), is that replace() removes the URL of the current document from the document history, meaning that it is not possible to use the "back" button to navigate back to the original document.
+<br/></p><hr/><br/>
+
+	
+<h2 style="color:#444444";>Location.replace()</h2>
+<p>The replace() method replaces the current document with a new one.<br/>
+<b>The difference between this method and assign(), is that replace() removes the URL of the current document from the document history, meaning that it is not possible to use the "back" button to navigate back to the original document.</b><br/>
+<i>Tip: Use the assign() method if you want to load a new document, and the option to navigate back to the original document.</i><br/>
+</p><hr/><br/>
+
+	
+<h2 style="color:#444444";>Location.href</h2>
+<p>The href property sets or returns the entire URL of the current page.<br/>
+<b>Possible values:</b><br/><br/>
+	<i>1. </i> An absolute URL - points to another web site (like location.href="http://www.example.com/default.htm")<br/>
+<i>2. </i>A relative URL - points to a file within a web site (like location.href="default.htm")<br/>
+<i>3. </i>An anchor URL - points to an anchor within a page (like location.href="#top")<br/>
+<i>4. </i>A new protocol - specifies a different protocol (like location.href="ftp://someftpserver.com", location.href="mailto:someone@example.com" or location.href="file://host/path/example.txt")<br/>
+
+</p><hr/><br/>
+
+	
+<h2 style="color:#444444";>Location.pathname</h2>
+<p>The pathname property sets or returns the pathname of a URL.<br/>
+</p><hr/><br/>
+
+	
+<h2 style="color:#444444";>Location.protocol</h2>
+<p>
+
+</p><hr/><br/>
+
+	
+<h2 style="color:#444444";>Location.port</h2>
+<p>The host property sets or returns the hostname and port of a URL.<br/>
+Note: If the port number is not specified in the URL (or if it is the scheme's default port - like 80, or 443), some browsers will not display the port number.<br/>
+</p><hr/><br/>
+	
+<h2 style="color:#444444";>Location.search</h2>
+<p>
+The search property sets or returns the querystring part of a URL, including the question mark (?).<br/>
+The querystring part is the part of the URL after the question mark (?). This is often used for parameter passing.<br/>
+</p><hr/><br/>
+	
+<h2 style="color:#444444";>Location.hash</h2>
+<p>The hash property sets or returns the anchor part of a URL, including the hash sign (#).<br/>
+Note: When this property is used to set the anchor part, do not include the hash sign (#).<br/>
+</p><hr/><br/>
+	
+<h2 style="color:#444444";>Location.hostname</h2>
+<p>The hostname property sets or returns the hostname of a URL.
+</p><hr/><br/>
+	
+<h2 style="color:#444444";>Location.origin</h2>
+<p>The origin property returns the protocol, hostname and port number of a URL.<br/>
+Note: If the port number is not specified in the URL (or if it is the scheme's default port - like 80, or 443), some browsers will not display the port number.<br/>
+Note: This property is read-only.<br/>
+<h2>Return Value:</h2>
+A String, representing the protocol (including ://), the domain name (or IP address) and port number (including the colon sign (:) of the URL. For URL's using the "file:" protocol, the return value differs between browsers<br/>
+</p><hr/><br/>
+
+
+	
+	
+	
+	
+	
+<br/>
+	</div>	
+<br/><br/>
+
+<div style="border:3px solid lightgreen;background-color:whitesmoke;color:#098765" >
+<p>Click below to reload page </p>
+<input type="button" value="Refresh" onclick="location.reload(true)"></input>
+<hr/>
+	
+<p>Click below to goto Snapdeal.com( By assigning new url )</p>
+<input type="button" value="snapdeal.com" onclick="location.assign('http://www.snapdeal.com')"></input>
+<hr/>
+
+<p>Click below to goto Snapdeal.com( By replacing pervious HINT: After that u can;t go back)</p>
+<input type="button" value="snapdeal.com" onclick="location.replace('http://www.snapdeal.com')"></input>
+<hr/>
+<p id="p0"></p>
+	<input type="button"  value="GOTO TOP!!" onclick="location.href = '#TOP'"></input>
+	<input type="button"  value="Contact developer" onclick="location.href = 'mailto:wasit.shafe123@gamil.com'"></input>
+	<input type="button"  value="Search Google" onclick="location.href = 'https:google.com'"></input>
+
+
+	<hr/>
+<p id="p1"></p><hr/>
+<p id="p2"></p><hr/>
+<p id="p3"></p><hr/>
+<p id="p4"></p><hr/>
+<p id="p5"></p><hr/>
+<p id="p6"></p><hr/>
+<p id="p7"></p><hr/>
+</div>
+<script type="text/javascript">
+
+
+	document.getElementById('p0').innerHTML = 'Value of { <b style="color:123456;"> location.href </b> } is :  ' + location.href;
+ 	document.getElementById('p1').innerHTML = 'Value of { <b style="color:123456;"> location.pathname </b> } is :  ' + location.pathname;
+	document.getElementById('p2').innerHTML = 'Value of { <b style="color:123456;"> location.protocol </b> } is :  ' + location.protocol ;
+	document.getElementById('p3').innerHTML = 'Value of { <b style="color:123456;"> location.port </b> } is :  ' + location.port;
+	document.getElementById('p4').innerHTML = 'Value of { <b style="color:123456;"> location.search </b> } is :  ' + location.search;
+	document.getElementById('p5').innerHTML = 'Value of { <b style="color:123456;"> location.hash </b> } is :  ' + location.hash;
+	document.getElementById('p6').innerHTML = 'Value of { <b style="color:123456;"> location.hostname </b> } is :  ' + location.hostname;
+	document.getElementById('p7').innerHTML = 'Value of { <b style="color:123456;"> location.origin </b> } is :  ' + location.origin;
+
+	
+</script>
+</body>
+</html>

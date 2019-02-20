@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script type="text/javascript">
+	function validate()
+		{
+	var msg,n;
+	/*msg = document.getElementById('message');
+	msg.innerHTML = "";
+	*/
+	n =  document.getElementById('txtb1').value;
+
+		
+	try{
+			alert('dsgjksdfg');
+		if(n == "") throw "is empty";
+		if(isNaN(n))  throw "not a number";
+		if(n > 10) throw "greater than upper limit";
+		if(n < 5) throw "less than lower limit";
+		}
+	   }	
+catch(err){
+	       //message.innerHTM = "Input " + err;
+ alert ('input ' + err.message);
+          }
+finally{
+        alert('end of program....');	 
+       }
+</script>
+</head>
+<body>
+	<form name="frm">
+	<p>Enter number between 5 to 10.</p>
+	<input type="text" id="txtb1"></input>
+	<input type="submit" onclick="validate();"></input>
+	<p id="p1"></p>
+	<h3 id="message"></h3>
+	</form>
+</body>
+</html>

@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+<title>Play Tic-Tac-Toe Game Developed By Jhons.</title>
+<style type="text/css">
+	*{font-family: comic sans ms,sans-serif,serif,cursive,fantasy;outline: none;}
+	::selection{color: tomato;background-color: whitesmoke;}
+	body{background-color:   #B93A32;}
+	#maincontainer{text-align:center;background-color: inherit;}
+	#game_menu_div{display: inline-block;text-align: center;margin: 5px 5px;padding:8px;width:auto;background-color: inherit;}		
+	#pabout{text-align: center;padding: 5px 8px; color: #343434;}
+	#pabout > a{color:#121212;text-decoration: none;}
+	#play_game_div{margin: 5px 3px; padding: 10px 5px;background-color: inherit;}		
+	#bt11,#bt12,#bt13,#bt21,#bt22,#bt23,#bt31,#bt32,#bt33{width: 65px;height:50px;text-align: center;font-size: 30px;background-color:#52b6ff;}
+	#btplaygame,#btabout,#btleave1
+	{
+	     background-color:#006e51;
+		 color:white;
+		 border-top: 2px solid #009B77;
+		 border-bottom: 2px solid #009B77;
+		 border-left: 1px solid #009B77;
+		 border-right: 1px solid #009B77;
+	     float:left;
+		 transition: background-color .7s , text-shadow 1s;
+	     transition-delay: 0.10s; 
+	 cursor: pointer;
+	}
+	#btrestart,#btreset,#btleave2
+	{
+		 background-color:#006e51;
+		 color:white;
+		 border: 2px solid #009B77;
+		 transition: background-color .7s , text-shadow 1s;
+	     transition-delay: 0.10s; 	
+	     cursor: pointer;
+	}
+	#btplaygame:hover,#btabout:hover,#btleave1:hover,#btrestart:hover,#btreset:hover,#btleave2:hover
+	{	
+	 background-color:#009B77;
+	 color: ghostwhite;
+     text-shadow: 0px 0px 3px dimgray,0px 0px 6px silver,0px 0px 8px gray ,0px 0px 10px rgba(255,255,255,.5) 
+	}
+	#table1{align-content: center;}
+	#lblstatusdraw{color: #FAE03C;text-shadow: 1px 1px 3px silver ,0px 0px 6px whitesmoke;animation-name:shadow1;animation-duration:2s; animation-iteration-count:infinite;}
+	#lblstatuswin{color: #DFCFBE;text-shadow: 0px 1px 3px gray;}
+	@keyframes shadow1
+	{ 
+		50%{text-shadow: 2px 2px 6px whitesmoke ,0px 0px 8px whitesmoke; }
+		100{text-shadow: 1px 1px 3px silver ,0px 0px 6px silver;}	
+	}
+</style>
+		<noscript>oOps..! Sorry U can't play game as UR current browser does not support javascript or is disabled. Try again with another browser.</noscript>
+	</head>
+<body onload="init();">
+<div id="maincontainer" >
+		<div id="game_menu_div" >
+			<input type="button" value="Let's Play game" id="btplaygame" onclick="playgame();"></input>
+			<input type="button" value="About" id="btabout" onclick="aboutdeveloper();"></input>
+			<input type="button" value="Leave" id="btleave1" onclick="window.close();"></input>
+	<br/>
+	<p id="pabout"></p>    
+	</div>
+
+	<div id="play_game_div">
+		<table id="table1" align="center">
+	<!--	<thead></thead>
+		    <tfoot></tfoot>
+			<tbody>  -->
+			<tr>
+			<td><input type="button"  id="bt11"  onclick="btclick('11');" ></input></td>
+			<td><input type="button"  id="bt12"  onclick="btclick('12');" ></input></td>
+			<td><input type="button"  id="bt13"  onclick="btclick('13');" ></input></td>
+			</tr>	
+
+			<tr>
+			<td><input type="button"  id="bt21"  onclick="btclick('21');"></input></td>
+			<td><input type="button"  id="bt22"  onclick="btclick('22');"></input></td>
+			<td><input type="button"  id="bt23"  onclick="btclick('23');"></input></td>
+			</tr>	
+
+			<tr>
+			<td><input type="button"  id="bt31"  onclick="btclick('31');"></input></td>
+			<td><input type="button"  id="bt32"  onclick="btclick('32');"></input></td>
+			<td><input type="button"  id="bt33"  onclick="btclick('33');"></input></td>
+			</tr>
+            <tr >
+			<td colspan="3"><input type="button" value="Restart" id="btrestart" onclick="gotostart();"></input><input type="button" value="Reset" id="btreset"  onclick="rset();" ></input><input type="button" value="Leave" id="btleave2" onclick="window.close();"></input></td>
+            </tr>
+	<!--	</tbody> -->
+	</table>	
+   <h4 id="lblstatusdraw"></h3>
+   <h4 id="lblstatuswin"></h3>
+   </div>
+</div>
+		   
+
+<script type="text/javascript" >
+var ox =0 ,count = 0,stop=0, win = 0;
+	function init()
+	{
+ 	    document.getElementById('play_game_div').style.display = "none";
+	}
+	function aboutdeveloper()
+	{
+		document.getElementById('pabout').innerHTML = "This game is developed by <a href=\"mailto:wasitshafi786@gmail.com\" title=\"Send me feedback/report a bug\">jhons....</a>";
+	}
+	
+	function playgame()
+	{
+	 document.getElementById('bt11').value = " ";
+	 document.getElementById('bt12').value = "  ";
+	 document.getElementById('bt13').value = "   ";
+	 document.getElementById('bt21').value = "    ";
+	 document.getElementById('bt22').value = "     ";
+	 document.getElementById('bt23').value = "      ";
+	 document.getElementById('bt31').value = "       ";
+	 document.getElementById('bt32').value = "        ";
+	 document.getElementById('bt33').value = "         "; 
+	 document.getElementById('play_game_div').style.display = "block";	
+	 document.getElementById('game_menu_div').style.display = "none";	
+	 document.getElementById('pabout').style.display = "none";
+	
+	 player1 = prompt('Enter Player1\'s name : ','');
+	 player2 = prompt('Enter Player2\'s name : ','');
+	 document.getElementById('lblstatuswin').innerHTML = "";
+     document.getElementById('lblstatusdraw').innerHTML = "";  
+		if(player1 == "" || player1 == null )
+	   {
+		player1 = "Anonymous Chalanger1";
+       }
+       else
+	   {
+		player1 = player1.toUpperCase();
+	   }
+       if(player2 == "" || player2 == null)
+       {
+   	    player2 = "Anonymous Chalanger2"
+	   }
+       else
+       {
+        player2 = player2.toUpperCase();
+       }
+	}
+	
+	function gotostart()
+	{
+       document.getElementById('game_menu_div').style.display = "block";	
+	   document.getElementById('play_game_div').style.display = "none";	
+       location.reload(true);
+	}
+	
+	function rset()
+	{
+	 document.getElementById('bt11').value = " ";
+	 document.getElementById('bt12').value = "  ";
+	 document.getElementById('bt13').value = "   ";
+	 document.getElementById('bt21').value = "    ";
+	 document.getElementById('bt22').value = "     ";
+	 document.getElementById('bt23').value = "      ";
+	 document.getElementById('bt31').value = "       ";
+	 document.getElementById('bt32').value = "        ";
+	 document.getElementById('bt33').value = "         ";
+     ox = 0;
+     count = 0; 
+	 stop = 0;
+	 win = 0;
+	document.getElementById('lblstatuswin').innerHTML = "";
+    document.getElementById('lblstatusdraw').innerHTML = "";
+		
+		
+		document.getElementById('bt11').removeAttribute('disabled');
+		document.getElementById('bt12').removeAttribute('disabled');
+		document.getElementById('bt13').removeAttribute('disabled');
+		document.getElementById('bt21').removeAttribute('disabled');
+		document.getElementById('bt22').removeAttribute('disabled');
+		document.getElementById('bt23').removeAttribute('disabled');
+		document.getElementById('bt31').removeAttribute('disabled');
+		document.getElementById('bt32').removeAttribute('disabled');
+		document.getElementById('bt33').removeAttribute('disabled');
+
+		  
+		  document.getElementById('bt11').style.opacity = "1";
+		  document.getElementById('bt12').style.opacity = "1";
+		  document.getElementById('bt13').style.opacity = "1";
+		  document.getElementById('bt21').style.opacity = "1";
+		  document.getElementById('bt22').style.opacity = "1";
+		  document.getElementById('bt23').style.opacity = "1";
+		  document.getElementById('bt31').style.opacity = "1";
+		  document.getElementById('bt32').style.opacity = "1";
+		  document.getElementById('bt33').style.opacity = "1";	
+		
+		
+		
+
+	}
+	
+function btclick(btnum)
+{
+	 	document.getElementById('lblstatuswin').value = "";
+        document.getElementById('lblstatusdraw').value = "";
+ 	 switch(btnum)
+		{
+		 case "11":
+				var bt11 = document.getElementById('bt11').value;
+                var bt12 = document.getElementById('bt12').value;
+                var bt13 = document.getElementById('bt13').value;
+				var bt21 = document.getElementById('bt21').value;
+                var bt22 = document.getElementById('bt22').value;
+                var bt23 = document.getElementById('bt23').value;
+				var bt31 = document.getElementById('bt31').value;
+                var bt32 = document.getElementById('bt32').value;
+                var bt33 = document.getElementById('bt33').value;
+		  if(ox == 0)
+		  {
+            document.getElementById('bt11').value = "0";
+            document.getElementById('bt11').style.color = "steelblue";
+            ox = 1;
+			bt11 = "0";
+            count++;			
+		  }
+		  else
+		  {
+            document.getElementById('bt11').value = "X";
+            document.getElementById('bt11').style.color = "forestgreen";
+			ox = 0;
+			bt11 = "X";
+			count++;
+		  }
+				
+		  if( (bt11 == bt12 && bt11 == bt13) || (bt11 == bt21 && bt11 == bt31) || (bt11 == bt22 && bt11 == bt33)  )
+			{	 
+			  stop =1;
+			  if(ox == 0)
+			  { 
+				document.getElementById('lblstatuswin').innerHTML = "Congratulations....! " +  player2 + " win's game.";
+			    win = 1;
+			  	document.getElementById('bt11').style.opacity = ".8";
+			  } 
+			  else
+			  {		
+				document.getElementById('lblstatuswin').innerHTML =  "Congratulations....! " +  player1 + " win's game.";
+		        win = 1;
+			  	document.getElementById('bt11').style.opacity = ".8";
+			  } 
+			}			
+	   	   document.getElementById('bt11').setAttribute('disabled','disabled');
+		   break;
+				
+		 case "12":
+				var bt11 = document.getElementById('bt11').value;
+                var bt12 = document.getElementById('bt12').value;
+                var bt13 = document.getElementById('bt13').value;
+				var bt21 = document.getElementById('bt21').value;
+                var bt22 = document.getElementById('bt22').value;
+                var bt23 = document.getElementById('bt23').value;
+				var bt31 = document.getElementById('bt31').value;
+                var bt32 = document.getElementById('bt32').value;
+                var bt33 = document.getElementById('bt33').value;
+		  if(ox == 0)
+		  {
+            document.getElementById('bt12').value = "0";
+            document.getElementById('bt12').style.color = "steelblue";
+			ox = 1;
+			bt12 = "0";
+			  count++;
+		  }
+		  else
+		  {
+            document.getElementById('bt12').value = "X";
+            document.getElementById('bt12').style.color = "forestgreen";
+			  ox = 0;
+			  bt12 = "X";
+			  count++;
+		  }
+				
+		  if( (bt12 == bt11 && bt12 == bt13) || (bt12 == bt22 && bt12 == bt32) )
+			{	 
+			  stop =1;
+			  if(ox == 0)
+			  { 
+				document.getElementById('lblstatuswin').innerHTML =  "Congratulations....! " +  player2 + " win's game.";
+			    win = 1;
+			  	document.getElementById('bt12').style.opacity = ".8";
+			  }
+			  else
+			  {		
+				document.getElementById('lblstatuswin').innerHTML =  "Congratulations....! " +  player1 + " win's game.";
+		        win = 1;
+			  	document.getElementById('bt12').style.opacity = ".8";
+			  } 
+			}
+	    document.getElementById('bt12').setAttribute('disabled','disabled');	
+	    break;
+				
+		 case "13":
+				var bt11 = document.getElementById('bt11').value;
+                var bt12 = document.getElementById('bt12').value;
+                var bt13 = document.getElementById('bt13').value;
+				var bt21 = document.getElementById('bt21').value;
+                var bt22 = document.getElementById('bt22').value;
+                var bt23 = document.getElementById('bt23').value;
+				var bt31 = document.getElementById('bt31').value;
+                var bt32 = document.getElementById('bt32').value;
+                var bt33 = document.getElementById('bt33').value;
+		  if(ox == 0)
+		  {
+            document.getElementById('bt13').value = "0";
+            document.getElementById('bt13').style.color = "steelblue";
+			  ox = 1;
+			  bt13 = "0";
+			  count++;
+		  }
+		  else
+		  {
+            document.getElementById('bt13').value = "X";
+		                document.getElementById('bt13').style.color = "forestgreen";
+			  ox = 0;
+			  bt13 = "X";
+			  count++;
+		  }
+				
+		  if( (bt13 == bt11 && bt13 == bt12) || (bt13 == bt23 && bt13 == bt33) || (bt13 == bt22 && bt13 == bt31)  )
+			{	 
+			  stop =1;
+			  if(ox == 0)
+			  { 
+				document.getElementById('lblstatuswin').innerHTML = "Congratulations....! " +  player2 + " win's game.";
+			    win = 1;
+			 	document.getElementById('bt13').style.opacity = ".8";
+			  } 
+			  else
+			  {		
+				document.getElementById('lblstatuswin').innerHTML = "Congratulations....! " +  player1 + " win's game.";
+		        win = 1;
+			  	document.getElementById('bt13').style.opacity = ".8";
+			  } 
+			}				
+		document.getElementById('bt13').setAttribute('disabled','disabled');		
+	    break;
+				
+		 case "21":
+				var bt11 = document.getElementById('bt11').value;
+                var bt12 = document.getElementById('bt12').value;
+                var bt13 = document.getElementById('bt13').value;
+				var bt21 = document.getElementById('bt21').value;
+                var bt22 = document.getElementById('bt22').value;
+                var bt23 = document.getElementById('bt23').value;
+				var bt31 = document.getElementById('bt31').value;
+                var bt32 = document.getElementById('bt32').value;
+                var bt33 = document.getElementById('bt33').value;
+		  if(ox == 0)
+		  {
+            document.getElementById('bt21').value = "0";
+            document.getElementById('bt21').style.color = "steelblue";
+			  ox = 1;
+			  bt21 = "0";
+			  count++;
+		  }
+		  else
+		  {
+            document.getElementById('bt21').value = "X";
+            document.getElementById('bt21').style.color = "forestgreen";
+			  ox = 0;
+			  bt21 = "X";
+			  count++;
+		  }
+				
+		  if( (bt21 == bt22 && bt21 == bt23) || (bt21 == bt11 && bt21 == bt31) )
+			{	 
+			  stop =1;
+			  if(ox == 0)
+			  { 
+				document.getElementById('lblstatuswin').innerHTML = "Congratulations....! " +  player2 + " win's game.";
+			    win = 1;
+			  	document.getElementById('bt21').style.opacity = ".8";
+			  } 
+			  else
+			  {		
+				document.getElementById('lblstatuswin').innerHTML = "Congratulations....! " +  player1 + " win's game.";
+		        win = 1;
+			  	document.getElementById('bt21').style.opacity = ".8";
+			  }
+			}				
+		document.getElementById('bt21').setAttribute('disabled','disabled');
+	    break;
+		 case "22":
+				var bt11 = document.getElementById('bt11').value;
+                var bt12 = document.getElementById('bt12').value;
+                var bt13 = document.getElementById('bt13').value;
+				var bt21 = document.getElementById('bt21').value;
+                var bt22 = document.getElementById('bt22').value;
+                var bt23 = document.getElementById('bt23').value;
+				var bt31 = document.getElementById('bt31').value;
+                var bt32 = document.getElementById('bt32').value;
+                var bt33 = document.getElementById('bt33').value;
+		  if(ox == 0)
+		  {
+            document.getElementById('bt22').value = "0";
+            document.getElementById('bt22').style.color = "steelblue";
+			  ox = 1;
+			  bt22 = "0";
+			  count++;
+		  }
+		  else
+		  {
+            document.getElementById('bt22').value = "X";
+            document.getElementById('bt22').style.color = "forestgreen";
+			  ox = 0;
+			  bt22 = "X";
+			  count++;
+		  }
+				
+		  if( (bt22 == bt21 && bt22 == bt23) || (bt22 == bt12 && bt22 == bt32) || (bt22 == bt11 && bt22 == bt33) || (bt22 == bt13 && bt22 == bt31 ) )
+			{	 
+			  stop =1;
+			  if(ox == 0)
+			  { 
+				document.getElementById('lblstatuswin').innerHTML = "Congratulations....! " +  player2 + " win's game.";
+			    win = 1;
+			  	document.getElementById('bt22').style.opacity = ".8";
+			  } 
+			  else
+			  {		
+				document.getElementById('lblstatuswin').innerHTML = "Congratulations....! " +  player1 + " win's game.";
+		        win = 1;
+			  	document.getElementById('bt22').style.opacity = ".8";
+			  } 
+			}				
+        document.getElementById('bt22').setAttribute('disabled','disabled');
+	    break;
+		 case "23":
+				var bt11 = document.getElementById('bt11').value;
+                var bt12 = document.getElementById('bt12').value;
+                var bt13 = document.getElementById('bt13').value;
+				var bt21 = document.getElementById('bt21').value;
+                var bt22 = document.getElementById('bt22').value;
+                var bt23 = document.getElementById('bt23').value;
+				var bt31 = document.getElementById('bt31').value;
+                var bt32 = document.getElementById('bt32').value;
+                var bt33 = document.getElementById('bt33').value;
+		  if(ox == 0)
+		  {
+            document.getElementById('bt23').value = "0";
+            document.getElementById('bt23').style.color = "steelblue";
+			  ox = 1;
+			  bt23 = "0";
+			  count++;
+		  }
+		  else
+		  {
+            document.getElementById('bt23').value = "X";
+            document.getElementById('bt23').style.color = "forestgreen";
+			  ox = 0;
+			  bt23 = "X";
+			  count++;
+		  }
+				
+		  if( (bt23 == bt21 && bt23 == bt22) || (bt23 == bt13 && bt23 == bt33) )
+			{	 
+			  stop =1;
+			  if(ox == 0)
+			  { 
+				document.getElementById('lblstatuswin').innerHTML = "Congratulations....! " +  player2 + " win's game.";
+			    win = 1;
+			  	document.getElementById('bt23').style.opacity = ".8";
+			  } 
+			  else
+			  {		
+				document.getElementById('lblstatuswin').innerHTML = "Congratulations....! " +  player1 + " win's game.";
+		        win = 1;
+				document.getElementById('bt23').style.opacity = ".8";
+			  }
+			}				
+		document.getElementById('bt23').setAttribute('disabled','disabled');
+	    break;
+		 case "31":
+				var bt11 = document.getElementById('bt11').value;
+                var bt12 = document.getElementById('bt12').value;
+                var bt13 = document.getElementById('bt13').value;
+				var bt21 = document.getElementById('bt21').value;
+                var bt22 = document.getElementById('bt22').value;
+                var bt23 = document.getElementById('bt23').value;
+				var bt31 = document.getElementById('bt31').value;
+                var bt32 = document.getElementById('bt32').value;
+                var bt33 = document.getElementById('bt33').value;
+		  if(ox == 0)
+		  {
+            document.getElementById('bt31').value = "0";
+            document.getElementById('bt31').style.color = "steelblue";
+			  ox = 1;
+			  bt31 = "0";
+			  count++;
+		  }
+		  else
+		  {
+            document.getElementById('bt31').value = "X";
+            document.getElementById('bt31').style.color = "forestgreen";
+			  ox = 0;
+			  bt31 = "X";
+			  count++;
+		  }	
+		  if( (bt31 == bt32 && bt31 == bt33) || (bt31 == bt11 && bt31 == bt21) || (bt31 == bt13 && bt31 == bt22) )
+			{	 
+			  stop =1;
+			  if(ox == 0)
+			  { 
+				document.getElementById('lblstatuswin').innerHTML = "Congratulations....! " +  player2 + " win's game.";
+			    win = 1;
+			  	document.getElementById('bt31').style.opacity = ".8";
+			  } 
+			  else
+			  {		
+				document.getElementById('lblstatuswin').innerHTML = "Congratulations....! " +  player1 + " win's game.";
+		        win = 1;
+			  	document.getElementById('bt31').style.opacity = ".8";
+			  } 
+			}				
+		document.getElementById('bt31').setAttribute('disabled','disabled');		
+	    break;
+		 case "32":
+				var bt11 = document.getElementById('bt11').value;
+                var bt12 = document.getElementById('bt12').value;
+                var bt13 = document.getElementById('bt13').value;
+				var bt21 = document.getElementById('bt21').value;
+                var bt22 = document.getElementById('bt22').value;
+                var bt23 = document.getElementById('bt23').value;
+				var bt31 = document.getElementById('bt31').value;
+                var bt32 = document.getElementById('bt32').value;
+                var bt33 = document.getElementById('bt33').value;
+		  if(ox == 0)
+		  {
+            document.getElementById('bt32').value = "0";
+		              document.getElementById('bt32').style.color = "steelblue";
+			  ox = 1;
+			  bt32 = "0";
+			  count++;
+		  }
+		  else
+		  {
+            document.getElementById('bt32').value = "X";
+            document.getElementById('bt32').style.color = "forestgreen";
+			  ox = 0;
+			  bt32 = "X";
+			  count++;
+		  }
+				
+		  if( (bt32 == bt31 && bt32 == bt33) || (bt32 == bt12 && bt32 == bt22) )
+			{	 
+			  stop =1;
+			  if(ox == 0)
+			  { 
+				document.getElementById('lblstatuswin').innerHTML = "Congratulations....! " +  player2 + " win's game.";
+			    win = 1;
+			  	document.getElementById('bt32').style.opacity = ".8";
+			  } 
+			  else
+			  {		
+				document.getElementById('lblstatuswin').innerHTML = "Congratulations....! " +  player1 + " win's game.";
+		        win = 1;
+			  	document.getElementById('bt32').style.opacity = ".8";
+			  } 
+			}				
+		document.getElementById('bt32').setAttribute('disabled','disabled');
+	    break;
+		 case "33":
+				var bt11 = document.getElementById('bt11').value;
+                var bt12 = document.getElementById('bt12').value;
+                var bt13 = document.getElementById('bt13').value;
+				var bt21 = document.getElementById('bt21').value;
+                var bt22 = document.getElementById('bt22').value;
+                var bt23 = document.getElementById('bt23').value;
+				var bt31 = document.getElementById('bt31').value;
+                var bt32 = document.getElementById('bt32').value;
+                var bt33 = document.getElementById('bt33').value;
+		  if(ox == 0)
+		  {
+            document.getElementById('bt33').value = "0";
+            document.getElementById('bt33').style.color = "steelblue";
+			  ox = 1;
+			  bt33 = "0";
+  			  count++;
+
+		  }
+		  else
+		  {
+            document.getElementById('bt33').value = "X";
+            document.getElementById('bt33').style.color = "forestgreen";
+			  ox = 0;
+			  bt33 = "X";
+			  count++;
+		  }
+				
+		  if( (bt33 == bt31 && bt33 == bt32) || (bt33 == bt13 && bt33 == bt23) || (bt33 == bt11 && bt33 == bt22)  )
+			{	 
+			  stop =1;
+			  if(ox == 0)
+			  { 
+				document.getElementById('lblstatuswin').innerHTML = "Congratulations....! " +  player2 + " win's game.";
+			    win = 1;
+			  	document.getElementById('bt33').style.opacity = ".8";
+			  } 
+			  else
+			  {		
+				document.getElementById('lblstatuswin').innerHTML = "Congratulations....! " +  player1 + " win's game.";
+		        win = 1;
+			  	document.getElementById('bt33').style.opacity = ".8";
+			  } 
+			}				
+		document.getElementById('bt33').setAttribute('disabled','disabled');
+	    break;
+	   }
+	 if(count == 9 && stop != 1)
+	 {
+       document.getElementById('lblstatusdraw').innerHTML = "Game draw.... ";
+
+		 document.getElementById('bt11').setAttribute('disabled','disabled');
+		document.getElementById('bt12').setAttribute('disabled','disabled');
+		document.getElementById('bt13').setAttribute('disabled','disabled');
+		document.getElementById('bt21').setAttribute('disabled','disabled');
+		document.getElementById('bt22').setAttribute('disabled','disabled');
+		document.getElementById('bt23').setAttribute('disabled','disabled');
+		document.getElementById('bt31').setAttribute('disabled','disabled');
+		document.getElementById('bt32').setAttribute('disabled','disabled');
+		document.getElementById('bt33').setAttribute('disabled','disabled');
+		  
+		  document.getElementById('bt11').style.opacity = ".8";
+		  document.getElementById('bt12').style.opacity = ".8";
+		  document.getElementById('bt13').style.opacity = ".8";
+		  document.getElementById('bt21').style.opacity = ".8";
+		  document.getElementById('bt22').style.opacity = ".8";
+		  document.getElementById('bt23').style.opacity = ".8";
+		  document.getElementById('bt31').style.opacity = ".8";
+		  document.getElementById('bt32').style.opacity = ".8";
+		  document.getElementById('bt33').style.opacity = ".8";
+
+	 }	
+	if (win == 1)
+	   {
+		document.getElementById('bt11').setAttribute('disabled','disabled');
+		document.getElementById('bt12').setAttribute('disabled','disabled');
+		document.getElementById('bt13').setAttribute('disabled','disabled');
+		document.getElementById('bt21').setAttribute('disabled','disabled');
+		document.getElementById('bt22').setAttribute('disabled','disabled');
+		document.getElementById('bt23').setAttribute('disabled','disabled');
+		document.getElementById('bt31').setAttribute('disabled','disabled');
+		document.getElementById('bt32').setAttribute('disabled','disabled');
+		document.getElementById('bt33').setAttribute('disabled','disabled');
+		  
+		  document.getElementById('bt11').style.opacity = ".8";
+		  document.getElementById('bt12').style.opacity = ".8";
+		  document.getElementById('bt13').style.opacity = ".8";
+		  document.getElementById('bt21').style.opacity = ".8";
+		  document.getElementById('bt22').style.opacity = ".8";
+		  document.getElementById('bt23').style.opacity = ".8";
+		  document.getElementById('bt31').style.opacity = ".8";
+		  document.getElementById('bt32').style.opacity = ".8";
+		  document.getElementById('bt33').style.opacity = ".8";
+
+       }
+}
+	
+</script>
+</body>
+</html>

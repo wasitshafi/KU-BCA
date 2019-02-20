@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>displaying all the plugins installtd on the browser</title>
+    <style type="text/css">
+     table{ 
+     	    border: 2px solid silver;
+     	    font-family: arial;
+     	    color: maroon;
+            caption-side: bottom;
+            border-collapse: collapse;
+          }
+     tr,td,th{ border: 2px solid #444444;}      
+     tfoot{font-family: courier;color: gray;font-weight: bold;}
+    </style>
+</head>
+<body>
+<h3>Displaying all the plugins that are installed on your browser..</h3>
+<table>
+	<caption>List of all plugins installed on ur browser.</caption>
+	<thead>
+		<th>Name</th>
+		<th>Filename</th>
+		<th>Description</th>
+	</thead>
+	<tfoot>
+		<td>-EoF-</td>
+		<td>-EoF-</td>
+		<td>-EoF-</td>
+	</tfoot>
+	<tbody>
+		<script type="text/javascript">
+			for(var i=0;i<navigator.plugins.length;i++)
+			{
+				document.write("<tr><td>");
+				document.write(navigator.plugins[i].name);
+				document.write("</td><td>");
+				document.write(navigator.plugins[i].filename);
+				document.write("</td><td>");
+				document.write(navigator.plugins[i].description);
+				document.write("</td></tr>");
+			}
+		</script>
+	</tbody>
+</table>
+</body>
+</html>

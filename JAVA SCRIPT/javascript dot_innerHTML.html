@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascritp innerHTML uses</title>
+	<script type="text/javascript">
+		function validate()
+		{
+			var num,output;
+            num=document.getElementById("txtbnum").value;
+			 if (isNaN(num) || document.getElementById("txtbnum").value > 10 || document.getElementById("txtbnum").value < 0) 
+			 {
+				output="Not valid no.Try again";
+                document.getElementById("lblstatusnv").innerHTML=output;
+			    
+			/*        or
+			 	document.getElementById('lblstatusnv').innerHTML="Not valid no.Try again";*/
+                document.getElementById("lblstatusv").innerHTML="";
+			 }
+			 else
+			 	{
+				 output="Valid no.";
+                 document.getElementById("lblstatusv").innerHTML=output;
+			    
+			/*        or
+			 	document.getElementById('lblstatusv').innerHTML="Valid no.";*/
+                 document.getElementById("lblstatusnv").innerHTML="";
+				}		
+		}
+
+	</script>
+</head>
+<body>
+<label>Enter any no. B/W 0 to 10</label>
+<input type="text" placeholder="Enter no here..." id="txtbnum"></input>
+<input type="submit" value="Submit" id="ok" onclick="validate();"></input>
+<br/>
+<p id="lblstatusv" style="color: lightgreen;font-size:large;font-family: comic sans ms; display: inline;"></p>
+<p id="lblstatusnv" style="color:red;font-size:large;font-family: comic sans ms; display: inline;"></p>
+</body>
+</html>

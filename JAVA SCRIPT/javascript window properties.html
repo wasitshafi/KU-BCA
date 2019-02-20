@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>window properties</title>
+<script type="text/javascript" >
+
+</script>
+</head>
+<body style="width:800px;height:900px;">
+	<div style="width:auto;height:200px;border:2px solid lightblue;" >
+<h2>javascript window properties</h2>
+	<input type="button" value="show browser height1" onclick="alert(window.innerHeight)" ></input>
+	<input type="button" value="show browser height2" onclick="alert(document.documentElement.clientHeight)" ></input>
+	<input type="button" value="show browser/body height3" onclick="alert(document.body.clientHeight)"></input>
+<br/><br/><br/>
+    <input type="button" value="show browser width1" onclick="alert(window.innerWidth)" ></input> 
+    <input type="button" value="show browser width2" onclick="alert(document.documentElement.clientWidth)" ></input> 
+    <input type="button" value="show browser/body width3" onclick="alert(document.body.clientWidth)" ></input> 
+<br/><br/><br/>
+	<input type="button" value="open new tab" onclick="window.open();" ></input>
+	<input type="button" value="close current tab" onclick="window.close();"> </input>
+	<input type="button" value="moveto " onclick="window.moveTo();"> </input>
+	<input type="button" value="resize current tab" onclick="window.resizeTo();"> </input>
+</div>
+<div style="border:2px solid lightgreen;">
+<h2>javascript window screen properties</h2>
+    <input type="button" value="show users screen width" onclick="alert(window.screen.width);"></input><!-- or screen.width; only -->
+    <input type="button" value="show users screen availwidth" onclick="alert(screen.availWidth);"></input>
+    <input type="button" value="show users screen height" onclick="alert(screen.height);"></input>
+    <input type="button" value="show users screen availheight" onclick="alert(screen.availHeight);"></input> <!-- minus taskbars height -->
+    <input type="button" value="show users screen colordepth" onclick="alert(screen.colorDepth);"></input> <!-- minus taskbars height -->
+    <input type="button" value="show users screen pixeldepth" onclick="alert(screen.pixelDepth);"></input> <!-- minus taskbars height -->
+<br/>
+<p>Colordepth/pixeldepth is the no. of bits used to represent one color/pixelcolor.For most of the modern computer colordepth and pixeldepth are equal.</p>
+</div>
+</body>
+</html>

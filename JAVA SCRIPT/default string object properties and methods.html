@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+<title>javascript string default properties and methods...</title>
+		<script type="text/javascript" >
+			function charat()
+			{
+			var str = "welcome in programming languages...!";
+			alert("value of charat(5) with respect to :WELCOME IN PROGRAMMING LANGUAGES...! is :" + str.charAt(5));
+			}
+			function charcodeat()
+			{ // charcodeat returns of a character by using unicodes
+			var str = "welcome in programming languages...!";
+			alert("value of charcodeat(5) with respect to :WELCOME IN PROGRAMMING LANGUAGES...! is :" + str.charCodeAt(5));
+			}
+			function concatinate()
+			{
+			var str1 = "this is string first.";
+			var str2 = "this is string second.";
+			var str3 = str1.concat(str2);
+			alert("strign3 is : " + str3 );
+			}
+			function indexof()  // it returns -1 if not found
+			{
+				var str = "this is string one again string";
+				alert("value of str.indexof('string') with respect to [ " + str + " ] is : " + str.indexOf("string"));
+			}			
+			function lastindexof()  // it returns -1 if not found
+			{
+				var str = "this is string one again string";
+				alert("value of str.lastindexof('string') with respect to [ " + str + " ] is : " + str.lastindexOf("string"));
+			}
+			function slice()
+			{
+				var str = "welcome in programming";
+				alert("value of str.slice(3,-2) with respect to [ " + str + " ] is : " + str.slice(3,-2));
+			}
+			function split()
+			{
+				var str = "welcome_in_programming_language.";
+				alert("value of str.split('_',3) with respect to [ " + str + " ] is : " + str.split("_",3));
+			}
+			function substr()
+			{
+				var str = "welcome in programming language.";
+				alert("value of str.substr(3,10) with respect to [ " + str + "] is : " + str.substr(3,10))
+			}
+			function substring()
+			{
+				var str = "welcome in programming language.";
+				alert("value of str.substring(3,10) with respect to [ " + str + "] is : " + str.substring(3,10))
+			}
+			function uppercase()
+			{
+				var str = "WeLcOme IN ProGraMMinG LAnGuagE.";
+				alert("value of str.touppercase() with respect to [ " + str + "] is : " + str.toUpperCase())
+			}
+	        function localeuppercase()
+			{
+				var str = "WeLcOme IN ProGraMMinG LAnGuagE.";// may be in upper or lower case it depends
+				alert("value of str.tolocaleuppercase() with respect to [ " + str + "] is : " + str.toLocaleLowerCase())
+			}
+			function lowercase()
+			{
+				var str = "WeLcOme IN ProGraMMinG LAnGuagE.";
+				alert("value of str.tolowercase() with respect to [ " + str + "] is : " + str.toLowerCase())
+			}
+			
+		</script>
+	</head>	
+<body>
+	<input type="button" value="show charAt(5)" onclick="charat();" ></input><br/><br/>
+	<input type="button" value="show charAtCode(5)" onclick="charcodeat();"></input><br/><br/>
+	<input type="button" value="concatinate strings" onclick="concatinate();"></input><br/><br/>
+	<input type="button" value="show str.indexof('string')" onclick="indexof();"></input><br/><br/>
+	<input type="button" value="show str.lastindexof('string')" onclick="lastindexof();"></input><br/><br/>
+	<input type="button" value="show str.slice(3,-4)" onclick="slice();"></input><br/><br/>
+	<input type="button" value="show str.split('_',3)" onclick="split();"></input><br/><br/>
+	<input type="button" value="show str.substr(3,10)" onclick="substr();"></input><br/><br/>
+	<input type="button" value="show str.substring('_',3)" onclick="substring();"></input><br/><br/>
+	<input type="button" value="show str.touppercase()" onclick="uppercase();"></input><br/><br/>
+	<input type="button" value="show str.tolocaleuppercase()" onclick="localeuppercase();"></input><br/><br/>
+    <input type="button" value="show str.tolowercase()" onclick="lowercase();"></input><br/><br/>
+
+
+	
+</body>
+</html>

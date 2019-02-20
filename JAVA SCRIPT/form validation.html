@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form validations</title>
+	<style type="text/css">
+		div{margin: 0px 0px 10px 0px;padding: 5px 10px;}
+	</style>
+	<script type="text/javascript">
+	<!--
+		function validation()
+		{ 
+		 if(document.frm1.chkbx.checked)            // or -> if(document.forms[0].element[0].checked)   {------}
+		 	alert("check-box is selected");
+		 else
+		 	alert("please select check-box");
+		}
+		function validation2()
+		{
+			var inpobj = document.getElementById('minmax');
+			if(inpobj.checkValidity()==false)
+				{
+					document.getElementById('p1').innerHTML = inpobj.validationMessage;
+				}
+		}
+		function validation3_1()
+		{
+		    var txt = "";
+			if (document.getElementById("min").validity.rangeUnderflow)
+			{
+			  txt = "Value too small";
+			}
+		document.getElementById("p3_1").innerHTML = txt;
+	
+	   }
+	   function validation3_2()
+	   {
+		    var txt = "";
+			if (document.getElementById("max").validity.rangeOverflow)
+			{
+			  txt = "Value too large";
+			}
+		document.getElementById("p3_2").innerHTML = txt;
+	   }
+	   function validation4()
+	   {
+		    var txt = "";
+			if (document.getElementById("pinzip").validity.toolong)
+			{
+			  txt = "you exceed maximum length";
+			}
+		 document.getElementById("p4").innerHTML = txt;
+	   }	
+
+       function validation5()
+	   {
+		    var txt = "";
+			if (document.getElementById("req").validity.valueMissing)
+			{
+		        document.getElementById("p5").style.color = 'red';
+				txt = "Please enter your name...!";
+			}
+		    else
+			{
+		       document.getElementById("p5").style.color = 'forestgreen';
+			   txt = "Hellow " + document.getElementById("req").value + " how are you ?" ;
+			}
+		   
+           document.getElementById("p5").style.fontFamily = 'courier';
+		   document.getElementById("p5").style.fontSize = '20px';
+		   document.getElementById("p5").innerHTML = txt;
+	  }	
+	//-->	
+	</script>
+</head>
+<body>
+<div style="border:2px solid lightgreen" >
+<h2>this is form 1</h2>
+<form name="frm1">
+<input type="checkbox" name="chkbx"></input>
+<input type="button" name="OK" value="validate" onclick="validation()"></input>
+</form>
+</div>
+
+<div style="border:2px solid darkkhaki;">
+<form name="frm2">
+<h2>this is form 2 (eg of checkvalidity() and validationmessage(); </h2>
+	Enter number between 20 to 100 :
+	<input type="number" min="20" max="100" id="minmax"></input>
+	<input type="button" value="OK" onclick="validation2();"></input>
+<p id="p1"></p>
+</div>
+</form>
+</div>
+
+<div style="border:2px solid yellow;">
+<form name="frm3">
+<h2>this is form 3 (eg of validity.Underflow() and validity.Overflow(); </h2>
+	Enter number not lessthan 20 :
+	<input type="number" min="20" id="min" ></input>
+	<input type="button" value="OK" onclick="validation3_1();"></input><br/><br/>
+	<p id="p3_1"></p>    
+ 	Enter number not greaterthan 100 :
+    <input type="number" max="100" id="max" ></input>
+	<input type="button" value="OK" onclick="validation3_2();"></input><br/><br/>
+    <p id="p3_2"></p>
+</form>
+</div>
+
+
+<div style="border:2px solid purple;">
+<form name="frm4">
+<h2>this is form 4 (eg of validity.toolong()</h2>
+	Enter pin/zip code :
+	<input type="text" maxlength="6" id="pinzip" ></input>
+	<input type="button" value="OK" onclick="validation4();"></input><br/><br/>
+    <p id="p4"></p>
+
+</form>
+</div>
+
+<div style="border:2px solid lightcoral;">
+<form name="frm5">
+<h2>this is form 5 (eg of validity.toolong() and validity.Overflow(); </h2>
+	Enter your name :
+	<input type="text"  id="req" required ></input>
+	<input type="button" value="OK" onclick="validation5();"></input><br/><br/>
+    <p id="p5"></p>
+
+</form>
+</div>
+
+</body>
+</html>

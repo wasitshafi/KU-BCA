@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM specified property</title>
+<style type="text/css">
+	.cone{font-family: comic sans ms;color:gray;}	
+</style>
+</head>
+<body>
+
+<h1>DOM specified property</h1>
+<p>The specified property returns true if the attribute is specified.<br/>
+Returns true also if the attribute has been created but not been attached to an element yet.<br/>
+Otherwise it returns false.<br/><br/><hr/>
+	
+
+		
+<div class="sdfjh">dfjkdfjkl<p>shjskdf</p>this is also div but with on attribure	
+</div>
+<p id="p1">this is hsdfkj</p>
+	
+	
+<br/><hr/><br/>
+
+<div class="cone" id="div1">this is div with attribute	
+</div>
+<p id="p2"></p>
+
+
+<script type="text/javascript">
+
+<!--
+    //document.getElementById('p2').innerHTML = "Value of { <b>document.getElementsByTagName('div')[1].attributes[0].specified </b> } is:" + document.getElementsByTagName('div')[1].attributes[0].specified; 
+                                                      // or 
+	document.getElementById('p2').innerHTML = "Value of { <b>document.getElementById('div1').attributes[0].specified  </b> } is:" + document.getElementById('div1').attributes[0].specified; 
+
+	
+	
+/*********************************************************************************/
+
+	
+	//document.getElementById('p1').innerHTML = "Value of { <b> document.body.getElementsByTagName('div')[0].childNodes[0].nodeName </b> } is:" + document.body.getElementsByTagName('div')[0].childNodes[0].nodeName;
+                                          // or
+	
+	var elmnt = document.body.getElementsByTagName('div')[0].childNodes;
+	document.getElementById('p1').innerHTML = "Value of { <b> elmnt[0].attributes[0].specified </b> } is:" + elmnt[0].attributes[0].specified;
+
+	
+
+
+//-->
+</script>
+</body>
+</html>

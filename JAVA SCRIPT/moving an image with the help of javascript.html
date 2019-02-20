@@ -1,0 +1,35 @@
+<html> 
+<head> 
+<title>JavaScript Animation</title> 
+<script type="text/javascript"> 
+<!-- 
+var imgobj; 
+var animate;
+function init(){ 
+   imgobj = document.getElementById('myImage'); 
+   imgobj.style.position= 'relative';  
+   imgobj.style.left = '10px';  
+} 
+function moveright(){ 
+   imgobj.style.left = parseInt(imgobj.style.left) + 10 + 'px'; 
+   imgobj.style.top = '20px';
+   animate= setTimeout(moveright,1000);
+   //animate= setInterval(moveRight,1000);
+} 
+function stop()
+{
+  clearTimeout(animate);
+
+}
+window.onload =init; 
+//--> 
+</script> 
+</head> 
+<body> <form>
+<img id="myImage" src="G:\BCA\icons & logo\video._logo_camera1.png" /> 
+<p>Click button below to move the image to right</p> 
+<input type="button" value="start" onclick="moveright();" /> 
+<input type="button" value="stop" onclick="stop();" /> 
+</form> 
+</body> 
+</html> 

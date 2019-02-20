@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>date object and setinterval function</title>
+	<script type="text/javascript">
+	<!--
+     function print_time()
+     {
+     	var today=new Date();
+     	var h= today.getHours();
+     	var m= today.getMinutes();
+     	var s= today.getSeconds();
+     	m=checktime(m);
+          s=checktime(s);
+          document.getElementById('lbltime').innerHTML = h + ":" + m + ":" + s;
+          setInterval("print_time()",1000);          
+     }
+     function checktime(i)
+     {
+          if (i<10) {i="0" + i}
+         return i;      
+     }
+     //-->
+    </script>
+</head>
+<body onload="print_time()">
+<div>
+<p style="display: inline;">Time:</p>
+<p id=lbltime style="display: inline;background-color:#fcfcfc;color: gray;text-shadow: 0px 0px 1px gray;"></p>     
+</div>
+</body>
+</html>

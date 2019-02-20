@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>History object</title>
+<script type="text/javascript">
+</script>
+<body>
+<div style="border:1px solid lightblue;">
+	<input type="button" value="Go Back <==" onclick="window.history.back();" style="padding:5px 10px;"></input>
+	<input type="button" value="Go Forward ==>" onclick="history.forward();" style="padding:5px 10px;"></input>
+	<input type="button" value="Go 2 steps back" onclick="window.history.go(-2);" style="padding:5px 10px;"></input>
+<p id="p1"></p>
+</div>
+<script type="text/javascript">
+
+document.getElementById('p1').innerHTML ="Number of URLs in history list  is : " + history.length;
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>javascript number properties</title>
+	<script type="text/javascript">
+	<!--
+		var mnum = Number.MAX_VALUE;
+		document.write("maximum value for a number data type c can upto :" + mnum + "<br/>");
+		
+		document.write("minimum value for a number data type c can't be less than  :" +Number.MIN_VALUE + "<br/>");
+		
+		function validate(dd)
+		{
+			var output;
+		 if(dd < 1 || dd >31)
+			 {
+				 dd=Number.NaN;
+				 alert("Day of month must be between 1 and 31.");
+			 }
+		   alert("vlaue of date of month is : " + dd);
+			output = "hellow";
+		    document.getElementById("lblstatus").innerHTML = output;
+		}
+		function maxvaluem2()
+		{
+			var maxm2 = Number.MAX_VALUE;
+			maxm2 *= 2; 
+			alert("max_value * 2 = : " + maxm2);
+        }
+		function toexp()
+		{
+		valexp=350.1234;
+			alert(" value of 350.1234.toExponential(2) is : " + valexp.toExponential(2) );		
+		}
+		function tofxd()
+		{
+		valfxd=350.1234;
+			alert(" value of 350.1234.tofixed() is : " + valfxd.toFixed() );		
+			alert(" value of 350.1234.tofixed(2) is : " + valfxd.toFixed(2) );		
+			alert(" value of 350.1234.tofixed(6) is : " + valfxd.toFixed(6) );		
+		}
+		function toprec()
+		{
+		 val=35.1234;
+			alert(" value of 35.1234.toprecision() is : " + val.toPrecision() );		
+			alert(" value of 35.1234.toprecision(4) is : " + val.toPrecision(4) );		
+			alert(" value of 35.1234.toprecision(2) is : " + val.toPrecision(2) );		
+			alert(" value of 35.1234.toprecision(1) is : " + val.toPrecision(1) );		
+		}
+		function tolstr()
+		{
+			 var val = 30.123456789;
+			 alert("value of 30.123456789.tolocalestring() is : " + val.toLocaleString() );		
+		}
+		function tostr()
+		{
+		 val=12;             /*   can be betweeb 2 to 36 as a base */
+			alert(" value of 35.1234.tostring() is : " + val.toString() );
+	        alert(" value of 35.1234.tostring() is(decimal) : " + val.toString(2) );		
+			alert(" value of 35.1234.tostring() is(octal) : " + val.toString(8) );		
+			alert(" value of 35.1234.tostring() is(hex) : " + val.toString(16) );		
+
+		}
+
+	</script>
+</head>
+
+<body>
+	<form id="frm1" >
+	<input type="text" placeholder="enter date of any month" id="txtb" ></input>
+	<input type="submit" value="Submit form" onclick="validate(document.getElementById('txtb').value);" required></input>
+	</form>
+<br/>
+<br/>
+<input type="button" value="Show maxno*2=" onclick="maxvaluem2();"></input>
+<br/>
+<br/>
+<input type="button" value="Show (350.1234).toexponential(2)" onclick="toexp();"></input>
+<br/><br/>
+<input type="button" value="Show (num).tofxd()" onclick="tofxd();"></input>
+<br/><br/>
+<input type="button" value="Show (num).toprec()" onclick="toprec();"></input>
+<br/><br/>
+<input type="button" value="Show (num).tolstr()" onclick="tolstr();"></input>
+<br/><br/>
+<input type="button" value="Show (num).tostr()" onclick="tostr();"></input>
+<br/><br/>
+</body>
+</html>

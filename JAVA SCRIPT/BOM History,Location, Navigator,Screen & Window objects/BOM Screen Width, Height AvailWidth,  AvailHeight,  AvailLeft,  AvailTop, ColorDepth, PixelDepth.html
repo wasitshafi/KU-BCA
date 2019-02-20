@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BOM Screen object</title>
+<style type="text/css">
+	
+	div{margin: 20px;}
+	</style>
+	</head>
+<body>
+<h1>Screen Object</h1>
+<p>The screen object contains information about the visitor's screen.<br/>
+<b>Note:</b> There is no public standard that applies to the screen object, but all major browsers support it.<br/>
+</p>
+
+	
+<div style=" background-color:#87CEFA;color:334455;border:2px solid lightgreen;padding:10px;">  
+<h1>width property</h1>
+<p>The width property returns the total width of the user's screen, in pixels.<br/>
+<b>Tip:</b> Use the height property to get the total height of the user's screen.<br/>
+</p><hr/>
+	
+<h1>availWidth property</h1>
+<p>The availWidth property returns the width of the user's screen, in pixels, minus interface features like the Windows Taskbar.<br/>
+<b>Tip:</b> To get the height of the screen (excluding the Windows Taskbar), use the availHeight property.
+</p><hr/>
+	
+<h1>height property</h1>
+<p>The height property returns the total height of the user's screen, in pixels.<br/>
+<b>Tip:</b>Use the width property to get the total width of the user's screen.<br/>
+</p><hr/><br/>	
+<h1>availHeight property</h1>
+<p>The availHeight property returns the height of the user's screen, in pixels, minus interface features like the Windows Taskbar.<br/>
+<b>Tip:</b> To get the width of the screen (excluding the Windows Taskbar), use the availWidth property.
+</p><hr/>
+
+<h1>colordepth property</h1>
+<p>The colorDepth property returns the bit depth of the color palette for displaying images (in bits per pixel).<br/>
+<b>Return Value:</b>A Number, representing the bit depth of the color palette for displaying images, in bits per pixel.<br/>
+  <b>Possible values:</b><br/>
+1 bit per pixel<br/>
+4 bits per pixel<br/>
+8 bits per pixel<br/>
+15 bits per pixel<br/>
+16 bits per pixel<br/>
+24 bits per pixel<br/>
+32 bits per pixel<br/>
+48 bits per pixel<br/>
+	<span style="color:red;"><b>NOTE:Colordepth/pixeldepth is the no. of bits used to represent one color/pixelcolor.For most of the modern computer colordepth and pixeldepth are equal.</b></span>
+	</p><hr/>
+	
+	
+<h1>pixelDepth</h1>
+<p>The pixelDepth property returns the color resolution (in bits per pixel) of the visitor's screen.<br/>
+<b>Tip:</b> The pixelDepth property is not supported in Internet Explorer 9 and earlier versions. However, the colorDepth property represents the same thing as the pixelDepth property. Since all major browsers support colorDepth, use that property instead<br/>
+<b>Return Value:</b>A Number, representing the color resolution , in bits per pixel.<br/>
+  <b>Possible values:</b><br/>
+1 bit per pixel<br/>
+4 bits per pixel<br/>
+8 bits per pixel<br/>
+15 bits per pixel<br/>
+16 bits per pixel<br/>
+24 bits per pixel<br/>
+32 bits per pixel<br/>
+48 bits per pixel<br/>
+</p><hr/>
+</div>
+	
+<br/><hr/><br/>
+<div style=" background-color:whitesmoke;color:#336699;border:2px solid lightgreen;padding:10px;">  
+<p id="p1"></p>
+<p id="p2"></p>
+<p id="p3"></p>
+	<hr/>
+<p id="p4"></p>
+<p id="p5"></p>
+<p id="p6"></p>
+	<hr/>
+<p id="p7"></p>
+<p id="p8"></p>
+
+
+</div>
+<script type="text/javascript">
+	
+	  document.getElementById('p1').innerHTML = " Value of { <b>window.screen.width </b> } is : <b> "	 + window.screen.width; // total width of screen physically
+      document.getElementById('p2').innerHTML = " Value of { <b>screen.availWidth </b> } is : <b>"	 + screen.availWidth;     // available width of screen for use 
+      document.getElementById('p3').innerHTML = " Value of { <b>screen.availLeft </b> } is : "	 + screen.availLeft;   
+
+	  document.getElementById('p4').innerHTML = " Value of { <b>screen.height </b> } is : <b>"	 + screen.height;        // total height of screen physically
+      document.getElementById('p5').innerHTML = " Value of { <b>screen.availHeight </b> } is : <b>"	 + screen.availHeight  //available height of screen for use ( eg : minus taskbar height )
+      document.getElementById('p6').innerHTML = " Value of { <b>screen.availTop </b> } is : <b>"	 + screen.availTop
+	  	
+	  document.getElementById('p7').innerHTML = " Value of { <b>screen.colorDepth </b> } is : <b>"	 + screen.colorDepth
+      document.getElementById('p8').innerHTML = " Value of { <b>screen.pixelDepth </b> } is : <b>"	 + screen.pixelDepth;
+
+</script>
+</body>
+</html>
