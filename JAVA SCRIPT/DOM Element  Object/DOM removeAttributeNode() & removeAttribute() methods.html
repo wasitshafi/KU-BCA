@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM removeAttributeNode() &amp; removeAttribute() methods</title>
+<style type="text/css">
+	.cone{color:silver;background-color:darkgoldenrod;display: inline;}
+	.ctwo{color:yellow;background-color: crimson;display: inline;}
+	div{padding: 20px 0px;}
+</style>
+</head>
+<body>
+<div style="border:4px solid lightgreen;">
+
+<h2>removeAttributeNode</h2>
+	<p>The removeAttributeNode() method removes the specified attribute from an element, and returns the removed attribute, as an Attr Node object.<br/>	
+E.G:<br/>
+<code style="color:#123456;">
+	var elmnt =document.getElementById('h31');<br/>
+	var att = elmnt.getAttributeNode('class');<br/>
+	elmnt.removeAttributeNode(att);<br/>
+</code>
+
+<h2>removeAttribute</h2>
+ <p>The removeAttribute() method removes the specified attribute from an element.</p>	
+E.G:<br/>
+<code style="color:#654321;">
+	    document.getElementById('h32').removeAttribute('class');
+</code>
+	
+<h3> difference between removeAttributenode and removeAttribute</h>	
+	<p>The difference between removeAttributeNode method and the removeAttribute() method, is that the removeAttribute() method removes the attribute with the specified name, while removeAttributeNode() method removes the specified Attr object. The result will be the same. Also, the removeAttribute() method has no return value, while removeAttributeNode() method returns the removed attribute, as an Attr object.</p>
+	
+</div>
+<br/><hr/><br/>
+	<input type="button" value="remove attr. by removeAttributeNode method()" onclick="fun1();"></input>
+	<input type="button" value="remove attr. by removeAttribute method()" onclick="fun2();"></input>
+<br/><br/>
+	<h3 id="h31" class="cone">HELLO WORLD1</h1><br/><br/>
+    <h3 id="h32" class="ctwo">HELLO WORLD2</h1>
+
+
+
+<script type="text/javascript">
+	<!--
+	function fun1()
+	{
+		var elmnt =document.getElementById('h31');
+		var att = elmnt.getAttributeNode('class');	
+		elmnt.removeAttributeNode(att);
+	}
+	function fun2()
+	{
+	    document.getElementById('h32').removeAttribute('class');
+	}	
+     //-->
+</script>
+</body>
+</html>

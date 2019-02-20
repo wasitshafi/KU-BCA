@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM id property</title>
+	<style type="text/css">
+		#normal{font-family: normal;}
+		#bold{font-weight: bold;}
+		#italic{font-style: italic;}
+		#underline{text-decoration: underline;}
+		#overline{text-decoration: overline;}
+		#strikethrough{text-decoration: line-through;}
+	</style>
+</head>
+<body>
+
+<label>Select an id for above text.(NOTE:id actually changes U can verify it by inspect element on ur browser.)</label>
+<br/>
+<p id="normal"></p>
+<select id="ddlst">
+<option disabled selected value="normal">SELECT</option>	
+<option value="bold">bold text</option>	
+<option value="italic">italic text</option>	
+<option value="underline">underline text</option>	
+<option value="overline">overline text</option>	
+<option value="strikethrough">strikethrough text</option>	
+</select>
+<script type="text/javascript">
+//    document.getElementById('p1').innerHTML = "This is para. text and it has an id <b> " +	document.getElementById('p1').id;
+    setInterval("repeat()",300);
+	function repeat()
+	{
+	 var nwid = document.getElementById('ddlst').value;
+     document.body.getElementsByTagName('P')[0].id = nwid;
+	 document.body.getElementsByTagName('P')[0].innerHTML = "This is para. text and it has an id <b> " +	document.body.getElementsByTagName('P')[0].id;
+	}
+</script>
+</body>
+</html>

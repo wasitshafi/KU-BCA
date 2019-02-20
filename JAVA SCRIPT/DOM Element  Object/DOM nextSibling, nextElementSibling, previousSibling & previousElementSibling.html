@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM nextSibling,nextElementSibling</title>
+</head>	
+<body>
+	<span style="font:25px comic sans ms;text-align:center;display:block;color:#444444;">NextSibling and NextElementSibling</span>
+<div style="background-color:teal;margin:10px;padding:20px;">	
+<h1>NextSibling</h1>	
+<p>The nextSibling property returns the node immediately following the specified node, in the same tree level.<br/>
+The returned node is returned as a Node object.<br/>
+The difference between nextSibling property and nextElementSibling, is that nextSibling returns the next sibling node as an 
+element node, a text node or a comment node, while nextElementSibling returns the next sibling node as an element node (ignores text and comment nodes).<br/>
+</p>	
+
+<h1>NextElementSibling</h1>	
+<p>The nextElementSibling property returns the element immediately following the specified element, in the same tree level.<br/>
+	The difference between NextElementSibling property and nextSibling, is that nextSibling returns the next sibling node as an element node, a text node or a comment node,
+	while nextElementSibling returns the next sibling node as an element node (ignores text and comment nodes).
+</p>
+<hr/>
+		
+<div style="border:3px solid lightgreen;background-color:silver;margin:20px;padding:10px;">
+	<p id="p1">This is para text(1) <b>and it has id='p1'.</b></p>
+This is text without any tag(2).
+<h5>This is heading5 style text(3).</h4>
+</div>
+This is text without any tag  outside div(4).	
+<p>This is para text outside div(5).</p>
+	
+<hr/><br/>
+<p id="p2" style="color:forestgreen;font-family:comic sans ms;background-color:whitesmoke;line-height:200%;box-shadow:3px 3px 5px gray;"></p>	
+<p id="p3" style="color:darkblue;font-family:comic sans ms;background-color:whitesmoke;line-height:200%;box-shadow:3px 3px 5px gray;"></p>	
+</div>
+
+<br/><br/>
+<hr/>
+<br/><br/>
+<span style="font:25px comic sans ms;text-align:center;display:block;color:#444444;">PreviousSibling and PreviousElementSibling</span>
+
+<div style="background-color:lightgreen;;margin:10px;padding:20px;">
+<h1>PerviousSibling</h1>	
+<p>The previousSibling property returns the previous node of the specified node, in the same tree level.<br/>
+	The returned node is returned as a Node object.<br/>
+    The difference between this property and previousElementSibling, is that previousSibling returns the previous sibling node as an element node, a text node or a comment node, while previousElementSibling returns the previous sibling node as an element node (ignores text and comment nodes).<br/>
+</p>	
+
+<h1>PreviousElementSibling</h1>	
+<p>The previousElementSibling property returns the previous element of the specified element, in the same tree level.<br/>
+   The difference between this property and previousSibling, is that previousSibling returns the previous sibling node as an element node, a text node or a comment node, while previousElementSibling returns the previous sibling node as an element node (ignores text and comment nodes).<br/>
+</p>
+<hr/>
+
+<div style="border:3px solid lightgreen;background-color:lightblue;margin:20px;padding:10px;">
+<h4>This is heading2 style text (1)</h4>
+This is text without any tag(2).
+<p id="p4">This is para text(3) <b>and it has id='p4'.</b></p>
+</div>
+<hr/><br/>
+<p id="p5" style="color:forestgreen;font-family:comic sans ms;background-color:whitesmoke;line-height:200%;box-shadow:3px 3px 5px gray;"></p>	
+<p id="p6" style="color:darkblue;font-family:comic sans ms;background-color:whitesmoke;line-height:200%;box-shadow:3px 3px 5px gray;"></p>	
+</div>
+<br/><br/>
+<hr/>
+<br/><br/>	
+	
+	
+<script type="text/javascript">
+	document.getElementById('p2').innerHTML = "Value of { <b> document.getElementById(\'p1\').nextSibling </b> } is : " + document.getElementById('p1').nextSibling.textContent;
+	document.getElementById('p3').innerHTML = "Value of { <b> document.getElementById(\'p1\').nextElementSiblingSibling </b> } is : " + document.getElementById('p1').nextElementSibling.textContent;
+
+	document.getElementById('p5').innerHTML = "Value of { <b> document.getElementById(\'p4\').previousSibling.textContent<b> } is : " + document.getElementById('p4').previousSibling.textContent;
+	document.getElementById('p6').innerHTML = "Value of { <b> document.getElementById(\'p4\').previousElementSiblingSibling </b> } is : " + document.getElementById('p4').previousElementSibling.textContent;
+
+</script>	
+</body>
+</html>

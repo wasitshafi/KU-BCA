@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>DOM dir property</title>
+</head>
+<body>
+	<input type="button" onclick="callrtl();"  value="make dir RTL"></input>
+	<input type="button" onclick="callltr();"   value="make dir LTR"></input>
+	<input type="button" onclick="callauto();" value="makedir auto"></input>
+<p id="p1" style="border:2px solid lightgreen;">
+The quick brown fox jumps over to the lazy dog tit for tat.<br/>
+The quick brown fox jumps over to the lazy dog tit for tat.<br/>
+The quick brown fox jumps over to the lazy dog tit for tat.<br/>
+The quick brown fox jumps over to the lazy dog tit for tat.<br/>
+The quick brown fox jumps over to the lazy dog tit for tat.<br/>
+The quick brown fox jumps over to the lazy dog tit for tat.<br/>
+The quick brown fox jumps over to the lazy dog tit for tat.<br/>
+The quick brown fox jumps over to the lazy dog tit for tat.<br/>
+The quick brown fox jumps over to the lazy dog tit for tat.<br/>
+</p>
+
+<script type="text/javascript">
+function callrtl()
+	{
+		document.getElementById('p1').dir = 'rtl';		
+	}
+function callltr()
+{
+	document.getElementById('p1').dir = 'ltr';		
+}
+function callauto()
+{
+	document.getElementById('p1').dir = 'auto';		
+}
+</script>	
+</body>
+</html>

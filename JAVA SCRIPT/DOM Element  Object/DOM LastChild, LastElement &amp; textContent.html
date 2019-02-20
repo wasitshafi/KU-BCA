@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM LastChild, LastElement &amp; textContent</title>
+</head>
+<body>
+<h1>Definition</h1>
+<h2>LastChild:</h2>
+<p>The lastChild property returns the last child node of the specified node, as a Node object.</p>
+
+<h2>LastElement Child</h2>
+<p>The firstElementChild property returns the last child element of the specified element.</p>
+
+<h1>Difference between two :</h1>
+<p>The difference between LastChild property and lastElementChild, is that lastChild returns the last child node as an element node, a text node or a comment node (depending on which one's last), while lastElementChild returns the last child node as an element node (ignores text and comment nodes).</p>
+	
+<br/><hr/>	
+<div id="div1" style="border:5px solid lightgreen;padding:10px;background-color:greenyellow;">
+<p>This is para1</p>
+<h2>This is heading2 text</h2>
+This is text without any tag.
+</div>
+<hr/><br/>	
+<p id="p0" style="color:forestgreen;"></p>
+<p id="p1" style="color:forestgreen;"></p>
+<p id="p2" style="color:chocolate;"></p>	
+
+<script type="text/javascript">
+document.getElementById('p0').innerHTML = "Value of {<b>  document.getElementById(\'div1\').lastChild</b> } is : " + document.getElementById('div1').lastChild;
+document.getElementById('p1').innerHTML = "Value of {<b>  document.getElementById(\'div1\').lastChild.textContent;</b> } is : " + document.getElementById('div1').lastChild.textContent;
+document.getElementById('p2').innerHTML = "Value of {<b>  document.getElementById(\'div1\').lastElementChild.innerHTML;</b> } is : " +  document.getElementById('div1').lastElementChild.innerHTML;
+</script>
+</body>
+</html>

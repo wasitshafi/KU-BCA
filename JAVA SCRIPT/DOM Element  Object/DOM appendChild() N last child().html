@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM appendChild() N last child()</title>
+<style type="text/css">
+	div{
+		margin-top: 50px;
+	    max-height:200px;
+		max-width:90%;
+		overflow:auto;
+	   }	
+</style>
+	</head>
+<body>
+<p style="font: bold 20px courier new;text-align:center; ">Remider:append means add at last.</p>	
+<p>This para is inside body.</p>
+<p>the button add will append it to the end of the document body.</p>
+	<input type="button" value="ADD" onclick="fun0();" id="bt0" ></input>
+	<form>
+		<p >the following form will append paragraphs to div below the form</p>
+	<input type="text" placeholder="Enter ur text here...." id="txtb1"></input>
+	<input type="button" value="add new para" id="bt1" onclick="fun1();"></input>
+	</form>
+	<div id="div1" style="border:2px solid lightgreen;">
+</div>
+<div id="div2" style="border:2px solid tomato;">
+	<p>this div will cut the last child of above div ad append it.</p>
+	<br/>
+	<input type="button" value="cutNpaste" onclick="fun2();"></input>
+</div>
+<script type="text/javascript">
+try
+{
+	function fun0()
+	{
+		var n,t;
+		n = document.createElement("h3");
+		t = document.createTextNode("This is new heading");
+		n.appendChild(t);
+		document.body.appendChild(n);
+		
+	}
+	function fun1()
+	{
+      if(document.getElementById('txtb1').value == "")
+	   {
+        alert("please enter text first...");  
+	    // return;
+	   }
+	   else
+	   {
+		var node,textnode,text;
+		text = document.getElementById('txtb1').value;
+		node = document.createElement("p");
+		textnode = document.createTextNode(text);
+		node.appendChild(textnode);
+		document.getElementById('div1').appendChild(node);
+		return;
+	   }
+   }
+ function fun2()
+	{
+		 var n2;
+		 n2 = document.getElementById('div1').lastChild;
+		 document.getElementById('div2').appendChild(n2);		   
+	}
+}
+catch(err){
+            alert(err.message);  	      
+}
+
+</script>
+</body>
+</html>

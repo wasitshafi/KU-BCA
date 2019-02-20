@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM has childnodes() method</title>
+	<style type="text/css">
+    div{border: 2px solid lightgreen;margin: 30px 20px;height:120px;width:300px;}
+	</style>
+	</head>
+<body>
+<h2>NOTE: Each div has width and height = 300px,120px;</h2>
+<div id="div1">
+<p>This is para. text</p>
+<p>This is para. text</p>
+<p>This is para. text</p>
+</div>
+<p id="p1"></p>
+<hr/>
+	
+<h3>The following has nothing</h3>
+<div id="div2"></div>
+<p id="p2"></p>
+<hr/>
+
+<h3>The following div has one white-space</h3>
+<div id="div3"> </div>
+<p id="p3"></p>
+<hr/>
+
+<h3>The following has one line-feed</h3>
+	<div id="div4">
+</div>
+<p id="p4"></p>
+
+<script type="text/javascript">
+var res = document.getElementById("div1").hasChildNodes();
+	
+  if(res == true)
+   {
+	   document.getElementById('p1').innerHTML = "The above div has childnodes";
+	   document.getElementById('p1').style.color = "forestgreen";
+   }
+   else
+   {
+	   document.getElementById('p1').innerHTML = "The above div does't contains any childnodes";
+	   document.getElementById('p1').style.color = "red";	   
+    }
+	
+res = document.getElementById("div2").hasChildNodes();
+	
+  if(res == true)
+   {
+	   document.getElementById('p2').innerHTML = "The above div has childnodes";
+	   document.getElementById('p2').style.color = "forestgreen";
+   }
+   else
+   {
+	   document.getElementById('p2').innerHTML = "The above div does't contains any childnodes";
+	   document.getElementById('p2').style.color = "red";	   
+    }
+	
+ res = document.getElementById("div3").hasChildNodes();
+	
+  if(res == true)
+   {
+	   document.getElementById('p3').innerHTML = "The above div has childnodes";
+	   document.getElementById('p3').style.color = "forestgreen";
+   }
+   else
+   {
+	   document.getElementById('p3').innerHTML = "The above div does't contains any childnodes";
+	   document.getElementById('p3').style.color = "red";	   
+    }
+	
+  res = document.getElementById("div4").hasChildNodes();
+	
+  if(res == true)
+   {
+	   document.getElementById('p4').innerHTML = "The above div has childnodes";
+	   document.getElementById('p4').style.color = "forestgreen";
+   }
+   else
+   {
+	   document.getElementById('p4').innerHTML = "The above div does't contains any childnodes";
+	   document.getElementById('p4').style.color = "red";	   
+    }
+	  
+</script>
+</body>
+</html>

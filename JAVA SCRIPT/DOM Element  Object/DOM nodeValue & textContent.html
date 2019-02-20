@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM nodeValue &amp; textContent</title>
+<style type="text/css">
+		div{padding: 10px;margin:10px 15px;}
+		tr{border-bottom: 2px solid lightgreen;}
+		td{border: 2px solid lightgreen;}
+</style>
+</head>
+<body>
+<div id="container"> <!-- this is because to restrict it to take script also -->
+		<!-- this is comment -->
+		<div style="border:3px solid violet">
+		<h1>DOM nodeValue property</h1>
+		<br/><br/>
+		The nodeValue property sets or returns the node value of the specified node.
+		<br/><br/>
+		If the node is an element node, the nodeValue property will return null.
+		<br/><br/>
+		Note: If you want to return the text of an element, remember that text is always inside a Text node, and you will have to return the Text node's node value (element.childNodes[0].nodeValue).
+		<br/><br/>
+		For other node types, the nodeValue property will return different values for different node types.
+		<br/><br/>
+		<span style="color:lightgreen;"><b>Tip:</b> An alternative to the nodeValue property can be the textContent property.</span>
+		<br/><br/>
+		</div>	
+		<div style="border:3px solid yellow;">
+		<h1>DOM textContent property</h1>
+		The textContent property sets or returns the textual content of the specified node, and all its descendants.
+		<br/><br/>
+		If you set the textContent property, any child nodes are removed and replaced by a single Text node containing the specified string.
+		<br/><br/>
+		<span style="color:lightgreen;">
+		<b>Tip:</b> Sometimes this property can be used instead of the nodeValue property, but remember that this property returns the text of all child nodes as well.
+		<br/><br/>
+		<b>Tip:</b> To set or return the HTML content of an element, use the innerHTML property.
+		</span>
+		</div>
+		<br/><hr/>
+  	       <input type="button" value="click here"></input><br/><br/>
+			<input type="text" value="This is txtb default text."></input><br/><br/>
+			<input type="checkbox" value="chkb1">check box 1</input><br/><br/>
+			<input type="color">Select Color</input><br/><br/>
+			<a href="https://www.google.com">Goooogle</a><br/><br/>
+			<b>this is bold text</b><br/><br/>
+			<p>This is para. text</p>
+		<hr/>
+		<div id="div1"></div>
+</div>
+
+
+<script type="text/javascript">
+var txt = "";
+var i,cnds;
+cnds = document.getElementById('container').childNodes;
+	txt = "<table style='border:2px solid gray;border-collapse: collapse;'><tr><th>Node Name</th><th>Node Vlaue</th><th>Text Content</th></tr>"
+	for(i = 0;i<cnds.length;i++)
+	{
+		txt = txt + "<tr><td style='text-align:left;'>" +  cnds[i].nodeName + "</td><td style='text-align:left;'>" +  cnds[i].nodeValue  + "</td><td style='text-align:center;'>" + cnds[i].textContent + "</td></tr>";
+	}
+	txt += "</table>"
+document.getElementById('div1').innerHTML = txt;
+</script>
+	
+</body>	
+</html>

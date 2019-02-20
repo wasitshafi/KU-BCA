@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM childred property</title>
+<style type="text/css">
+	*{margin: 20px;}	
+</style>
+	</head>
+<body>
+	<h2 id="lbl"></h2>
+	<p>tghjdf</p>
+	<input type="button" value="google.com" ></input>
+
+    <p>tghjdf</p>
+<div id="div1" style="border:2px solid lightgreen">
+<p>this is para</p>	
+<p>this is para</p>	
+<div  style="border:2px solid lightblue;">
+<h6>this is heading </h6>
+<h6>this is heading </h6>
+<h6>this is heading </h6>
+<h6>this is heading </h6>
+</div>	
+<p>this is para</p>
+</div>
+<div >
+	<input type="button" value="changecolor to 1 childred" 	onclick="change(0);"></input>
+	<input type="button" value="changecolor to 2 childred" 	onclick="change(1);"></input>
+	<input type="button" value="changecolor to 3 childred" 	onclick="change(2);"></input>
+	<input type="button" value="changecolor to 4 childred" 	onclick="change(3);"></input>
+	<input type="button" value="changecolor to 5 childred" 	onclick="change(4);"></input>
+	<input type="button" value="changecolor to 6 childred" 	onclick="change(5);"></input>
+	<input type="button" value="changecolor to 7 childred" 	onclick="change(6);"></input>
+	<input type="button" value="changecolor to 8 childred" 	onclick="change(7);"></input>
+	<input type="button" value="changecolor to 9 childred" 	onclick="change(8);"></input>
+	<input type="button" value="changecolor to ALL childred" onclick="changeall();"></input>
+	</div>
+<script type="text/javascript">
+try
+{
+	 document.getElementById('lbl').innerHTML ="Total no of children's on this document are : " + document.body.children.length
+	function change(i)
+	{
+		var obj = document.body.children;
+		obj[i].style.backgroundColor = "lightgreen";
+	alert(obj[i]);
+
+	}
+	
+	function changeall()
+	{
+		var obj = document.body.children;
+        for(i = 0;i < document.body.children.length;i++)
+		{
+		 obj[i].style.backgroundColor = "lightcoral";
+		}
+	}
+}
+catch(err)
+{
+	 alert("ERROR MESSAGE : " + err.message + "\n\nERROR NAME : " + err.name);
+}
+</script>
+</body>
+</html>

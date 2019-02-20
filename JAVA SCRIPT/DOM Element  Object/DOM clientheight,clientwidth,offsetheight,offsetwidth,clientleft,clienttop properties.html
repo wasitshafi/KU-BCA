@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+<title>DOM clientheight,clientwidth,offsetheight,offsetwidth properties</title> 
+<style type="text/css">
+	#div1{width:300px;height:200px;overflow:auto; border-bottom: 20px solid lightgreen;border-top: 20px solid lightgreen;border-left: 10px solid #90ce90;border-right: 10px solid #90ce90; padding: 10px;margin:5px;resize: both;}	
+	</style>
+</head> 
+<body onload="setInterval('values()',500)
+"> 
+	<h5>TIP : u can resize the div</h5>
+	<p id="p0"></p>
+	<input type="button" onclick="addtext();" value="ADD text to div"></input>
+		<input type="button" onclick="document.getElementById('div1').style.padding = '60px';" value="set padding to 60px"></input>
+		<input type="button" onclick="document.getElementById('div1').style.padding = '30px';" value="set padding to 30px"></input>
+
+	<input type="button" onclick="document.getElementById('div1').style.overflow = 'scroll';" value="ADD both scrollbars"></input>
+	<input type="button" onclick="document.getElementById('div1').style.overflow = 'auto';" value="REMOVE scrollbars"></input>
+<div id="div1">
+	<p id="p1"></p>
+	</div>
+
+
+	<script type="text/javascript">
+     function addtext()
+		{
+			document.getElementById('p1').innerHTML += "THIS DIV HAS FOLLOWING PROPERTIES :<b>width:300px;height:200px;overflow:auto; border: 10px solid green;padding: 10px;margin:5px;resize: both;</b><BR/><br/>";
+		}
+   
+		function values()
+		{
+		var elmnt = document.getElementById('div1');
+        var txt = "";
+			txt += "CLIENT HEIGHT :- Height with padding:<b> " + elmnt.clientHeight + " px</b><br/><br/>";
+			txt += "OFFSET HEIGHT :- Height with padding, border and scrollbar: <b>" + elmnt.offsetHeight + " px</b><br/><hr/><br/>";
+			txt += "CLIENT WIDTH :- Width with padding: <b>" + elmnt.clientWidth + " px</b><br/><br/>";
+			txt += "OFFSET WIDTH :- Width with padding, border and scrollbars:<b> " + elmnt.offsetWidth + " px</b><br/><hr/><br/>";
+			txt += "CLIENT LEFT :- Border left width <b>: " + elmnt.clientLeft + " px</b><br/>";
+			txt += "CLIENT TOP :- Border top width <b>: " + elmnt.clientTop + " px</b><br/><hr/><br/>";
+
+			document.getElementById('p0').innerHTML = txt;
+					
+
+		}
+	</script>	
+</body>
+</html>

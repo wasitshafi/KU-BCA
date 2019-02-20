@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM tabIndex property</title>
+	</head>
+<body>
+	<input type="text" placeholder="this has tab index 2" id="2" ></input><br/><br/>
+    <input type="button" value="tabindex = 5" id="5"></input>	<br/><br/>
+    <input type="text" placeholder="this has tab index 3" id="3"></input><br/><br/>
+    <input type="checkbox" id="1">tab index 1</input><br/><br/>
+    <input type="text" placeholder="this has tab index 4" id="4"></input><br/><br/>
+
+	
+<script type="text/javascript">
+	document.getElementById('1').tabIndex = '1';
+	document.getElementById('2').tabIndex = '2';
+	document.getElementById('3').tabIndex = '3';
+	document.getElementById('4').tabIndex = '4';
+	document.getElementById('5').tabIndex = '5';
+</script>
+</body>
+</html>

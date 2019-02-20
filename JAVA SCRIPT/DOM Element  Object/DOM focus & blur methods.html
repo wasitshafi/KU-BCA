@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM focus and blur methods</title>
+</head>
+<body>
+	<input type="text" id="txtb"></input>
+	<input type="button" value="focus" id="btfocus" onclick="funfocus();"></input>
+	<input type="button" value="blur" id="btblur" onclick="funblur();"></input>
+<script type="text/javascript">
+function funfocus()
+	{
+		document.getElementById('txtb').focus();
+	}
+function funblur()
+	{
+		document.getElementById('txtb').blur();
+	}
+</script>
+</body>
+</html>

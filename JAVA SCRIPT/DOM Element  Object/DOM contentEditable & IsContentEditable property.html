@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>DOM contentEditable &amp; IsContentEditable property</title>
+</head>
+<body>
+<p id="p1">this is para. text</p>
+
+<br/><br/>
+<input type="button" value="Disable content of p to be editable!" id="enab_disab" onclick="fun1();"></input>
+<br/><br/>
+
+<label>Enter any text</label>
+<input type="text" placeholder="Enter your text here" id="txtb" ></input>
+<input type="button" value="APPEND text" onclick="funappend();"></input>
+<h4 id="h41"></h4>
+
+<script type="text/javascript">
+  function funappend()
+	{
+		document.getElementById('p1').innerHTML += " " + document.getElementById('txtb').value; 
+	}
+	function fun1()
+	{
+		var x = document.getElementById('p1');
+		
+		if(x.isContentEditable == true)
+		{
+ 		 x.contentEditable = false;
+		 document.getElementById('enab_disab').value = 'Enable content of p to be editable!';
+		
+		 document.getElementById('h41').innerHTML = "Value of <b> { document.getElementById(\'p1\').isContentEditable } is : " + document.getElementById('p1').isContentEditable;
+		}
+		else
+        {
+		 x.contentEditable = true;
+		 document.getElementById('enab_disab').value = 'Disable content of p to be editable!';
+		
+		document.getElementById('h41').innerHTML = "Value of <b> { document.getElementById(\'p1\').isContentEditable } is : " + document.getElementById('p1').isContentEditable;
+	    }
+	}
+</script>	
+</body>
+</html>

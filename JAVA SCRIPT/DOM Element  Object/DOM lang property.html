@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM lang property</title>
+</head>
+<body>
+<p id="p1" lang="en">This is para text.</p>
+<p id="p2"></p>
+<script type="text/javascript">
+	document.getElementById('p2').innerHTML = "Language of above text is : " + document.getElementById('p1').lang;
+</script>
+</body>
+</html>

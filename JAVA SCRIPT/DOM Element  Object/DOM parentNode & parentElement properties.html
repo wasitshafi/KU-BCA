@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+<title>DOM parentNode &amp; parentElement properties</title> 
+<style type="text/css">
+	i{text-decoration: underline;}	
+</style>
+	</head> 
+<body> 
+
+<h1>ParentNode</h1>
+<p>The parentElement property returns the parent element of the specified element.<br/>
+	<b>Return Value:</b>A Node object, representing the parent node of a node, or null if the node has no parent</p><hr/>
+	
+<h1>ParentElement</h1>
+<p>The parentNode property returns the parent node of the specified node, as a Node object.<br/>
+	<b>Return Value:</b>An Element object, representing the parent element node of a node, or null if the node has no parent</p><hr/>
+	
+<h2>NOTE:</h2>
+<p>In HTML, the document itself is the parent node of the HTML element, HEAD and BODY are child nodes of the HTML element.</p><hr/>
+
+<h1>Difference</h1>
+<p>The difference between parentElement and parentNode, is that parentElement returns null if the parent node is not an element node:<br/><br/>
+   In most cases, it does not matter which property you use,<b> however, parentNode is probably the most popular.</b></p><br/><hr/><br/>
+
+<hr/>
+<p id="p1"></p>
+<p id="p2"></p>
+<hr/>
+<p id="p3"></p>
+<p id="p4"></p>
+<hr/>
+<p id="p5"></p>
+<p id="p6"></p>
+<p><code>The above command Returns null  because &lt;html&gt; does not have a parent ELEMENT node) that is way it returns NULL.</code></p>
+<hr/>
+	<br>
+	<div id="div1">
+	<p>This is para text inside div.</p>
+	   This is text inside div without any tag.<br/>
+	   <span id="span1"><p>This is para text inside span which itself is inside div.</p></span>
+	</div>
+<p id="p7"></p>
+<p id="p8"></p>
+
+<hr/>
+	
+<script type="text/javascript">
+var res = document.getElementsByTagName('P')[0].parentNode.tagName;
+document.getElementById('p1').innerHTML = "<i>parentNode :- </i>value of {<b>document.getElementsByTagName(\'P\')[0].parentNode.tagName</b> } is : " + res;
+res = document.getElementsByTagName('P')[0].parentElement.tagName;
+document.getElementById('p2').innerHTML = "<i>parentElement :- </i>value of {<b>document.getElementsByTagName(\'P\')[0].parentElement.tagName</b> } is : " + res;
+
+res = document.body.parentNode.tagName;
+document.getElementById('p3').innerHTML = "<i>parentNode :- </i>value of {<b>document.body.parentNode.tagName</b> } is : " + res;
+res = document.body.parentElement.tagName;
+document.getElementById('p4').innerHTML = "<i>parentElement :- </i>value of {<b>document.body.parentElement.tagName</b> } is : " + res;
+
+
+res = document.documentElement.parentNode;
+document.getElementById('p5').innerHTML = "<i>parentNode :- </i>value of {<b>document.documentElement.parentNode</b> (refers to HTML itself) } is :  " + res;
+res = document.documentElement.parentElement;
+document.getElementById('p6').innerHTML = "<i>parentElement :- </i>value of {<b>document.documentElement.parentElement</b> (refers to HTML itself) } is : " + res;	
+
+	
+res = document.getElementById('span1').parentNode;
+document.getElementById('p7').innerHTML = "<i>parentNode :- </i>value of {<b>res = document.getElementById('span1').parentNode;</b> } is : <b>" + res + "</b> and its id is <b> " + res.getAttribute('id') + "</b>.";
+res = document.getElementById('span1').parentElement;
+document.getElementById('p8').innerHTML = "<i>parentElement :- </i>value of {<b>res = document.getElementById('span1').parentElement;</b> } is : <b>" + res + "</b> and its id is <b> " + res.getAttribute('id') + "</b>.";
+	
+	
+	
+	</script>	
+</body>
+</html>

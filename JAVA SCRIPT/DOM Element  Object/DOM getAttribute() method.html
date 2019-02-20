@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+<title>DOM Element getAttribute() method</title>
+<style type="text/css">
+div{
+	 margin-top: 20px;
+	 padding: 20px;
+   }	
+	.btdesign1{color: whitesmoke;background-color: tomato;}
+</style>
+</head>
+<body>
+
+<div style="max-width:90%;border: 2px solid lightgreen;">
+<a id="anchor1" href="http://www.google.com" title="google is awesome search engine">google.com</a>
+	<h4 id="heading4">this is heading 4 style.</h4>
+</div>
+
+<div style="max-width:90%;border: 2px dotted blue;">
+<img src="G:\BCA\icons & logo\html5.gif" id="img1" ></img>
+	<h4 id="hdng4">this is heading 4 style text.</h4>
+
+</div>
+
+<div style="max-width:90%;border: 2px dashed brown">
+<input type="button" value="click here"  id="bt1"class="btdesign1"></input>
+</div>
+
+<p id="p1"></p>
+<p id="p2"></p>
+<p id="p3"></p>
+<p id="p4"></p>
+
+<script type="text/javascript">          // attribute is not found it returns null or empty string
+ document.getElementById('p1').innerHTML = 'value of {<b> document.getElementsByName(\'h4\')[0].getAttribute(\'id\');</b> } is : '  +  document.getElementsByTagName('h4')[1].getAttribute('id');
+ document.getElementById('p2').innerHTML = 'value of {<b> document.getElementById(\'anchor1\').getAttribute(\'href\') </b> } is : '  +  document.getElementById('anchor1').getAttribute('href');
+ document.getElementById('p3').innerHTML = 'value of {<b> document.getElementById(\'img1\').getAttribute(\'src\') </b> } is : '  +  document.getElementById('img1').getAttribute('src');
+ document.getElementById('p4').innerHTML = 'value of {<b> document.getElementById(\'bt1\').getAttribute(\'class\') </b> } is : '  +  document.getElementById('bt1').getAttribute('class');
+
+
+</script>
+</body>
+</html>

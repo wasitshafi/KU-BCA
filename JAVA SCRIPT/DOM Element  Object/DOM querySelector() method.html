@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>DOM querySelector() method</title>
+</head>	
+<body>
+<div id="div1">
+	
+<p>This is para. text without any id/class</p>
+<p>This is also para. text without any id/class</p>	
+<hr/>
+<p id="p1">This is para. text and has id : <b>p1</b></p>
+<p id="p1">This is also para. text and has id : <b>p1</b></p>
+<hr/>
+
+<h4 class="h41">This is heading 4 style text and belongs to class : <b>h41</b></h4>
+<h4 class="h41">This is also heading 4 style text and belongs to class : <b>h41</b></h4>
+<hr/>
+ 
+<a href="http:www.google.com" target="_blank">google.com</a>
+<a href="http:www.yahoo.com" target="_blank">yahoo.com</a>
+<hr/>
+
+<br/>	
+<b class="bold1">This is bold text and belongs to class bold1.</b></br>
+<b class="bold1">This is also bold text and belongs to class bold1.</b>	
+<hr/>
+
+	
+<h5>This is heading5 style text.</h5>
+<h6>This is heading6 style text.</h6><br/><br/>
+
+	
+<h5>This is also heading5 style text.</h5>
+<h6>This is also heading6 style text.</h6>
+<hr/>
+<br/>
+	</div>	
+<br/><hr/><br/>
+	
+	<script type="text/javascript" >		
+		
+	var mydiv = document.getElementById('div1');	
+		mydiv.querySelector('p').style.textDecoration = "underline";
+	    mydiv.querySelector('#p1').style.color = "chocolate";	
+		mydiv.querySelector('.h41').style.fontFamily = "comic sans ms";
+		mydiv.querySelector('a[target]').style.backgroundColor = "lightgreen";
+		mydiv.querySelector('.bold1').innerHTML += "<i style='color: red;'>dynamic coding result</i>";
+		      
+		      // working with multiple selectors
+		mydiv.querySelector('h6 , h5').style.fontFamily = 'courier'; // the one which is placed first(In HTML not in arguments) will get the style 
+		
+	</script>
+</body>
+</html>

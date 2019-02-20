@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+<title>DOM attributes property</title>
+<style type="text/css">
+div{
+	 margin-top: 20px;
+	padding: 20px;
+   }	
+</style>
+</head>
+<body>
+
+<div style="max-width:90%;border: 2px solid lightgreen;">
+<a id="anchor1" href="http://www.google.com" title="google is awesome search engine">google.com</a>
+<h4>the above link has following attributes.</h4>
+	<p id="p1"></p>
+</div>
+
+<div style="max-width:90%;border: 2px dotted blue;">
+<img src="G:\BCA\icons & logo\html5.gif" id="img1" ></img>
+<p id="p2"></p>
+</div>
+
+<div style="max-width:90%;border: 2px dashed brown">
+<input type="button" value="click here" id="bt1"></input>
+<p id="p3"></p>
+</div>
+
+<script type="text/javascript">
+ var i;
+	for (i = 0; i < document.getElementById('anchor1').attributes.length; i++)
+		{
+			document.getElementById('p1').innerHTML = document.getElementById('p1').innerHTML + document.getElementById('anchor1').attributes[i].name + ' = ' + document.getElementById('anchor1').attributes[i].value + '<br/>'; 
+		}
+		 
+	for (i = 0; i < document.getElementById('img1').attributes.length; i++)
+		{
+			document.getElementById('p2').innerHTML = document.getElementById('p2').innerHTML + document.getElementById('img1').attributes[i].name + ' = ' + document.getElementById('img1').attributes[i].value + '<br/>'; 
+		}
+		 
+	for (i = 0; i < document.getElementById('bt1').attributes.length; i++)
+		{
+			document.getElementById('p3').innerHTML = document.getElementById('p3').innerHTML + document.getElementById('bt1').attributes[i].name + ' = ' + document.getElementById('bt1').attributes[i].value + '<br/>'; 
+		}
+</script>
+</body>
+</html>

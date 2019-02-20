@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>DOM contains method()</title>
+</head>
+<body>
+<div id="div1">
+this is div text<span id="span1">but this is span text</span>	
+</div>
+	<input type="button" value="check" onclick="check('div1','span1');"></input>	
+	
+<div id="div2">
+this is div text and this is also div text.	
+</div>
+<input type="button" value="check" onclick="check1('div2');"></input>		
+<script type="text/javascript">
+	function check(divname,spanname)
+	{
+      var res = document.getElementById(divname).contains(document.getElementById(spanname));
+ 	 alert('Above div contains span element  \n result is: ' + res);
+	}
+
+	function check1(divname)
+	{
+      var res = document.getElementById(divname).contains(document.getElementById('anyspanid'));
+ 	 alert('Above div does not contains span element \n result is: ' + res);
+	}
+	
+	</script>	
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>              <!-- not working properly -->
+	<title>DOM is EqualNode &amp; SameNode methods</title>
+</head>
+<body>
+<h3>IsEqualNode( ) method</h3>
+<p><pre>
+The isEqualNode( ) method checks if two nodes are equal.
+
+Two nodes are equal if all the following conditions are true:
+
+They have the same Node Type
+They have the same nodeName, NodeValue, localName, nameSpaceURI and prefix
+They have the same childNodes with all the descendants
+They have the same attributes and attribute values (the attributes does not have be in the same order)
+
+Tip: Use the isSameNode( ) method to determine if two nodes are the same node.
+
+</pre></p>
+<h3>IsSameNode( ) method</h3>
+<p><pre>
+The isSameNode( ) method checks if two nodes are the same node.
+
+The isSameNode( ) method returns true if the two nodes are the same node, otherwise false.
+
+Tip: Use the isEqualNode( ) method to check if two nodes are equal, but not necessarily the same node.
+
+</pre></p>	
+<div id="divissame" style="color:brown;background-color:whitesmoke;border:2px solid lightgreen;">
+<p id="p1">This is para text.(text node)</p>
+<p id="h21">This is heading text.(text node)</p>
+<p id="p2"></p>
+<p id="p3"></p>
+
+</div>
+
+<script type="text/javascript">
+ var item1 = document.getElementById('p1');
+ var item2 = document.getElementsByTagName('P')[0];
+ 
+document.getElementById('p2').innerHTML = "Value of { <b>item1.isSameNode(item2)</b> } : " + item1.isSameNode(item2);
+document.getElementById('p3').innerHTML = "Value of { <b>item1.EqualNode(item2)</b> } : " + item1.isEqualNode(item2);
+
+	
+</script>
+</body>
+</html>

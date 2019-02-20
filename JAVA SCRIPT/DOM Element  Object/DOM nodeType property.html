@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM nodeType property</title>
+</head>
+<body>
+<h1>NodeType</h1>
+	
+<!--this is comment -->
+
+<p>Definition and Usage</p>
+<br/><br/>
+The nodeType property returns the node type, as a number, of the specified node.
+<br/><br/>
+<span style="border:2px solid lightgreen;background-color:whitesmoke;display:block;">	
+<p id="p0" >If the node is an element node, the nodeType property will return 1.</p>
+<p id="p1" style="font-family:courier;"></p>
+</span><br/><br/>
+If the node is an attribute node, the nodeType property will return 2.
+<br/><br/>
+If the node is a text node, the nodeType property will return 3.
+<br/><br/>
+If the node is a comment node, the nodeType property will return 8.
+<br/><br/>
+<input type="button" value="just for fun"></input>
+<div>this is div</div>	
+<hr/>
+<h3 id="h31"></h3>	
+<script type="text/javascript" >
+document.getElementById('p1').innerHTML = "The above element has node type(in dom internally) is : " + document.getElementById('p0').nodeType;	
+var txt = "";
+var i,cnds;
+cnds = document.body.childNodes;
+ 
+	
+	for(i = 0;i<cnds.length;i++)
+	{
+		txt = txt + cnds[i].nodeType + "<br>";
+	}
+document.getElementById('h31').innerHTML = txt;
+</script>
+	
+</body>	
+</html>

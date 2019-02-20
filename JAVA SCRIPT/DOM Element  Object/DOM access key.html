@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM access key</title>
+</head>
+<body onload="init();">
+	<div>
+<p id="p1">The access key for the button is :</p>
+
+<input type="button" value="Google.com" id="bt1" onclick="alert('button clicked')"></input>
+<p id="p2">The access key for the anchor is :</p>
+<a href="http://www.amazon.in" id="anchor1">Amazon.in</a>
+</div>
+<script type="text/javascript">
+function init()
+{ var key1,key2;
+ key1 = document.getElementById('bt1').accessKey = "g";
+ key2 = document.getElementById('anchor1').accessKey = "a";
+ document.getElementById('p1').innerHTML = document.getElementById('p1').innerHTML + key1;
+ document.getElementById('p2').innerHTML = document.getElementById('p2').innerHTML + key2;
+	
+	
+
+}
+
+</script>
+</body>
+</html>

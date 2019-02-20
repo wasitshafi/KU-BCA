@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM classList Property</title>
+<style type="text/css">
+	.mycolorclass{color: blueviolet;}
+	.myfontclass{font: 40px courier;}
+	.myspecialclass{font-family: comic sans ms;color: #555555;}
+	
+	</style>
+	
+</head>	
+<body>
+<p id="p1">this is text</p>	
+<input type="button" onclick="document.getElementById('p1').classList.add('mycolorclass','myfontclass');" value="set to mycolor class and myfontclass"></input>
+<input type="button" onclick="document.getElementById('p1').classList.remove('mycolorclass');" value="remove mycolor class"></input>
+<input type="button" onclick="document.getElementById('p1').classList.remove('myfontclass');" value="remove myfontclass"></input>
+<input type="button" onclick="document.getElementById('p1').classList.remove('myfontclass','mycolorclass');" value="remove mycolorclass and myfont class"></input>
+<input type="button" onclick="document.getElementById('p1').classList.toggle('myspecialclass');" value="toggle class to MY SPECIAL CLASS"></input>
+
+<br/><br/><br/>
+
+
+<input type="button" onclick="alert('para. has ' + document.getElementById('p1').classList.length + ' classes.');" value="count no. of classes"></input>
+<input type="button" onclick="alert('PARA. CLASSES NAMES ARE AS : ' + document.getElementById('p1').classList);" value="DISPLAY CLASSES NAME"></input>
+
+	<script type="text/javascript">
+	
+</script>
+</body>
+</html>

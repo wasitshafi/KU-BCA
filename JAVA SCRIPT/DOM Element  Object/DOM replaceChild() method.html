@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM replaceChild() method</title>
+<style type="text/css">
+	#c1{font-family: comic sans ms;color: #098765;}	
+</style>
+</head>
+<body>
+<h1>replaceChild() method</h1>
+<p>The replaceChild() method replaces a child node with a new node.<br/>
+   The new node could be an existing node in the document, or you can create a new node.<br/></p>
+<h1>NOTE :their must not be any space/newline/comments after div as  these are considered textnodes</h1>	
+	<input type="button" value="add para" onclick="funappend(); "></input>
+	<input type="button" value="Replace first child" onclick="rep_node();"></input><br/><br/>
+     <!-- their must not be any space/newline after div as these are considered textnodes  -->
+<div id="div1" style="border:2px solid lightgreen;display:inline-block;"><p id="c1">This is para. text.</p>	
+<h5>This is heading5 style text.</h5>
+</div><hr/><br/><br/>
+
+<input type="button" value="add para" onclick="funappend1(); "></input>
+<input type="button" value="Replace first child's text" onclick="reptext_node();"></input>	
+<br/><br/>
+     <!-- their must not be any space/newline after div as these are considered textnodes  -->
+<div id="div2" style="border:2px solid lightgreen;display:inline-block;"><p id="c1">This is para. text.</p>	
+<h5>This is heading5 style text.</h5>
+</div>
+
+<script type="text/javascript">
+	
+	var i = 1;
+	function funappend()
+	{
+		var n,t;
+		n = document.createElement("p");
+		t = document.createTextNode("This is new para. text( " + i + " ).") ;
+		n.appendChild(t);
+		document.getElementById('div1').appendChild(n);
+		i++;
+	}
+	    	
+	 var j = 1;
+	
+	function rep_node()
+	{
+		var elmnt = document.createElement('H2');
+		var txtnode = document.createTextNode('This is replaced text ( ' + j + ' ).');
+	    elmnt.appendChild(txtnode);
+		
+		var item = document.getElementById('div1');
+		item.replaceChild(elmnt, item.childNodes[0]);   
+		j++;
+	}
+
+	
+		function funappend1()
+	{
+		var n,t;
+		n = document.createElement("p");
+		t = document.createTextNode("This is new para. text( " + i + " ).") ;
+		n.appendChild(t);
+		document.getElementById('div2').appendChild(n);
+		i++;
+	}
+	    	
+
+	
+	
+	
+	var k =1;
+	function reptext_node()
+	{
+	   var txt = document.createTextNode('This is replaced text ( ' + k + ' ).');
+	   var item = document.getElementById('div2').childNodes[0];
+	
+	   item.replaceChild(txt , item.childNodes[0]);
+		k++;
+	
+	}
+</script>
+</body>	
+</html>

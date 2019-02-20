@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM removeChild() method</title>
+</head>
+<body>
+	<h3>NOTE : Children are actually added and removed dynamically. U can check it by inspecting web page in UR browser.</h3>
+	<input type="button" value="add para" onclick="funappend(); "></input>
+	<input type="button" value="remove" onclick="rem();"></input>	
+<br/><br/>
+
+<div id="div1" style="border:2px solid lightgreen;display:inline-block;">
+<p>This is para. text.</p>	
+<h5>This is heading5 style text.</h5>
+</div>
+
+<script type="text/javascript">
+	
+	var i = 1;
+	function funappend()
+	{
+		var n,t;
+		n = document.createElement("p");
+		t = document.createTextNode("This is new para. text( " + i + " ).") ;
+		n.appendChild(t);
+		document.getElementById('div1').appendChild(n);
+		i++;
+	}
+	function rem()
+	{
+		var objdiv = document.getElementById('div1');
+		    objdiv.removeChild(objdiv.childNodes[0]);
+	}
+</script>
+</body>	
+</html>

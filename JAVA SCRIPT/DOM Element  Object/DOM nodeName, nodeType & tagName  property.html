@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM nodeName,nodeType &amp; tagName property</title>
+<style type="text/css">
+	
+	td{border: 2px solid lightgreen;}
+
+	</style>
+	</head>
+<body>
+<h1>nodeName</h1>
+<!-- this is comment -->
+<p id="p0">
+this is text without any tag
+<p>this is para. text</p>
+<div>this is div </div>
+<span> this is span</span>
+<b>this is bold text>
+<hr/>
+<h3 id="h31"></h3>
+<div id="div1">	</div>
+<script type="text/javascript" >
+var txt = "";
+var i,cnds;
+cnds = document.body.childNodes;
+	txt = "<table style='border:2px solid gray;border-collapse: collapse;'><tr><th> NODE NAME </th><th> NODE TYPE </th><th> TAG NAME </th></tr> "
+	for(i = 0;i<cnds.length;i++)
+	{
+		txt = txt + "<tr><td style='text-align:left;'>" +  cnds[i].nodeName  + "</td><td style='text-align:center;'>" + cnds[i].nodeType + "</td><td>"+ cnds[i].tagName + "</td></tr>";
+	}
+	txt += "</table>"
+document.getElementById('div1').innerHTML = txt;
+</script>
+	
+</body>	
+</html>

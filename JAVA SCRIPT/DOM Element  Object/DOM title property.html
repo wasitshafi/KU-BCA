@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM title property</title>
+
+</head>
+<body>
+
+<label>Select an title for below anchor.(NOTE:title actually changes U can verify it by mouseover on it.)</label>
+<br/><br/>
+<a href="https://www.google.com" title='Google is awesome search engine' id="anchor1">Google.com</a>
+<br/>
+<p id="p1"></p>
+	
+<label>Select title for anchor : </label>
+
+<select id="ddlst">
+<option disabled selected value="0">-----SELECT TITLE-----</option>	
+<option value="1">Best search engine</option>	
+<option value="2">Gooooogle</option>	
+<option value="3">Search anything</option>	
+<option value="4">Search whole web</option>	
+<option value="5">I like gooooogle too much</option>	
+</select>
+
+<script type="text/javascript">
+    setInterval("repeat()",300);
+	 function repeat()
+	 {
+	   var nwtitle = document.getElementById('ddlst').value;
+	   switch(nwtitle)
+		 {
+			 case '0': document.getElementById('anchor1').title = "Google is awesome search engine";
+					 break;
+			 case '1': document.getElementById('anchor1').title = "Best search engine";
+					 break;
+			 case '2': document.getElementById('anchor1').title = "Gooooogle";
+					 break;
+			 case '3': document.getElementById('anchor1').title = "Search anything";
+					 break;
+			 case '4': document.getElementById('anchor1').title = "Search whole web";
+					 break;
+			 case '5': document.getElementById('anchor1').title = "I like gooooogle too much";
+					 break;
+		 }
+			document.getElementById('p1').innerHTML = "Title of above anchor is :<b> " + document.getElementById('anchor1').title;
+	  }
+</script>
+</body>
+</html>

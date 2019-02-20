@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM child Element count property</title>
+</head>
+<body>
+<div id="div1" style="border:2px solid lightgreen">
+<p>this is para</p>	
+<p>this is para</p>	
+<div  style="margin:50px;border:2px solid lightblue;">
+<h6>this is heading inside another div</h6>
+<h6>this is heading inside another div</h6>
+<h6>this is heading inside another div</h6>
+<h6>this is heading inside another div</h6>
+</div>
+<p>this is para</p>	
+<input type="button" value="google.com" ></input>
+<p id="result">Total no. of elements in the div are : </p>
+</div>
+
+<script type="text/javascript">
+try{
+	var count;
+	count = document.getElementById('div1').childElementCount;
+	document.getElementById('result').innerHTML = document.getElementById('result').innerHTML + count;
+	alert(document.getElementById('div1').children("result"))
+}
+	catch(err)
+		{
+			alert("ERROR MESSAGE : " + err.message + "\n\nERROR NAME : " + err.name);
+		}
+</script>
+</body>
+</html>

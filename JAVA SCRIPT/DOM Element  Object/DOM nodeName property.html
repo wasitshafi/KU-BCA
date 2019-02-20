@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM nodeName property</title>
+</head>
+<body>
+<h1>nodeName</h1>
+<!-- this is comment -->
+<p id="p0">
+The nodeName property returns the name of the specified node.
+	</p>
+<p id="p1" style="color:green;font:20px bold comic sans ms;"></p>
+If the node is an element node, the nodeName property will return the tag name.
+<br/><br/>
+If the node is an attribute node, the nodeName property will return the name of the attribute.
+<br/><br/>
+For other node types, the nodeName property will return different names for different node types.
+<br/><br/>
+	
+<b>Possible values:</b>	<input type="button" value="justforfun"></input>
+
+<br/>
+Returns the tagname for element nodes, in uppercase<br/><br/>
+Returns the name of the attribute for attribute nodes<br/><br/>
+Returns "#text" for text nodes<br/><br/>
+Returns "#comment" for comment nodes<br/><br/>
+Returns "#document" for document nodes	<br/><br/>
+<br/><br/><b>
+Tip: You can also use the tagName property to return the tag name of an element. The difference is that tagName only return tag names, while nodeName returns the name of all nodes (tags, attributes, text, comments).	</b>
+
+<hr/>
+<div style="border:3px solid lightgreen;padding:20px;">
+<h2>the tag name for this document is as:</h2>
+<h3 id="h31"> </h3>
+</div>
+
+<script type="text/javascript" >
+
+document.getElementById('p1').innerHTML = "The above element has tag name is : " + document.getElementById('p0').nodeName;	
+	
+var txt = "";
+var i,cnds;
+cnds = document.body.childNodes;
+
+	
+	for(i = 0;i<cnds.length;i++)
+	{
+		txt = txt + cnds[i].nodeName + "<br>";
+	}
+document.getElementById('h31').innerHTML = txt;
+</script>
+	
+</body>	
+</html>

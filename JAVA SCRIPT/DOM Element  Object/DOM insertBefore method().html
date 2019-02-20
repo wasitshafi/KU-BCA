@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<title>DOM insertBefore method()</title>
+</head>
+<body>
+<input type="button" value="add new item before para." onclick="addnew();"></input>
+
+<p id="p1">This is para</p>
+ 	<script type="text/javascript">
+	<!--
+	var i = 1;	
+	function addnew()
+	{
+     var node = document.createElement('H2');
+	 var txtnode = document.createTextNode("This is new heading2 style text [" + i + "]");
+	 node.appendChild(txtnode);
+ 	 document.body.insertBefore(node,document.getElementById('p1'));
+	 i++;
+	}
+	
+	//-->
+    </script>
+</body>
+</html>

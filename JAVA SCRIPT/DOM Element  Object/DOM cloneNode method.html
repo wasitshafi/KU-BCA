@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM cloneNode method()</title>
+<style type="text/css">
+	div{border: 2px solid lightgreen;margin: 20px 30px;}
+	#p1{font: 20px bold comic sans ms;color: #555555;}
+	#img1{box-shadow: 2px 2px 6px gray inset ,3px 3px 8px gray ;outline: none;}
+	</style>
+	</head>
+<body>
+	<input type="button" value="clone/make another identical div1" onclick="clone();"></input>
+<div id="div1">
+<p id="p1">this is para </p>
+<a href="http://www.google.com" title="google is awsome search enging" >goooogle</a>
+<h2>this is heading 2 style</h2>
+<img src="cloud-computing-1.png" width="200px" height="200px" id="img1"></img>	
+</div>
+<script type="text/javascript">
+	function clone()
+	{
+	 var itm = document.getElementById('div1');
+	 var clone = itm.cloneNode(true);
+     //   clone = document.getElementById('div1').cloneNode(true);
+ 	 document.body.appendChild(clone);
+	} 
+	</script>	
+</body>
+</html>

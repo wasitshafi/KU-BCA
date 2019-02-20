@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM hasAttribute() method</title>
+<style type="text/css">
+	.c1{color: sandybrown;}	
+	
+</style>
+	</head>
+<body>
+	<p id="p0"></p>
+    <hr/>
+	<div id="div1" >
+	<p class="c1" id="ptext1">This is para. text with aattribute.</p>		
+	<p id=p1></p>
+	<hr/>
+	<p>This is para. text that does't contain any attribute</p>
+	<p id="p2"></p>
+	<hr/>
+	</div>
+<p id="p1"></p>
+<script type="text/javascript">
+	var res = document.body.hasAttribute("onload");
+	if( res == true)
+		{
+			document.getElementById('p0').innerHTML = "Body tag  has <b>onload</b> attributes."
+            document.getElementById('p0').style.color = "lightgreen";
+		}
+	else
+		{
+		    document.getElementById('p0').innerHTML = "Body tag does't contain <b>onload</b> attribures."
+			document.getElementById('p0').style.color = "red";
+		}
+res =document.getElementById('ptext1').hasAttribute("class");
+	
+	if(res == true)
+		{
+			document.getElementById('p1').innerHTML = "Above para has <b>class</b> attributes."
+			document.getElementById('p1').style.color = "lightgreen";
+		}
+	else
+		{
+		    document.getElementById('p1').innerHTML = "Above para does't contain  <b>class</b> attribures."
+			document.getElementById('p1').style.color = "red";
+		}
+	
+	var x = document.getElementById('div1').getElementsByTagName('P')[2];
+	//x.style.color = "yellow";
+    res = x.hasAttribute("onmouseover");
+
+	if(res == true)
+		{
+			document.getElementById('p2').innerHTML = "Above para has <b>onclick</b>and onmouseover attributes.";
+			document.getElementById('p2').style.color = "lightgreen";
+		}
+	else
+		{
+		    document.getElementById('p2').innerHTML = "Above para does't contain  <b>onclick</b> attribures.";
+			document.getElementById('p2').style.color = "red";
+		}
+		
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>                  <!--  error : eventlistner is not removing in the program....? -->
+<head>
+<title>DOM addEventListener() &amp; removeEventListener() method</title>
+	
+</head>
+<body>
+	<h2>Hover on google.com</h2><br/><br/>
+	<input type="button" value="google.com" id="bt1"></input><br/><br/>
+	<input type="button" value="remove button eventListener" id="bt1" onclick="rem();"></input>
+
+	<p id="p1" ></p>
+	<script type="text/javascript">
+     
+		
+		document.getElementById("bt1").addEventListener("mouseover",function function1(){document.getElementById('p1').innerHTML +=  "google is as very popular company <br/>"})
+	
+		function rem()
+		{
+			var x = document.getElementById('bt1');
+
+			x.removeEventListener("mouseover",function1); // for all major browsers
+		   
+			
+			/* cross browser technique */
+			if(x.removeEventListener)
+			{
+			  x.removeEventListener('mouseover',function1); // For all major browsers, except IE 8 and earlier
+			}
+			else if(x.detachEvent)
+			{
+			  x.detachEvent('onmouseover',function1);// For all major browsers, except IE 8 and earlier
+			}
+			
+		
+		
+		}
+</script>
+</body>
+</html>

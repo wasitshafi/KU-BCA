@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+<title>DOM scrollHeight,scrollWidth,scrollTop &amp; scrollLeft properties</title> 
+<style type="text/css">
+	
+	#div1{max-width:300px;max-height:200px;overflow:auto; border-bottom: 20px solid lightgreen;border-top: 20px solid lightgreen;border-left: 10px solid #90ce90;border-right: 10px solid #90ce90; padding: 10px;margin:5px;resize:both;}	
+	</style>
+</head> 
+	<body onload="setInterval('values()',500)">
+	<div style="text-align:center;position:fixed;z-index:2; background-color:whitesmoke;width:100%;margin:0px;padding:0px;">
+	<input type="button" value="scroll down by 10px" onclick="document.body.scrollTop += '10'"></input>    
+    <input type="button" value="scroll up by 10px" onclick="document.body.scrollTop -= '10'"></input>
+    <input type="button" value="scroll left by 10px" onclick="document.body.scrollLeft += '10'"></input>
+    <input type="button" value="scroll right by 10px" onclick="document.body.scrollLeft -= '10'"></input> 
+    <hr/>    
+    </div>
+<br/><br/>
+<div id="container" style="z-index:1;min-width:1200px;">
+	<div style="border:3px solid lightgreen;">
+
+	<h1>ScrollHeight</h1>
+	<p>The scrollHeight property returns the entire height of an element in pixels, including padding, but not the border, scrollbar or margin.<br/>
+	   Tip: Use the scrollWidth property to return the entire width of an element.<br/>
+	<b>The scrollWidth and scrollHeight properties return the entire height and width of an element, including the height and width that is not viewable (because of overflow).</b>b><br/>
+	   Tip: To add scrollbars to an element, use the CSS overflow property.<br/>
+	   This property is read-only.</p><br/><hr/><br/>
+
+   <h1>ScrollWidth</h1>
+   <p>  The scrollWidth property returns the entire width of an element in pixels, including padding, but not the border, scrollbar or margin.<br/>
+        Tip: Use the scrollHeight property to return the entire height of an element.<br/>
+ 	 <b>The scrollWidth and scrollHeight properties return the entire height and width of an element, including the height and width that is not viewable (because of overflow).</b><br/>
+        Tip: To add scrollbars to an element, use the CSS overflow property.<br/>
+		</p><br/><hr/><br/>
+		
+		
+   <h1>ScrollTop</h1>
+	<p>The scrollTop property sets or returns the number of pixels an element's content is scrolled vertically.<br/>
+       Tip: Use the scrollLeft property to set or return the number of pixels an element's content is scrolled horizontally.<br/>
+       Tip: To add scrollbars to an element, use the CSS overflow property.<br/>
+       Tip: The onscroll event occurs when an element's scrollbar is being scrolled.</p><br/><hr/><br/>
+		
+   <h1>ScrollLeft</h1>
+	<p>The scrollLeft property sets or returns the number of pixels an element's content is scrolled horizontally.<br/>
+        Tip: Use the scrollTop property to set or return the number of pixels an element's content is scrolled vertically.<br/>
+		Tip: To add scrollbars to an element, use the CSS overflow property.</p><br/><hr/><br/>
+	</div>
+	<p id="p0"></p>
+	<input type="button" onclick="addtext();" value="ADD text to div"></input>
+	<input type="button" onclick="document.getElementById('div1').style.padding = '30px';" value="set padding to 30px"></input>
+    <input type="button" onclick="document.getElementById('div1').style.padding = '60px';" value="set padding to 60px"></input>
+    <br/><br/>
+    <input type="button" value="scroll down by 10px" onclick="document.getElementById('div1').scrollTop += '10'"></input>    
+    <input type="button" value="scroll up by 10px" onclick="document.getElementById('div1').scrollTop -= '10'"></input>
+    <input type="button" value="scroll left by 10px" onclick="document.getElementById('div1').scrollLeft += '10'"></input>
+    <input type="button" value="scroll right by 10px" onclick="document.getElementById('div1').scrollLeft -= '10'"></input>
+
+<br/><br/><hr/><br/>
+<div id="div1">
+	<p ><pre id="pre1" style="line-height:300%;"></pre></p>
+	</div>
+</div>
+<br/><br/><br/>
+<script type="text/javascript">
+     function addtext()
+		{
+			document.getElementById('pre1').innerHTML += "The quick brown fox jumps over to the lazy dog tit for tat.<b>The quick brown fox jumps over to the lazy dog tit for tat.</b><br/>";
+		}
+		function values()
+		{
+		 var elmnt = document.getElementById('div1');
+         var txt = "";
+			txt += "Scroll Height is :<b> " + elmnt.scrollHeight + " px</b><br/><br/>";
+			txt += "Scroll width is :<b>" + elmnt.scrollWidth + " px</b><br/><br/><br/><br/>";
+			txt += "Scroll Top : <b>" + elmnt.scrollTop + " px</b><br/><br/>";
+			txt += "Scroll Left :<b> " + elmnt.scrollLeft + " px</b><br/><br/>";
+		
+			document.getElementById('p0').innerHTML = txt;
+		}
+	</script>	
+</body>
+</html>
