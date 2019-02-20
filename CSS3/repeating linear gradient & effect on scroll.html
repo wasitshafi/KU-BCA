@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS3 repeating linear gradient() function</title>
+	<style type="text/css">
+	div{
+		position: relative;
+		height: 300px; 
+		width: 300px;
+	   }
+	.grad1{
+						   /* Safari 5.1 to 6.0 */
+			  background: -webkit-repeating-linear-gradient(red, yellow 10%, green 20%);
+			  /* Opera 11.1 to 12.0 */
+			  background: -o-repeating-linear-gradient(red, yellow 10%, green 20%);
+			  /* Firefox 3.6 to 15 */
+			  background: -moz-repeating-linear-gradient(red, yellow 10%, green 20%);
+			  /* Standard syntax */
+			  background: repeating-linear-gradient(red, yellow 10%, green 20%);
+
+		  }
+     .grad2{
+			background: -webkit-repeating-linear-gradient(45deg,red,blue 7%,green 10%); /* For Safari 5.1 to 6.0 */
+			background: -o-repeating-linear-gradient(45deg,red,blue 7%,green 10%); /* For Opera 11.1 to 12.0 */
+			background: -moz-repeating-linear-gradient(45deg,red,blue 7%,green 10%); /* For Firefox 3.6 to 15 */
+			background: repeating-linear-gradient(45deg,red,blue 7%,green 10%); /* Standard syntax (must be last) */
+		   }
+	 .grad3{ 
+			background: -webkit-repeating-linear-gradient(190deg,red,blue 7%,green 10%); /* For Safari 5.1 to 6.0 */
+			background: -o-repeating-linear-gradient(190deg,red,blue 7%,green 10%); /* For Opera 11.1 to 12.0 */
+			background: -moz-repeating-linear-gradient(190deg,red,blue 7%,green 10%); /* For Firefox 3.6 to 15 */
+			background: repeating-linear-gradient(190deg,red,blue 7%,green 10%); /* Standard syntax (must be last) */
+	 	 }
+	 .grad4 {
+			background: -webkit-repeating-linear-gradient(90deg,red,blue 7%,green 10%); /* For Safari 5.1 to 6.0 */
+			background: -o-repeating-linear-gradient(); /* For Opera 11.1 to 12.0 */
+			background: -moz-repeating-linear-gradient(90deg,red,blue 7%,green 10%); /* For Firefox 3.6 to 15 */
+			background: repeating-linear-gradient(90deg,red,blue 7%,green 10%); /* Standard syntax (must be last) */
+	        }
+	 
+	</style>
+</head>
+<body onscroll="document.body.style.opacity = '.8';" onmousemove="document.body.style.opacity = '1';" >
+<p>This div belong to grad1 class</p>
+<div class="grad1">	
+</div>
+
+<p>This div belong to grad2 class</p>
+<div class="grad2">	
+</div>
+
+<p>This div belong to grad3 class</p>
+<div class="grad3">	
+</div>
+
+<p>This div belong to grad4.1 class</p>
+<div class="grad4">
+</div>
+
+<div style="text-align: center; width: 100%;height: auto;">
+<iframe src="G:\BCA\html\w3school.org\css\css references\set 2\CSS repeating-linear-gradient() function.html" style="width: 90%;height: 550px;" ></iframe>
+</div>
+
+</body>
+</html>

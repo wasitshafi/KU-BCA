@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS in-range and out-range</title>
+	<style type="text/css">
+	input[type=text]:in-range{color: lightgreen}
+	input[type=text]:out-of-range{border: 2px solid red;}
+	</style>
+</head>
+<body>
+<form>
+		<input type="text" minlength="10"></input>
+		<input type="submit" value="ok"></input>
+</form>
+</body>
+</html>

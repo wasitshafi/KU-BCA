@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css3 transitions....</title>
+	<link rel="icon" href="C:\Users\jhon pc\Pictures\1492910_1444646559090277_1041890683_n.jpg">
+	<style type="text/css">
+	#d1,#d2,#d3{
+	    font-family:comic sans ms;
+	    font-size: 18pt;
+		text-decoration: none;
+        color:whitesmoke;
+        background-color:#555555;;
+	    border:1px solid #777777;
+	    display: inline-block;
+	    border-spacing: 10px;
+	   }
+	#d1{ 
+		 width: 100px;
+		 height: auto;
+		 -webkit-transition: width .8s; /* Safari */
+		 transition: width .8s ease-in-out;
+		 border-radius: 2px;	   
+	   }
+	#d1:hover{
+		      transition-delay: .2s;
+	          width:150px;
+	          opacity:.7;
+	         } 
+	#d2{ 
+		 width:190px;
+		 height: auto;
+		 -webkit-transition: width .8s; /* Safari */
+		 transition: width .8s;
+		 border-radius: 2px;
+	     
+	   }
+	#d2:hover{
+		      transition-delay: .2s;
+	          width:250px;
+	          opacity:.7;
+	         }
+	#d3{ 
+		 width:250px;
+		 height: auto;
+		 -webkit-transition: width .8s; /* Safari */
+		 transition: width .8s;
+		 border-radius:50px/20px;
+	     padding-left: 30px;
+	     padding-right:30px;
+	     text-overflow: ellipsis;
+	   }
+	#d3:hover{
+		      transition-delay: .2s;
+	          width:300px;
+	          text-overflow: clip;
+	      
+	         }
+	#d3:focus{
+			  outline: none;
+			 }         
+
+	</style>
+</head>
+<body>
+<a href="http://www.google.com" ><input type="button" value="HOME" id="d1" /></a>
+<a href="http://www.bing.com" ><input type="button" value="ADDMISSION" id="d2" /></a>
+<br/>
+<br/>
+<br/>
+<form >
+<input id="d3" type="search" placeholder="Enter keyword" required  style="background-color: whitesmoke; color: #555555" />
+<input type="submit"></input>
+</form>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>handling white-spaces</title>
+	<style type="text/css">
+	div{color: #333333;
+		margin: 0px;
+		margin-bottom: 50px;
+		overflow: auto;}
+	.one{
+		white-space: pre;	/*act like pre tag*/
+		background-color: lightblue;
+		border: 2px solid tomato;
+	   }
+
+	.two{
+		 white-space: nowrap;
+		 background-color: lightgreen;
+	     border: 2px solid tomato;
+	    }
+
+	.three{
+		   white-space: pre-line;
+		   background-color: lightblue;
+		   border: 2px solid tomato;   
+		  }
+
+	.four{
+		  white-space: pre-wrap;
+		  background-color: lightgreen;
+	      border: 2px solid tomato;
+	     }
+	</style>
+</head>
+<body>
+<p>PRE:-Whitespace is preserved by the browser. Text will only wrap on line breaks. Acts like the &ltpre&gt tag in HTML.<br/><b>eg:</b></p>
+<div class="one">T              he   q      uick brown fox        jumps over to     the lazy dog tit for tat AAA   BBB   CCC   DDD   EEE   FFF   GGGG   HHH  III   JJJ   KKK   LLL   MMM   NNN   OOO   PPP   QQQ   RRR   SSS   TTT   UUUU   VVV   WWW   XXX   YYY   ZZZ     .now br tag <br/>hello world ..... </div>
+
+
+<p>NOWRAP:-Sequences of whitespace will collapse into a single whitespace. Text will never wrap to the next line. The text continues on the same line until a &ltbr&gt tag is encountered<br/><b>eg:</b></p>
+
+<div class="two">T              he   q      uick brown fox        jumps over to     the lazy dog tit for tat AAA   BBB   CCC   DDD   EEE   FFF   GGGG   HHH  III   JJJ   KKK   LLL   MMM   NNN   OOO   PPP   QQQ   RRR   SSS   TTT   UUUU   VVV   WWW   XXX   YYY   ZZZ     .now br tag <br/>hello world ..... </div>
+
+
+<p>PRE-LINE:-Sequences of whitespace will collapse into a single whitespace. Text will wrap when necessary, and on line breaks<br/><b>eg:</b></p>
+
+<div class="three">T              he   q      uick brown fox        jumps over to     the lazy dog tit for tat AAA   BBB   CCC   DDD   EEE   FFF   GGGG   HHH  III   JJJ   KKK   LLL   MMM   NNN   OOO   PPP   QQQ   RRR   SSS   TTT   UUUU   VVV   WWW   XXX   YYY   ZZZ     .now br tag <br/>hello world ..... </div>
+
+
+<p>PRE-WRAP:-Whitespace is preserved by the browser. Text will wrap when necessary, and on line breaks<br/><b>eg:</b></p>
+
+<div class="four">T              he   q      uick brown fox        jumps over to     the lazy dog tit for tat AAA   BBB   CCC   DDD   EEE   FFF   GGGG   HHH  III   JJJ   KKK   LLL   MMM   NNN   OOO   PPP   QQQ   RRR   SSS   TTT   UUUU   VVV   WWW   XXX   YYY   ZZZ     .now br tag <br/>hello world ..... </div>
+</body>
+</html>

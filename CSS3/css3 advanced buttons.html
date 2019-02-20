@@ -1,0 +1,266 @@
+<html>
+<head>
+<title>css 3 buttons</title>
+<style type="text/css">
+ p{
+ font-family:curier;
+ font-size:15pt;
+ color:maroon;
+ font-style:bold;
+ line-height:20%;
+ }
+/************************************************************************************/
+/************************************************************************************/
+ li{
+	display:inline;
+	list-style:none;	
+   }
+/************************************************************************************/
+/************************************************************************************/
+ #d1,#d2,#d3,#d4,#d4_2, #d4_3,#d4_4, #d5,#d5_2,#d5_3,#d5_4, #d6,#d7,#d8{
+ 	font-family:comic sans ms;
+   	font-size:25px;
+   	text-align:center;
+    padding:10px 20px;
+    cursor:hand;
+	text-decoration: none;
+	border-radius:2px;
+ }
+ #d1,#d2,#d3,#d4,#d4_2, #d4_3,#d4_4, #d5,#d5_2,#d5_3,#d5_4, #d6,#d7,#d8{ outline: none; }
+ 
+ #d1{
+	 background-color:#4caf50;
+	 color:white;
+	 border:0;
+	}  
+/************************************************************************************/
+/************************************************************************************/
+ #d2{
+     background-color:#4caf50;
+	 color:white;
+	 border:0;
+     border-radius:12px;
+     
+     }	
+/************************************************************************************/
+/************************************************************************************/
+	 #d3{
+     background-color:white;
+	 border:3px solid #4caf50;
+     border-spacing: 0px;
+     margin: 0px;
+      }	 
+/************************************************************************************/
+/************************************************************************************/
+	  #d4{
+	 background-color:#4caf50;
+	 border:3px solid #4caf50;
+	-webkit-transition-duration: 1s; /* Safari */
+    transition-duration: 0.4s;
+	}   
+	#D4:hover
+	{
+    background-color: white;
+	border:3px solid #4caf50;
+	}
+	#d4_2{
+	 background-color:#555555;
+	 border:3px solid #555555;
+	-webkit-transition-duration: 1s; /* Safari */
+    transition-duration: 0.4s;
+	}   
+	#D4_2:hover
+	{
+    background-color: white;
+	border:3px solid #555555;
+	}
+    #d4_3{
+	 background-color:#008cba;;
+	 border:3px solid #008cba;
+	-webkit-transition-duration: 1s; /* Safari */
+    transition-duration: 0.4s;
+	}   
+	#D4_3:hover
+	{
+    background-color: white;
+	border:3px solid #4caf50;
+	}	
+     #d4_4{
+	 background-color:teal;
+	 border:3px solid teal;
+	-webkit-transition-duration: 1s; /* Safari */
+    transition-duration: 0.4s;
+	}   
+	#D4_4:hover
+	{
+    background-color: white;
+	border:3px solid teal;
+	}
+/************************************************************************************/
+/************************************************************************************/
+ #d5{
+	 background-color:white;
+	 border:3px solid #4caf50;
+	-webkit-transition-duration: 1s; /* Safari */
+    transition-duration: 0.4s;
+	}   
+	#D5:hover
+	{
+    background-color:#4caf50;
+	border:3px solid #4caf50;
+	}
+	#d5_2{
+	 background-color:white;
+	 border:3px solid #555555;
+	-webkit-transition-duration: 1s; /* Safari */
+    transition-duration: 0.4s;
+	}   
+	#D5_2:hover
+	{
+    background-color: #555555;
+	border:3px solid #555555;
+	}
+    #d5_3{
+	 background-color:white;
+	 border:3px solid #008cba;
+	-webkit-transition-duration: 1s; /* Safari */
+    transition-duration: 0.4s;
+	}   
+	#D5_3:hover
+	{
+    background-color:#008cba;;
+	border:3px solid #008cba;;
+	}	
+     #d5_4{
+	 background-color:white;
+	 border:3px solid teal;
+	-webkit-transition-duration: 1s; /* Safari */
+    transition-duration: 0.4s;
+	}   
+	#D5_4:hover
+	{
+    background-color: teal;
+	border:3px solid teal;
+	}
+     #d6{
+     	background-color:#4caf50;
+		color:white;
+		border:0;
+       }
+    #d6:hover{
+    	 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19); 
+         transition-duration: 0.001s;
+             }
+    #d7{
+    	background-color:#4caf50;
+		color:white;
+		border:0;
+		opacity: 0.6;
+    	cursor:not-allowed;
+       } 
+    #d8{
+		 background-color:#006e51;
+		 color:white;
+		 border-top: 2px solid #009B77;
+		 border-bottom: 2px solid #009B77;
+		 border-left: 1px solid #009B77;
+		 border-right: 1px solid #009B77;
+	     border-radius:0;
+	     float:left;
+	    }                    
+     #d8:hover{
+			   transition-duration: 0.4s;
+			   background-color:#009B77;
+	           transition-delay: 0.01s;     
+	          }
+}
+</style>
+</head>
+<body>
+<p>This button has id = design1</p>
+<nav>
+<li>
+<a href="HTTP://WWW.GOOGLE.COM" ><input id="d1" type="button" value="GOOGLE" \></a>
+</li>
+<li>
+<a href="HTTP://WWW.YAHOO.COM" ><input  id="d1" type="button"  value="YAHOO"  style="background-color:555555;"></a>
+</li>
+<li>
+<a href="HTTP://WWW.bing.COM" ><input  id="d1" type="button"  value="BING"  style=" background-color:#008cba;"></a>
+</li>
+<li>
+<a href="HTTP://WWW.w3school.org.COM" ><input  id="d1" type="button"  value="W3SCHOOL.ORG"  style=" background-color:teal;"></a>
+</li>
+</nav>
+<p>This button has id = design2</p>
+<nav>
+<li>
+<a href="HTTP://WWW.google.com" ><input  id="d2" type="button"  value="GOOGLE" title="border radius=12px"></a>
+</li>
+<li>
+<a href="HTTP://WWW.yahoo.COM" ><input  id="d2" type="button"  value="YAHOO"  title="border radius=20%" style=" background-color:#555555;border-radius:20%"></a>
+</li>
+<li>
+<a href="HTTP://WWW.BING.COM" ><input  id="d2" type="button"  value="BING"  title="border radius=50%" style=" background-color:#008cba;border-radius:50%"></a>
+</li>
+<li>
+<a href="HTTP://WWW.W3SCHOOL.ORG" ><input  id="d2" type="button"  value="W3SCHOOL.ORG"  title="border radius=90%" style=" background-color:teal;border-radius:90%"></a>
+</li>
+</nav>
+<p>This button has id = design3</p>
+<nav>
+<li>
+<a href="HTTP://WWW.GOOGLE.COM" ><input id="d3" type="button" value="GOOGLE" \></a>
+</li>
+<li>
+<a href="HTTP://WWW.YAHOO.COM" ><input  id="d3" type="button"  value="YAHOO"  style=" border:3px solid #555555;"></a>
+</li>
+<li>
+<a href="HTTP://WWW.bing.COM" ><input  id="d3" type="button"  value="BING"  style=" border:3px solid #008cba;"></a>
+</li>
+<li>
+<a href="HTTP://WWW.w3school.org.COM" ><input  id="d3" type="button"  value="W3SCHOOL.ORG"  style=" border:3px solid teal;"></a>
+</li>
+</nav>
+<p>This button has id = design4 to design4.4</p>
+<nav>
+<li>
+<a href="HTTP://WWW.GOOGLE.COM" ><input id="d4" type="button" value="GOOGLE"/></a>
+</li>
+<li>
+<a href="HTTP://WWW.YAHOO.COM" ><input  id="d4_2" type="button" value="YAHOO"/></a>
+</li>
+<li>
+<a href="HTTP://WWW.bing.COM" ><input  id="d4_3" type="button"  value="BING"/></a>
+</li>
+<li>
+<a href="HTTP://WWW.w3school.org.COM" ><input  id="d4_4" type="button"  value="W3SCHOOL.ORG"/></a>
+</li>
+</nav>
+<br/>
+<p>This button has id = design5 to design5.4</p>
+<nav>
+<li>
+<a href="HTTP://WWW.GOOGLE.COM" ><input id="d5" type="button" value="GOOGLE"/></a>
+</li>
+<li>
+<a href="HTTP://WWW.YAHOO.COM" ><input  id="d5_2" type="button" value="YAHOO"/></a>
+</li>
+<li>
+<a href="HTTP://WWW.bing.COM" ><input  id="d5_3" type="button"  value="BING"/></a>
+</li>
+<li>
+<a href="HTTP://WWW.w3school.org.COM" ><input  id="d5_4" type="button" value="W3SCHOOL.ORG"/></a>
+</li>
+</nav>
+<p>This button has id = design6</p>
+<a href="HTTP://WWW.GOOGLE.COM" ><input type="button" value="GOOGLE" id="d6"></input></a>
+<p>This button has id = design7</p>
+<a href="HTTP://WWW.GOOGLE.COM" ><input type="button" value="GOOGLE" id="d7" disabled></input></a>
+<p>These  button has id = design8</p>
+<a href="HTTP://WWW.GOOGLE.COM" ><input id="d8" type="button" value="GOOGLE"/></a>
+<a href="HTTP://WWW.YAHOO.COM" ><input  id="d8" type="button"  value="YAHOO"/></a>
+<a href="HTTP://WWW.bing.COM" ><input  id="d8" type="button"  value="BING"/></a>
+<a href="HTTP://WWW.w3school.org.COM" ><input  id="d8" type="button" value="W3SCHOOL.ORG"/></a>
+</body>
+</html>		

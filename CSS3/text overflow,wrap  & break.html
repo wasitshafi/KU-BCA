@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>text overflow/wrap/break</title>
+	<style type="text/css">
+	#d1,#d2,#d3{
+		font-family:fontawesome;
+		font-size: 15pt;
+		color: green;
+        width: 150px;
+		height: 200px;
+		border: 2px solid black;
+	   }
+	#d1{ 
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: clip;
+	   }
+	#d1:hover{
+	 	        overflow: visible;
+	          }
+	#d2{ 
+		word-break: break-all;/* Lines may break between any two letters */
+	   }
+    #d3{ 
+		word-break: keep-all;/*	Breaks are prohibited between pairs of letters */
+
+	   }
+	</style>
+	</head>
+<body>
+<p><b><u>the following paragraph text has an id =d1</u></b></p>
+<p id="d1"> THE QUICK BROWN FOX JUMPS OVER TO THE LAZY DOG TIT FOR TAT.looooonnnnnnngWORD</p>
+<p>the following paragraph text has an id =d1</u></b></p>
+<p id="d1" style="word-wrap: normal;"> THE QUICK BROWN FOX JUMPS OVER TO THE LAZY DOG TIT FOR TAT.looooonnnnnnngWORD</p>
+<p>the following paragraph text has an id =d1</u></b></p>
+<p id="d1" style="text-overflow: ellipsis;"> THE QUICK BROWN FOX JUMPS OVER TO THE LAZY DOG TIT FOR TAT.looooonnnnnnngWORD</p>
+
+
+<p><b><u>the following paragraph text has an id =d2</u></b></p>
+<p id="d2"> THE QUICK BROWN FOX JUMPS OVER TO THE LAZY DOG TIT FOR TAT.looooonnnnnnngWORD</p>
+
+<p><b><u>the following paragraph text has an id =d3</u></b></p>
+<p id="d3" > THE QUICK BROWN FOX JUMPS OVER TO THE LAZY DOG TIT FOR TAT.looooonnnnnnngWORD</p>
+
+
+<p><b><u>the following paragraph has no id</u></b></p>
+<p style="word-wrap: break-word;/* word-wrap  Allow long words to be able to break and wrap onto the next line:*/;
+		  font-size: 15pt;
+		  color: green;
+	      width: 150px;
+	      height: 200px;
+		  border: 2px solid black;"
+		 >THE QUICK BROWN FOX JUMPS OVER TO THE LAZY DOG TIT FOR TAT.looooonnnnnnngWORD</p>
+
+</body>
+</html>

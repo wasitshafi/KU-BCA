@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS3 table layout property</title>
+	<link rel="icon" href="">
+	<style type="text/css">
+	h1{ color: brown;
+		text-decoration: underline;
+		background-color: inherit;
+	  }
+	  b{
+	  	 font-family: courier;
+	  	 font-style: bold;
+	  	 text-decoration:underline;
+	   } 
+	  p{
+	  	 text-shadow: 1px 1px 5px yellowgreen ,2px 2px 10px white;
+	   }
+	  body{background-color: lightyellow;}  
+	 .maindiv{
+			   color: yellow;
+			   background-color: tomato;
+			   margin: 10px;
+			   border-radius: 5px;
+		 }
+	 .div1,.div2{
+		 	     margin-top: 50px;
+		 	     margin-bottom: 0px;
+	 		     margin-left: 3vw;
+		 	     margin-right:3vw;
+		 	     border: 1px dashed maroon; 
+		 	     overflow: auto;
+		 	     text-align: justify;
+	            }
+	 .div1{
+	 	   color: inherit;
+		   background-color: inherit;
+		   left: 100px;
+	      }   
+	 .div2{
+	 	color:inherit;
+	 	background-color:inherit;
+	 	
+	      }
+	</style>
+</head>
+<body>
+<div class="maindiv">
+<div class="div1">
+	<h1>Table layout : Auto;</h1>
+	<pre><p><b>Auto:</b> Automatic table layout algorithm (this is default):
+The column width is set by the widest unbreakable content in the cells
+Can be slow, since it needs to read through all the content in the table, before determining the final layout	
+	</p></pre>
+	</div>
+<p>The following table has table-layout property to auto.</p>
+<div class="table1" style="margin: 0px;margin-left: 50px;margin-right: 50px; background-color: whitesmoke;  color: dodgerblue;">
+
+<table style="table-layout: auto;"> 
+   <caption>Result of BCA 3rd year session 2015-2016</caption>   
+   <tr>
+	   <th>Roll no</th>
+	   <th>Name</th>
+	   <th>Marks</th>
+	   <th>M marks</th>
+	   <th>Address</th>
+	   <th>Contact no.</th>
+   </tr>
+   
+   <tr>
+	   <td >100</td>
+	   <td>adil</td>
+	   <td>50</td>
+	   <td>100</td>
+	   <td>solina</td>
+	   <td>9960548452</td>
+   </tr>
+   
+   <tr>
+	   <td>101</td>
+	   <td >zahid</td>
+	   <td>64</td>
+	   <td>100</td>
+	   <td>raambagh</td>
+	   <td>9622511677</td>
+   </tr>
+   
+   <tr>
+	   <td>102</td>
+	   <td>amir</td>
+	   <td >86</td>
+	   <td>100</td>
+	   <td>batamaloo</td>
+	   <td>9797182778</td>
+   </tr>
+   
+   <tr>
+	   <td>103</td>
+	    <td>waseem</td>
+	   <td>45</td>
+	   <td >100</td> 
+	   <td>lal chowk</td>
+	   <td>9797856247</td>
+   </tr>
+   
+   <tr>
+	   <td>105</td>
+	    <td>aqib</td>
+	   <td>91</td>
+	   <td>100</td> 
+	   <td >hazuri bagh</td>
+	   <td>9797856247</td>
+   </tr>
+
+   <tr>
+	   <td>106</td>
+	    <td>yasir</td>
+	   <td>67</td>
+	   <td>100</td> 
+	   <td>natipora</td>
+	   <td>8036554785</td>
+   </tr>
+   </table>
+   </div>
+<div class="div2">
+	<h1>Table layout : Fixed;</h1>
+	<pre><p><b>Fixed:</b>Fixed table layout algorithm:
+The horizontal layout only depends on the table's width and the width of the columns, not the contents of the cells
+Allows a browser to lay out the table faster than the automatic table layout
+The browser can begin to display the table once the first row has been received	
+	</p></pre>
+</div>	
+<p>The following table has table-layout property to auto.</p>
+<div  class="table1" style="margin: 0px;margin-left: 50px;margin-right: 50px; background-color: whitesmoke;color: seagreen;">
+
+<table class="table2" style="table-layout: fixed;">  
+   <caption>Result of BCA 3rd year session 2015-2016</caption>   
+   <tr>
+	   <th>Roll no</th>
+	   <th>Name</th>
+	   <th>Marks</th>
+	   <th>M marks</th>
+	   <th>Address</th>
+	   <th>Contact no.</th>
+   </tr>
+   
+   <tr>
+	   <td >100</td>
+	   <td>adil</td>
+	   <td>50</td>
+	   <td>100</td>
+	   <td>solina</td>
+	   <td>9960548452</td>
+   </tr>
+   
+   <tr>
+	   <td>101</td>
+	   <td >zahid</td>
+	   <td>64</td>
+	   <td>100</td>
+	   <td>raambagh</td>
+	   <td>9622511677</td>
+   </tr>
+   
+   <tr>
+	   <td>102</td>
+	   <td>amir</td>
+	   <td >86</td>
+	   <td>100</td>
+	   <td>batamaloo</td>
+	   <td>9797182778</td>
+   </tr>
+   
+   <tr>
+	   <td>103</td>
+	    <td>waseem</td>
+	   <td>45</td>
+	   <td >100</td> 
+	   <td>lal chowk</td>
+	   <td>9797856247</td>
+   </tr>
+   
+   <tr>
+	   <td>105</td>
+	    <td>aqib</td>
+	   <td>91</td>
+	   <td>100</td> 
+	   <td >hazuri bagh</td>
+	   <td>9797856247</td>
+   </tr>
+
+   <tr>
+	   <td>106</td>
+	    <td>yasir</td>
+	   <td>67</td>
+	   <td>100</td> 
+	   <td>natipora</td>
+	   <td>8036554785</td>
+   </tr>
+   </table>
+   </div>
+</div>
+</body>
+</html>

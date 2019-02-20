@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS order property</title>
+	<style type="text/css">
+	/* Code for Safari 6.1 to 8.0 */
+	div#myRedDIV {-webkit-order: 2;}
+	div#myBlueDIV {-webkit-order: 4;}
+	div#myGreenDIV {-webkit-order: 3;}
+	div#myPinkDIV {-webkit-order: 1;}
+
+	/* Standard syntax */
+	div#myRedDIV {order: 2;}
+	div#myBlueDIV {order: 4;}
+	div#myGreenDIV {order: 3;}
+	div#myPinkDIV {order: 1;}
+	</style>
+</head>
+<body>
+<p>The order property specifies the order of a flexible item relative to the rest of the flexible items inside the same container.</p>
+<div class="maindiv" style="background-color:  lightgreen; display: flex; border: 1px double forestgreen;">
+
+
+<div id="myRedDIV" style="color: red;width: 200px;height: 200px;">
+this is red div(1)
+</div>
+
+<div id="myBlueDIV" style="color: blue;width: 200px;height: 200px;">
+this is blue div(2)
+</div>
+
+<div id="myGreenDIV" style="color: green;width: 200px;height: 200px;">
+this is green div(3)
+</div>
+
+<div id="myPinkDIV" style="color: pink;width: 200px;height: 200px;">
+this is pink div(4)
+</div>
+
+</div>
+</body>
+</html>

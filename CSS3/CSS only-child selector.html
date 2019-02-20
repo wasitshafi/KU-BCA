@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS only-child selector</title>
+	
+	<style type="text/css">
+
+	p:only-child{background: tomato;}
+    div{margin: 5px 5px  10px 5px;}
+	
+	</style>
+</head>
+<body>
+<div style="border: 2px solid yellow;">
+	<p>this is 1st paragraph inside div 1</p>
+	<p>this is 2st paragraph inside div 1</p>
+	<p>this is 3st paragraph inside div 1</p>
+	<h1>this is 1st heading inside div 1</h1>
+	<h1>this is 2st heading inside div 1</h1>
+	<h1>this is 3st heading inside div 1</h1>
+	<h1>this is 4st heading inside div 1</h1>
+</div>
+
+<div style="border:2px dotted green;">
+	<p>this is 1st paragraph inside div 2</p>
+	<p>this is 2st paragraph inside div 2</p>
+	<p>this is 3st paragraph inside div 2</p>
+	<p>this is 4st paragraph inside div 2</p>
+</div>
+
+<div style="border:2px dashed lime;">
+	<p>this div contains only one paragraph</p>
+</div>
+</body>
+</html>

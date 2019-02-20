@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css search boxes</title>
+	<link rel="icon" href="G:\BCA\icons & logo\magnifying-glass.png">
+    <style type="text/css">
+#d1,#d2{
+		 display: inline-block;
+    	 font-family: courier;
+    	 color: black;	
+    	 text-overflow: ellipsis;
+    	 padding-top: 5x;
+     	 padding-bottom:5px;
+     	 padding-left: 10px;
+     	 padding-right: 5px;
+     	 font-size: 17pt; 
+     	 border-radius: 3px;
+     	 border-spacing: 0px
+      }
+    #d1:focus{
+  			  outline: none;
+  		      background-color: white;
+             }           
+      
+    #d2:focus{
+ 			  outline: none;
+  			 }           
+    #d1{
+    	 background-color: whitesmoke;
+     	 border: 1px solid grey; 
+       }
+    #d2{ 
+     	 position: relative;
+     	 background-color: silver;
+         
+         transition: .5s;
+         transition-delay: .10s;
+       }  
+    #d2:hover{
+     		   border: 1px solid #206aaa;
+     		   background-color: #207cca;
+     	       color: whitesmoke;
+             }   
+    </style>
+</head>
+<body>
+<input type="text" placeholder="Search...." id="d1" required ></input>
+<input type="button" value="SEARCH" id="d2" ></input>
+</body>
+</html>

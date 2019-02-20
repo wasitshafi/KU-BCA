@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS3 animation.....</title>
+	<link rel="icon" href=" G:\BCA\icons & logo\laptop.png">
+	<style type="text/css">
+    .animation
+    {
+    width: 100px;
+    height: 100px;
+    background-color: lime;
+    animation-delay: .5s;
+    animation-name: example;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+   }
+ 	@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+   }
+  input[buttton] {
+   	font-family: comic sans ms;
+   	font-size: 18pt;
+    width: 150px;
+    height: 50px;
+    background-color: aqua;
+    animation-delay: .5s;
+    animation-name:example2 ;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function:ease-in-out;
+    position: relative;
+   }
+    @keyframes example2 {
+    0%   {background-color: red; left:0px; top:0px;}
+    25%  {background-color: yellow; left:200px; top:0px;}
+    50%  {background-color: blue; left:200px; top:100px;}
+    75%  {background-color: green; left:0px; top:100px;}
+    100% {background-color: red; left:0px; top:0px;}
+}
+
+#d1{
+			font-family: courier;
+		   	font-size: 20;
+		    width: 150px;
+		    height: 50px;
+		    background-color: #dddddd;
+		    animation-name: example3 ;
+		    animation-timing-function: ease-in-out;
+		    animation-direction: alternate;
+		    animation-iteration-count: infinite;
+		    animation-duration: 5s;
+		    position: relative;
+            display: block;
+           }
+@keyframes example3{
+					0%		{transform: rotate(0deg);left:0px;}
+					25%		{transform: rotate(20deg);left:0px;}
+					50%		{transform: rotate(0deg);left:500px;}
+					55%		{transform: rotate(0deg);left:500px;}
+					70%		{transform: rotate(0deg);left:500px;background:#1ec7e6;}
+					100%	{transform: rotate(-360deg);left:0px;}
+                    }
+#d2{
+			font-family: courier;
+		   	font-size: 20;
+		    width: auto;
+		    height: auto;
+		    background-color:f2f2f2;
+		    animation: example4 3s ease-in-out .5s;
+		    position: relative;
+		    align-self: center;
+		    margin: -10px;
+           }
+@keyframes example4{
+					0%{transform: rotate(0deg);left: 0px;top: 0px;}
+					5%{left: 10px;}
+					20%{transform: rotate(0deg);left: -150px; top:0px}
+					40%{transform: rotate(0deg);left: -150px; top: -65px}
+					60%{transform: rotate(0deg);left: 150px; top: -65px}
+					80%{transform: rotate(0deg);left: 150px; top: 0px}	
+					90%{left: -10px;}	
+					95%{left: 10px;}
+					100%{transform: rotate(0deg);left: 0px; top: 0px}
+				   }							
+				 td{text-align: center;}
+				
+		
+#d3{
+			font-family: courier;
+		   	font-size: 20;
+		    width: auto;
+		    height: auto;
+  		    background-color:f2f2f2;
+            position: relative;
+		    align-self: center;
+		    margin: -10px;
+   }
+#d3:hover{
+	     transform: translate(-300,-200);
+
+          }   
+ </style>
+</head>
+<body>
+<div class="animation">This is div tag.</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<input id=d1 type="button" value="yahoo" \>
+<br/>
+<br/>
+<br/>
+<div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<table align="center">
+<tr>
+<td><input type="text" placeholder="ENTER YOUR E-MAIL id...." style="height: 30px; width: 200px; font-family: cursive;color:#333333; margin: -10px;"></input></td>
+</tr>
+<tr>
+<td>
+<input id=d2 type="button" value="SUBSCRIBE" id=d2\>
+</td>
+</tr>
+</table>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</div>
+
+<input type="button" value="google" id="d3"></input>
+
+</body>
+</html>

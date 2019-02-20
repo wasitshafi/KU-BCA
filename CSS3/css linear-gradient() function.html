@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	div{
+		position: relative;
+		height: 200px; 
+		width: 300px;
+	   }
+	.grad1{
+			  /* For Safari 5.1 to 6.0 */
+			  background: -webkit-linear-gradient(tomato,orange,yellow,green,blue,indigo,violet);
+			  /* For Opera 11.1 to 12.0 */
+			  background: -o-linear-gradient(tomato,orange,yellow,green,blue,indigo,violet);
+			  /* For Fx 3.6 to 15 */
+			  background: -moz-linear-gradient(tomato,orange,yellow,green,blue,indigo,violet);
+			  /* Standard syntax */
+			  background: linear-gradient(tomato,orange,yellow,green,blue,indigo,violet); 
+		  }
+	.grad2{
+		   	  /* For Safari 5.1 to 6.0 */
+			  background: -webkit-linear-gradient(180deg,tomato,orange,yellow,green,blue,indigo,violet);
+			  /* For Opera 11.1 to 12.0 */
+			  background: -o-linear-gradient(180deg,tomato,orange,yellow,green,blue,indigo,violet);
+			  /* For Fx 3.6 to 15 */
+			  background: -moz-linear-gradient(180deg,tomato,orange,yellow,green,blue,indigo,violet);
+			  /* Standard syntax */
+			  background: linear-gradient(130deg,tomato,orange,yellow,green,blue,indigo,violet); 
+			}
+	.grad3{   /* means starts at top left and goes to bottom right*/
+			  background: -webkit-linear-gradient(right right, red , blue); /* Safari 5.1 to 6.0 */
+			  background: -o-linear-gradient(bottom right, red, blue); /* Opera 11.1 to 12.0 */
+			  background: -moz-linear-gradient(bottom right, red, blue); /* Firefox 3.6 to 15 */
+
+			  background: linear-gradient(to bottom right,red , blue); /* Standard syntax */
+		  }
+	</style>
+</head>
+<body>
+<p>This div belong to grad1 class</p>
+<div class="grad1">	
+</div>
+
+<p>This div belong to grad2 class</p>
+<div class="grad2">	
+</div>
+
+
+<p>This div belong to grad3 class</p>
+<div class="grad3">	
+</div>
+
+</body>
+</html>

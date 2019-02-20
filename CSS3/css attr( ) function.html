@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS3 attr() function</title>
+	<style type="text/css">
+    a:link,a:hover,a:active,a:focus
+    {
+    	text-decoration: none;
+    	outline: none;
+    }
+    a:hover,a:active,a:focus
+    {
+    	border-top:  5px solid grey;
+    }
+    .a{
+    	  color: #555555;
+    	  position: relative;
+    	  left: calc(100% / 3);
+    	  font-size: 25px;
+         }
+    .a:after{
+    	content: "(" attr(href) ")";
+    	color: #666666;
+    	font-family: courier;
+    	font-size: 8px;
+    	position: relative;
+    }
+    .parag{font-family: comic sans ms;
+    	color: red;}
+    .parag:before{
+    	content: "[this paragraph belongs to class " attr(class) "]";
+    	font-size: 10px;
+    	font-family: courier;
+    	color: grey;
+        }
+	</style>
+</head>
+<body>
+<a href="https:\\www.google.com" title="goto goooogle" class="a" target="_blank">click here</a>
+<p class="parag">this is paragraph text</p>
+</body>
+</html>

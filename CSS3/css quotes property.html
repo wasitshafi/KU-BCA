@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8" /> 
+    <title>
+        HTML Quotes
+    </title>
+    <style>
+        :lang(en) > q { quotes: '“' '”' '‘' '’'; }
+        :lang(en-GB) > q { quotes: '‘' '’' '“' '”'; }/*brithish english*/
+        :lang(fr) > q { quotes: '«' '»' '“' '”'; }
+        :lang(de) > q { quotes: '„' '“' '‚' '‘'; }/*german*/
+    </style>
+</head>
+<body>
+
+<h1>
+    HTML Quotes
+</h1>
+<blockquote>most of the major browser indents &ltblockquote&gt text ( places spaces right and left ) and may change font style to italic </blockquote>
+
+<p lang="en">the quick <q>brown</q> fox jumps over to the lazy dog tit for tat.</p>
+<p lang="de">the quick <q>brown</q> fox jumps over to the lazy dog tit for tat.</p>
+<p lang="eng-db">the quick <q>brown</q> fox jumps over to the lazy dog tit for tat.</p>
+
+
+</body>
+</html>

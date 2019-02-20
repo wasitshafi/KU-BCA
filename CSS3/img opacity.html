@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>homepage</title>
+    
+    <style type="text/css">
+        #tr_moz{
+	      -moz- opacity:0.4;
+	      height=200px;
+		  width=200px;
+		   border:3px dashed black;
+	      left=100px;
+	      top=100px;
+	      opacity:0.1
+	       }
+	#tr_ie{
+  	       filter:alpha(opacity=5);
+		   height=200px;
+		   width=200px;
+		   border=2px dotted lime;
+	       left=100px;
+		   top=100px;
+		  }
+		  img
+		  {
+		   max-height:200px;
+		   max-width:200px;
+		   border=2px solid red;
+	  }
+    </style>
+  </head>
+ <body>  
+<img src="C:\Users\jhon pc\Pictures\2015-8-13_1-40-21.420.jpg" title="this is orignal image" \>
+<img id="tr_ie"  src="C:\Users\jhon pc\Pictures\2015-8-13_1-40-21.420.jpg"  title="this will be little transparent in IE browser"/>
+<img id="tr_mz"  src="C:\Users\jhon pc\Pictures\2015-8-13_1-40-21.420.jpg"  title="this will be little transparent in Mozila browser"/> 
+</body>
+</html>

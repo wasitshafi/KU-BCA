@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS3 filter property</title>
+	<link rel="icon" href="G:\BCA\icons & logo\picture.png">
+	<style type="text/css">
+	.maindiv{
+		     background-color: transparent;
+			 border: 2px dotted lightgreen;
+			 outline: solid lightgreen 1px;
+			 min-width: 700px;
+			 overflow: auto;
+	        }
+	 div.imgcontainer{text-align: right;
+	                  background-color: inherit;
+	                  color: tomato; 
+	                  text-shadow:1px 2px 5px rgba(100,100,100,.9);
+	                 }
+	 p{
+	   font-family: comic sans ms;
+	  }	
+	  body{background-color: chocolate;}
+	 	
+	 	    
+	 </style>
+</head>
+<body>
+
+<div class="maindiv" >
+
+
+
+
+	<div style="position: fixed; z-index: -1;">
+	<img  src="G:\PICTURES\images\angrybird.jpg" >
+	<p>Original image</p>
+	</div>
+
+<div class="imgcontainer">
+<img  src="G:\PICTURES\images\angrybird.jpg" style="filter: grayscale(80%) blur(5px);-webkit-filter: grayscale(80%) blur(5px);/* Chrome, Safari, Opera */">
+<p>filter :grayscale (80%) and blur(5px)</p>
+</div>
+
+
+<div class="imgcontainer">
+<img  src="G:\PICTURES\images\angrybird.jpg" style="filter: brightness(60%) sepia(95%) ;-webkit-filter: brightness(60%) sepia(95%) ;/* Chrome, Safari, Opera */">
+<p>filter :brightness(60%) and sepia(95%)</p>
+</div>
+
+
+
+<div class="imgcontainer">
+<img  src="G:\PICTURES\images\angrybird.jpg" style="filter: drop-shadow(5px 8px 10px silver) contrast(150%);-webkit-filter:drop-shadow(5px 8px 10px silver) contrast(150%);/* Chrome, Safari, Opera */">
+<p>filter :drop-shadow(5px 8px 10px silver%) and contrast(150%)</p>
+</div>
+
+<div class="imgcontainer">
+<img  src="G:\PICTURES\images\angrybird.jpg" style="filter: hue-rotate(180deg) opacity(80%);-webkit-filter:hue-rotate(180deg) opacity(80%);/* Chrome, Safari, Opera */">
+<p>filter :hue-rotate(180deg) and opacity(80%)</p>
+</div>
+
+
+<div class="imgcontainer">
+<img  src="G:\PICTURES\images\angrybird.jpg" style="filter: saturate(250%); -webkit-filter:saturate(250%);/* Chrome, Safari, Opera */">
+<p>filter :saturate(250%)</p>
+</div>
+
+
+
+<div class="imgcontainer">
+<img  src="G:\PICTURES\images\angrybird.jpg" style="filter: invert(100%); -webkit-filter:invert(100%);/* Chrome, Safari, Opera */">
+<p>filter :invert(100%)</p>
+</div>
+
+</div>
+
+<div style="text-align: center; width: 100%;height: auto;">
+<iframe src="G:\BCA\html\w3school.org\css\css references\set 1\CSS3 filter Property.html" style="width: 100%;height: 800px;" ></iframe>
+</div>
+
+</body>
+</html>

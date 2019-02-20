@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Z index</title>
+	<link rel="icon" href=" G:\BCA\icons & logo\edit.png">
+	<style type="text/css">
+	.div1{
+		   background-color:teal;
+		   z-index: 1;
+		   height: 200px;
+		   width: 200px;
+		   left: 100px;
+		   top: 10px;
+		   position: absolute;
+	     }
+	.div2{
+		   background-color: yellow;
+		   z-index: 2;
+		   height: 200px;
+		   width: 230px;
+           left: 200px;
+           top: 20px;
+		   position: absolute;
+	     }
+	.div3{
+		   background-color: tomato;
+		   z-index: 3;
+		   height: 200px;
+		   width: 200px;
+		   left: 260px;
+		   top: 30px;
+		   position: absolute;
+	     }
+	</style>
+</head>
+<body>
+    <div style="border: 2px solid aqua;height: 300px;background-color: cornsilk;">
+    <div class="div1">
+	this is div 1
+	</div>
+	
+	<div class="div2">
+	this is div 2
+	</div>
+
+	<div class="div3">
+	this is div 3
+    </div>
+    </div>
+	
+	<br/>
+	<br/>
+
+		<div style="position: absolute; border: 2px solid lightgreen;overflow: auto;left: calc(100% / 3);z-index: 2;">
+		<img src="C:\Users\jhon pc\Pictures\2015-8-13_1-40-21.420.jpg" style="z-index: 1;width: 300px;height: 300px;" alt="error occured while loading image." >
+
+		<p style="font-family: comic sans ms;text-shadow: 1px 2px 3px  rgba(120,120,120,.9);text-align: center;">Enter your text here</p>
+		</div>
+
+	<div style="border: 2px dotted lightgreen;width: 300px; height: 360px;left: calc(100% / 3);overflow: auto;z-index: 2;">
+	<img src="C:\Users\jhon pc\Pictures\2015-8-13_1-40-21.420.jpg" style="z-index: 1;" >
+    
+
+	</div>
+		</body>
+</html>

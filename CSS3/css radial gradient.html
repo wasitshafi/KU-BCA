@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS3 radial gradient() function</title>
+	<style type="text/css">
+	div{
+		position: relative;
+		height: 200px; 
+		width: 300px;
+	   }
+	.grad1{
+			  background: -webkit-radial-gradient( tomato,yellowgreen,coral,blue); /* Safari 5.1- 6.0 */
+			  background: -o-radial-gradient(tomato,yellowgreen,coral,blue); /* Opera 11.6-12.0 */
+			  background: -moz-radial-gradient(tomato,yellowgreen,coral,blue); /* Firefox 3.6-15 */
+			  background: radial-gradient( tomato,yellowgreen,coral,blue); /* Standard syntax */ 
+		  }
+     .grad2{
+	          background: -webkit-radial-gradient(circle,tomato,yellowgreen,coral,blue); /* Safari 5.1- 6.0 */
+			  background: -o-radial-gradient(circle,tomato,yellowgreen,coral,blue); /* Opera 11.6-12.0 */
+			  background: -moz-radial-gradient(circle,tomato,yellowgreen,coral,blue); /* Firefox 3.6-15 */
+			  background: radial-gradient(circle,tomato,yellowgreen,coral,blue); /* Standard syntax */ 
+		
+
+		   }
+   /* means starts at top left and goes to bottom right*/
+	 .grad3{ 
+	 	      background: -webkit-radial-gradient(red 10%, green 30%, blue 40%); /* Safari 5.1-6.0 */
+			  background: -o-radial-gradient(red 10%, green 30%, blue 40%); /* Opera 11.6-12.0 */
+			  background: -moz-radial-gradient(red 10%, green 30%, blue 40%); /* Firefox 3.6-15 */
+			  background: radial-gradient(red 10%, green 30%, blue 40%); /* Standard syntax */
+	 	 }
+	 .grad4_1 {
+			  /* Safari 5.1 to 6.0 */
+			  background: -webkit-radial-gradient(60% 55%, closest-side,blue,green,yellow,black); 
+			  /* For Opera 11.6 to 12.0 */
+			  background: -o-radial-gradient(60% 55%, closest-side,blue,green,yellow,black);
+			  /* For Firefox 3.6 to 15 */
+			  background: -moz-radial-gradient(60% 55%, closest-side,blue,green,yellow,black);
+			  /* Standard syntax */
+			  background: radial-gradient(closest-side at 60% 55%,blue,green,yellow,black);
+			  }
+	 .grad4_2 {
+			  /* Safari 5.1 to 6.0 */
+			  background: -webkit-radial-gradient(60% 55%, closest-corner,blue,green,yellow,black);
+			  /* Opera 11.6 to 12.0 */ 
+			  background: -o-radial-gradient(60% 55%, closest-corner,blue,green,yellow,black);
+			  /* For Firefox 3.6 to 15 */
+			  background: -moz-radial-gradient(60% 55%, closest-corner,blue,green,yellow,black);
+			  /* Standard syntax */
+			  background: radial-gradient(closest-corner at 60% 55%,blue,green,yellow,black);
+			 }
+	 .grad4_3 {
+			  /* Safari 5.1 to 6.0 */
+			  background: -webkit-radial-gradient(60% 55%, farthest-side,blue,green,yellow,black);
+			  /* Opera 11.6 to 12.0 */ 
+			  background: -o-radial-gradient(60% 55%, farthest-side,blue,green,yellow,black);
+			  /* For Firefox 3.6 to 15 */
+			  background: -moz-radial-gradient(60% 55%, farthest-side,blue,green,yellow,black);
+			  /* Standard syntax */
+			  background: radial-gradient(farthest-side at 60% 55%,blue,green,yellow,black);
+			 }
+	 .grad4_4 {
+			  /* Safari 5.1 to 6.0 */
+			  background: -webkit-radial-gradient(60% 55%, farthest-corner,blue,green,yellow,black);
+			  /* Opera 11.6 to 12.0 */ 
+			  background: -o-radial-gradient(60% 55%, farthest-corner,blue,green,yellow,black);
+			  /* For Firefox 3.6 to 15 */
+			  background: -moz-radial-gradient(60% 55%, farthest-corner,blue,green,yellow,black);
+			  /* Standard syntax */
+			  background: radial-gradient(farthest-corner at 60% 55%,blue,green,yellow,black);
+			 }
+	</style>
+</head>
+<body>
+<p>This div belong to grad1 class</p>
+<div class="grad1">	
+</div>
+
+<p>This div belong to grad2 class</p>
+<div class="grad2">	
+</div>
+
+<p>This div belong to grad3 class</p>
+<div class="grad3">	
+</div>
+
+<p>This div belong to grad4.1 class</p>
+<div class="grad4_1">
+</div>
+
+<p>This div belong to grad4.2 class</p>
+<div class="grad4_2">
+</div>
+
+<p>This div belong to grad4.3 class</p>
+<div class="grad4_3">
+</div>
+
+<p>This div belong to grad4.3 class</p>
+<div class="grad4_4">
+</div>
+
+<div style="text-align: center; width: 100%;height: auto;">
+<iframe src="G:\BCA\html\w3school.org\css\css references\set 2\CSS radial-gradient() function.html" style="width: 90%;height: 550px;" ></iframe>
+</div>
+
+</body>
+</html>

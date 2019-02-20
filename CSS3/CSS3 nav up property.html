@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS nav down property</title>
+	<style type="text/css">
+	button#b1 {
+		       top: 20%; 
+		       left: 80%;
+		       nav-index: 1;
+		       nav-right: #b2;
+		       nav-left: #b4;
+		       nav-down: #b2;
+		       nav-up: #b4;
+			  }
+
+	button#b2  {
+			    top: 40%; 
+			    left: 50%;
+
+			    nav-index: 2;
+			    nav-right: #b3; 
+			    nav-left: #b1;
+			    nav-down: #b3; 
+			    nav-up: #b1;
+
+		   	   }
+
+	button#b3 {
+			    top: 70%; 
+			    left: 25%;
+			    nav-index: 3;
+			    nav-right: #b4; 
+			    nav-left: #b2;
+			    nav-down: #b4; 
+			    nav-up: #b2;
+			   }
+
+	button#b4 {
+			    top: 40%; 
+			    left: 0%;
+			    nav-index: 4;
+			    nav-right: #b1; 
+			    nav-left: #b3;
+			    nav-down: #b1; 
+			    nav-up: #b3;		
+			  }
+	</style>
+</head>
+<body>
+<p>The nav-up or others(nav-down,left,right) property is only supported in Opera 12 and some earlier versions. This property became deprecated and obsolete in Opera 15.
+
+</p>
+<input type="button" value="bt1" id="b1"></input>
+
+<input type="button" value="bt2" id="b2"></input>
+
+<input type="button" value="bt3" id="b3"></input>
+
+<input type="button" value="bt4" id="b4"></input>
+
+</body>
+</html>

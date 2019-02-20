@@ -1,0 +1,36 @@
+p{
+  color:pink;
+  font-family:fantsy;
+  font-size:30pt;
+  background-color:green;
+  }
+a{
+  color:darkred;
+  text-decoration:none; 
+  font-size:20pt;
+ }
+a:hover{
+         color:crimson;
+         text-decoration:underline;
+         font-size:21pt;
+       }
+#bt1{ 
+       border-radius: 15px;
+       border-color:maroon;
+       background-color:orange;
+       width:200px;
+       height:auto;
+       font-family:comic sans ms;
+       }       
+h3{ 
+  font-family:monospace;
+  font-style:oblique;
+  font-size:x-large;
+  background-color:lightblue;
+  }
+b{
+   font-family:arial;
+   font-weight:bolder;
+   font-variant:small-caps;
+   
+ }  

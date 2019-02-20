@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css aimation</title>
+	<style type="text/css">
+	@keyframes turn{
+		              0% {transform: translateX(100px) rotate(0);}
+		              20% {transform: translateX(-10px) rotate(-0.5turn);}
+		              100% {transform: translateX(450px) rotate(1turn);}
+	              }
+	 .rotate{
+	 	   width: 100px;
+	 	   height: 100px;
+	       animation-name: turn;
+	       animation-duration: 3s;
+	       animation-fill-mode: both;
+	       animation-delay: 2s;
+	     /* animation-iteration-count: infinite;
+	      /* animation-direction: alternate;
+	      */ animation-timing-function: ease-in-out;
+	     }             
+	@keyframes spin{
+		             100%{transform: rotate(1turn);}
+	                } 
+	@keyframes scal{
+     				 0%{transform: scale(.7);opacity: .9}
+     	             50%{transform: scale(1);opacity: .6}
+     	             100%{transform: scale(.7);opacity: .9}
+                    }   
+	.spinonhover{
+		          height: 100px;
+		          width: 100px;
+		          animation: spin 1s linear infinite;
+		          animation-play-state: paused;
+	            }                
+	.spinonhover:hover{ animation-play-state: running;}            
+	
+	.spinonactive{
+		          height: 100px;
+		          width: 100px;
+		          animation-name: spin, scal ;
+		          animation-duration: 1s;
+		          animation-timing-function: linear;
+		          animation-iteration-count: infinite;
+		         /* animation: spin, scal 2s linear infinite;
+		          */animation-play-state: paused;
+	            }                
+	.spinonactive:active{ animation-play-state: running;}            
+ </style>
+</head>
+<body>
+<img src="G:\BCA\icons & logo\clock.png" class="rotate" />
+<div>
+	<img src="G:\BCA\icons & logo\planet3.png" class="spinonhover" />
+    <img src="G:\BCA\icons & logo\color-circle.png" class="spinonactive" />
+    
+</div>
+
+</body>
+</html>

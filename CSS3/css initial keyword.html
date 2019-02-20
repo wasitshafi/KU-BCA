@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS3 initial keyword property</title>
+	<style type="text/css">
+	.maindiv{
+			 color: lightgreen;
+			 font-family: comic sans ms;  
+			 letter-spacing: 3px;
+		    }
+	.h2{
+		color: initial; 	  /* initial sets the default value*/
+		font-family: initial;
+		letter-spacing: initial;
+	   }  
+    ::selection{
+	            color: tomato;
+			    background-color: cornsilk;
+			   } 	
+	</style>
+</head>
+<body>
+<div class="maindiv">
+	<p>This is paragraph text inside div element.</p>
+	<span style="display: block;">This is span text inside div element.</span>
+	<h3>This is heading 3 style text inside div element.</h1>
+	<h2 class="h2">This is heading 2 style text inside div element.</h2>
+</div>
+<h2>This is heading 2 style text outside div element.</h2>
+<b style="float: right;color: #666666">TIP:- Select text and see the result......</b>
+</body>
+</html>
