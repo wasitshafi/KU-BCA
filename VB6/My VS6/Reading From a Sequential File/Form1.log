@@ -1,0 +1,5 @@
+Line 64: Class RichTextLib.RichTextBox of control rtb1 was not a loaded control class.
+Line 70: The property name _ExtentX in rtb1 is invalid.
+Line 71: The property name _ExtentY in rtb1 is invalid.
+Line 72: The property name _Version in rtb1 is invalid.
+Line 74: The property name TextRTF in rtb1 is invalid.

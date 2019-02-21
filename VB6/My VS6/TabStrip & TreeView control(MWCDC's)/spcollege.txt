@@ -1,0 +1,16 @@
+shoaib
+suhaib
+adil
+zahid
+salman
+prof. thalat ahmad khan
+prof.gurdeep singh sodi
+prof.asif kawoosa
+prof.thair ahmad
+prof.muzaffar ahmad
+prof.ishfaq khan
+mohammad adil hussain
+bilal ahmad bhat
+rouf ahamd khan
+zahid mustaq khan
+only 15 records required.(5*3= 15 lines/name/data one in each lines)
