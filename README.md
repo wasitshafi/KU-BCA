@@ -1,5 +1,5 @@
 **This repository contains all data like Coding Stuff which is created/written 
-solely by me while doing BCA from [Kashmir University](https://www.kashmiruniversity.net "Visit Website") (14-06-2014 to ##-##-2017)**
+solely by me while doing BCA from [Kashmir University](https://www.kashmiruniversity.net "Visit Website") ([Amar Singh College](http://www.ascollegelive.net/)) (14-06-2014 to ##-##-2017)**
 # **Quick Links :**
 
 + **[I-YEAR](/I-year)**
