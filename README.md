@@ -26,4 +26,4 @@ solely by me while doing BCA from [Kashmir University](https://www.kashmiruniver
     - **BCA-III-03** - _OPERATING SYSTEM_
     - **BCA-III-04** - _MULTI MEDIA COMPUTING_
     - **BCA-III-05** - _WEB DESIGNING_
-    - **BCA-III-06** - _PORJECTS_
+    - **BCA-III-06** - _PORJECT_
