@@ -1,0 +1,129 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="DoctorMasterPage.master.cs" Inherits="Doctor_Module_DoctorMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Template Name: Corporation
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Corporation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
+</head>
+<body id="top">
+    <form id="form1" runat="server">
+<div class="wrapper col1">
+  <div id="head">
+    <img src="../images/logo.png" style="position:absolute; left:-120px;top:20px;height:60px;width:60px;" />
+                <h1><a href="../General Module/GeneralHome.aspx" style="position: absolute; left: -60px; font: bolder  36px tohama;line-height:80%;color:#1bb7b1;">&nbsp;&nbsp;Health&nbsp;&nbsp;<br />
+                    Connect</a></h1>
+                <h3 style="position: absolute; left: -60px;top:80px; font: normal 15px tohama;line-height:80%;color:white;">Serve for humanity</h3>
+<div id="topnav">
+      <ul>
+        <li><a runat="server" id="home"  href="~/Doctor Module/DoctorHome.aspx">Home</a></li>
+        <li><a runat="server" id="viewappointments"  href="View_Appointments.aspx">View Appointments</a></li>
+        <li><a runat="server" id="viewpatientdetails"  href="View_PatientDetails.aspx">Patients Details</a></li>
+        <li><a href="#">Drop Down</a>
+          <ul>
+            <li><a href="#">ID</a></li>
+            <li><a href="#">Name</a></li>
+            
+          </ul>
+        </li>
+        <li class="last"><a href="~/General Module/Login.aspx" runat="server">Sign out</a></li>
+      </ul>
+    </div>
+    <div id="search">
+        <fieldset>
+          <legend>Site Search</legend>
+          <input type="submit" name="go" id="go" value="GO" />
+          <input type="text" value="Search the site&hellip;"  onfocus="this.value=(this.value=='Search the site&hellip;')? '' : this.value ;" />
+        </fieldset>
+      </div>
+  </div>
+</div>
+      <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+      </asp:ContentPlaceHolder>
+           <div class="wrapper col5">
+            <div id="footer">
+                <div id="contactform">
+                    <h2>Why Not Contact Us Today !</h2>
+                    <form action="mailto:mailtobasit74@gmail.com" method="post">
+                        <fieldset>
+                            <legend>Contact Form</legend>
+                            <label for="fullname">
+                                Name:
+            <input id="fullname" name="fullname" type="text" value="" />
+                            </label>
+                            <label for="emailaddress" class="margin">
+                                Email:
+            <input id="emailaddress" name="emailaddress" type="text" value="" />
+                            </label>
+                            <label for="phone">
+                                Telephone:
+            <input id="phone" name="phone" type="text" value="" />
+                            </label>
+                            <label for="subject" class="margin">
+                                Subject:
+            <input id="subject" name="subject" type="text" value="" />
+                            </label>
+                            <label for="message">
+                                Message:<br />
+                                <textarea id="message" name="message" cols="40" rows="4"></textarea>
+                            </label>
+                            <p>
+                                <input id="submitform" name="submitform" type="submit" value="Submit" />
+                                &nbsp;
+            <input id="resetform" name="resetform" type="reset" value="Reset" />
+                            </p>
+                        </fieldset>
+                    </form>
+                </div>
+                <!-- End Contact Form -->
+                <div id="compdetails">
+                    <div id="officialdetails">
+                        <h2>NEW CITY HOSPITAL </h2>
+                        <ul>
+                            <li>New City Hospital</li>
+                            <li>Registered with J&amp;K govt.</li>
+                            <li>Reg ID. HJK19873</li>
+                            <li class="last">VAT No. xxxx</li>
+                        </ul>
+                        <h2>Stay in The Know !</h2>
+                        <p><a href="#"class="limegreen">Get Our E-Newsletter</a> | <a href="#"class="limegreen">Grab The RSS Feed</a></p>
+                  
+<div class="socialconnect">
+   <a href="#"> <img src="../images/facebook.png" class="socialicon"/> </a>
+  <a href="#">  <img src="../images/twitter.png" class="socialicon"/></a>
+   <a href="#"> <img src="../images/linkedin.png" class="socialicon" /></a>
+  <a href="#">  <img src="../images/googleplus.png" class="socialicon" /></a>
+</div>                          </div>
+                    <div id="contactdetails">
+                        <h2>Contact Details !</h2>
+                        <ul>
+                            <li>New City hospital</li>
+                            <li>Silk Factory Road,</li>
+                            <li>Srinagar - 190009</li>
+                            <li>Tel: <a href="tel:9622488755" class="limegreen">9622488755</a></li>
+                            <li>Fax: +91-11-25688663 /26588641</li>
+                            <li>Email: <a href="mailto:healthconnectnow@gmail.com" class="limegreen">healthconnectnow@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <!-- End Company Details -->
+                <div id="copyright">
+                    <p class="fl_left">Copyright © 2017 - All Rights Reserved - www.healthconnect.com</p>
+                    <p class="fl_right"><span style="color: #006699">Meet Developers:</span> <a href="https://www.facebook.com/dar.parveez.9" class="limegreen">Parvaiz</a>,&nbsp;<a href="https://www.facebook.com/eminentrafiq" class="limegreen">Rafiq</a>,&nbsp;<a href="https://www.facebook.com/bhat.umar" class="limegreen">Umar</a>,&nbsp; <a href="https://www.facebook.com/hrrsingh.singh" class="limegreen">Harry</a></p>
+                    <br class="clear" />
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
